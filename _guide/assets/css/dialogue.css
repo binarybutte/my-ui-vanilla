@@ -1,0 +1,126 @@
+/* Common
+========================================================*/
+.dialog-opened { overflow: hidden; width: 100%; height: 100%; }
+.dimmed { position: fixed; top: 0; left :0; width: 100%; height: 100%; z-index: 10001; background-color: rgba(var(--rgbBlack), .5) }
+.ui-popover-close,
+.ui-tooltip-close { position: absolute; top: .625em; right: .625em; }
+/* chip-triangle */
+.chip-triangle { display: block; font-size: 1rem; width: .875em; height: .625em; }
+.chip-triangle::before { display: block; content: ''; width: 0; border-style: solid; border-width: 0 .375em .5em .406em; }
+/* chip-border-triangle */
+.chip-border-triangle { display: block; font-size: 1rem; width: .875em; height: .625em; }
+.chip-border-triangle::before,
+.chip-border-triangle::after { display: block; content: ''; width: 0; border-style: solid; border-width: 0 .375em .5em .406em; }
+.chip-border-triangle::after { transform: translate(0, -.438em); }
+/* chip-isotriangle */
+.chip-isotriangle { display: block; font-size: 1rem; width: .75em; height: .75em; }
+.chip-isotriangle::before { display: block; content: ''; width: 0; border-style: solid; border-width: 0 .75em .75em 0; }
+
+
+/* Popover
+========================================================*/
+.popover { position: absolute; width: 24em; max-width: 24em; min-height: 5em; padding: 1em; border-radius: var(--radius--sm); border: 1px solid var(--colorGray500); background-color: var(--colorWhite); z-index: 10; visibility: hidden; font-size: 1rem;}
+.popover-visible { visibility: visible; opacity: 0; transition: opacity var(--fadeSpeed); }
+.popover-effect { opacity: 1; }
+.popover-content { position: relative; padding-right: 2em; overflow-y: auto; } 
+.popover-title { font-weight: 700; }
+.popover .chip-border-triangle { position: absolute; }
+.popover .chip-border-triangle::before { border-color: var(--colorGray700) transparent; }
+.popover .chip-border-triangle::after { border-color: var(--colorWhite) transparent; }
+/* 위치, rotate */
+.popover-left .chip-border-triangle { top: 1.875em; left: calc(100% - .188em); transform: rotate(90deg); }
+.popover-right .chip-border-triangle { top: 1.875em; right: calc(100% - .188em); transform: rotate(-90deg); }
+.popover-bottom .chip-border-triangle { top: -.5em; left: 1.875em; }
+.popover-top .chip-border-triangle { bottom: -.5em; left: 1.875em; transform: rotate(180deg); }
+
+
+/* Tooltips
+========================================================*/
+.tooltip { position: absolute; min-width: 3.125em; max-width: 18em; min-height: 3em; padding: 1em; border-radius: var(--radius--sm); background-color: var(--colorPoint); z-index: 10; visibility: hidden; font-size: .8rem;}
+.tooltip-visible { visibility: visible; opacity: 0; transition: opacity var(--fadeSpeed); }
+.tooltip-effect { opacity: 1; }
+.tooltip-content { position: relative; padding-right: 2em; color: var(--colorWhite) } 
+.tooltip .chip-triangle { position: absolute; }
+.tooltip .chip-triangle::before { border-color: var(--colorPoint) transparent; }
+/* 위치, rotate */
+.tooltip-left .chip-triangle { top: 50%; left: calc(100% - .25em); transform: translateY(-50%) rotate(90deg); }
+.tooltip-right .chip-triangle { top: 46%; right: calc(100% - .25em); transform: translateY(-46%) rotate(-90deg); }
+.tooltip-bottom .chip-triangle { top: -.438em; left: 50%; transform: translateX(-50%); }
+.tooltip-top .chip-triangle { bottom: -.438em; left: 50%; transform: translateX(-50%) rotate(180deg); }
+
+
+/* speech-bubble
+========================================================*/
+.speech-bubble { position: absolute; min-width: 8em; max-width: 18em; min-height: 3em; padding: 1em; border-radius: var(--radius--md); background-color: var(--colorPrimary); z-index: 10; font-size: .8rem;}
+.speech-bubble-content { position: relative; color: var(--colorWhite) } 
+.speech-bubble .chip-isotriangle { position: absolute; bottom: -.563em; left: 1em }
+.speech-bubble .chip-isotriangle::before { border-color: transparent var(--colorPrimary) transparent transparent; }
+.speech-bubble.speech-bubble-lt .chip-isotriangle { bottom: -.563em; left: 1em }
+.speech-bubble.speech-bubble-rt .chip-isotriangle { bottom: -.563em; left: auto; right: 1em; transform: scale(-1) rotate(90deg) }
+.speech-bubble.speech-bubble-lb .chip-isotriangle { bottom: auto; top: -.563em; left: 1em; transform: rotate(90deg)}
+.speech-bubble.speech-bubble-rb .chip-isotriangle { bottom: auto; top: -.563em; left: auto; right: 1em; transform: scale(-1) }
+
+
+/* Dialogue
+========================================================*/
+.dialog-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 10000; }
+.dialog-box { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18.75rem; height: 12.5rem; background-color: var(--colorWhite); border-radius: var(--radius--md); border: 1px solid var(--colorGray300); z-index: 10002; font-size: 1rem; padding: 1.25em; }
+.dialog-box .dialog-content { display: flex; flex-direction: column; height: 100%; gap: .625rem}
+.dialog-box .dialog-content > .dialog-message { display: flex; justify-content: center; align-items: center; flex-grow: 1;  }
+
+
+/* Toast
+========================================================*/
+.toast { position: fixed; left: 50%; max-width: 23.75em; min-width: 12.5em; min-height: 3.125em; border-radius: var(--radius--xs); background-color: rgba(var(--rgbBlack), .5); font-size: 1rem; display: flex; align-items: center; justify-content: center; padding: .875em; z-index: 10000; opacity: 0; transition: opacity .2s; }
+.toast-top { top: 1.25rem; transform: translate(-50%, 0); }
+.toast-middle { top: 50%; transform: translate(-50%, -50%);  }
+.toast-bottom { bottom: 1.25rem; transform: translate(-50%, 0); }
+.toast-massage { color: var(--colorWhite); text-align: center; }
+.toast.ui-active { opacity: 1; }
+
+
+/* Snackbar
+========================================================*/
+.snackbar { position: fixed; left: 50%; transform: translateX(-50%); max-width: 42.5em; min-width: 18.75em; min-height: 3.125em; border-radius: var(--radius--xs); background-color: var(--colorPrimary); font-size: 1rem; display: flex; align-items: flex-start; justify-content: space-between; z-index: 10000; opacity: 1; transition: .3s; }
+.snackbar .btn-icon { flex-shrink: 0; margin-top: -.125em}
+.snackbar-top { top: -5.375em; padding: 1.625em 1.125em 1.125em; }
+.snackbar-bottom { bottom: -5.375em; padding: 1.125em 1.125em 1.625em; }
+.snackbar-massage { color: var(--colorWhite); text-align: left; }
+.snackbar-top.ui-active { top: -.5em; opacity: 1; }
+.snackbar-bottom.ui-active { bottom: -.5em; opacity: 1; }
+
+
+/* message-box
+========================================================*/
+.message-box { padding: 1em; width: 100%; font-size: 1rem; border-width: 1px; border-style: solid; border-radius: var(--radius--sm); }
+.message-box .flexbox { gap: .4em }
+.message-box .flexbox .message { flex: 1; align-self: center; }
+.message-box .flexbox .icon-md { flex: none; flex-shrink: 0; }
+
+
+/* Popup
+========================================================*/
+.popup-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 10000; }
+.popup { background-color: rgba(var(--rgbWhite), 1); z-index: 10002; }
+.popup--box{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; box-shadow: 2px 2px 8px 1px rgba(180, 180, 180, 0.2); max-height: 45rem; }
+.popup-overlap .popup-section[data-popup-index='1'] .popup { z-index: 10001; }
+/**/
+.popup-header { display: flex; justify-content: space-between; align-items: center; padding: 1em 1.5em; } 
+.popup-title { display: flex; flex: 1; }
+.popup-title .title { color: var(--colorGray900); }
+.popup-body { flex-grow: 1; scrollbar-gutter: stable; overflow: overlay; font-size: 1rem; }
+.popup-body::-webkit-scrollbar { width: .3em; height: .3em; }
+.popup-body::-webkit-scrollbar-thumb { background: var(--colorGray500); border-radius: 0.094rem; }
+.popup-body::-webkit-scrollbar-track { display: none; }
+.popup-content { padding: 0 1.5em }
+.popup-footer { padding: 1em 1.5em }
+/* Size */
+.popup--box-lg { font-size: 1.4rem; width: 64rem; min-height: 24rem; max-width: 86vw; border-radius: var(--radius--md); }
+.popup--box-md { font-size: 1.2rem; width: 42rem; min-height: 20rem; max-width: 86vw; border-radius: var(--radius--md); }
+.popup--box-sm { font-size: 1.2rem; width: 32rem; min-height: 20rem; max-width: 86vw; border-radius: var(--radius--sm); max-height: 25rem; }
+.popup--box-auto { font-size: 1.2rem; }
+
+@media screen and ( max-height: 768px ) {  
+    .popup--box{ max-height: calc(100vh - 10rem); }
+    .popup--box-sm { max-height: 25rem;  }
+}

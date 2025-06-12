@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<section class="_pb-container">
+		<div class="_pb-page-tit">
+			<h2>Grid</h2>
+			<div class="_pb-sub-menu">
+				<ul>
+					<li><a href="#article1">Inline-block</a></li>
+					<li><a href="#article2">Flexbox</a></li>
+					<li><a href="#article3">Table-layout</a></li>
+					<li><a href="#article4">Responsive</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="_pb-article-wrap">
+			<article class="_pb-article">
+				<h3 class="_pb-article-tit">Inline-block</h3>
+				<div class="_pb-cnt-area">
+					<!-- <h4 class="_pb-cnt-tit">style {display:inline-block}</h4> -->
+					<div class="_pb-comp-view col2">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.grid-area-span(n)</h5>
+							<!-- ========== Component ========== -->
+							<div class="grid-area-span2">
+								<div class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</div>
+								<div class="colum">
+									<div class="_pb-temp-box2">.colum</div>
+								</div>
+							</div>
+							<ul class="grid-area-span3">
+								<li class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</li>
+								<li class="colum">
+									<div class="_pb-temp-box2">.colum</div>
+								</li>
+								<li class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</li>
+							</ul>
+							<div class="grid-area-span4">
+								<div class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</div>
+								<div class="colum">
+									<div class="_pb-temp-box2">.colum</div>
+								</div>
+								<div class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</div>
+								<div class="colum">
+									<div class="_pb-temp-box2">.colum</div>
+								</div>
+							</div>
+							<!--// ========== Component ========== -->	
+						</div>
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.grid-area-span(n).gap(n)</h5>
+							<!-- ========== Component ========== -->
+							<div class="grid-area-span2 gap30">
+								<div class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</div>
+								<div class="colum">
+									<div class="_pb-temp-box2">.colum</div>
+								</div>
+							</div>
+							<ul class="grid-area-span3 gap20">
+								<li class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</li>
+								<li class="colum">
+									<div class="_pb-temp-box2">.colum</div>
+								</li>
+								<li class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</li>
+							</ul>
+							<div class="grid-area-span4 gap10">
+								<div class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</div>
+								<div class="colum">
+									<div class="_pb-temp-box2">.colum</div>
+								</div>
+								<div class="colum">
+									<div class="_pb-temp-box1">.colum</div>
+								</div>
+								<div class="colum">
+									<div class="_pb-temp-box2">.colum</div>
+								</div>
+							</div>
+							<!--// ========== Component ========== -->	
+						</div>
+						<style>
+							/*========================================================
+							 grid-area
+							========================================================*/
+							[class*="grid-area-"]{position:relative; font-size:0; text-align:left;}
+							[class*="grid-area-"]:after{display:block; content:''; clear:both;}
+							[class*="grid-area-"] > .colum{display:inline-block; vertical-align:top; font-size:14px;}
+							/**** span ****/
+							.grid-area-span2 > .colum{width:50%;}
+							.grid-area-span3 > .colum{width:33.33333333%;}
+							.grid-area-span4 > .colum{width:25%;}
+							.grid-area-span5 > .colum{width:20%;}
+							.grid-area-span6 > .colum{width:16.66666667%;}
+							/**** gap ****/
+							[class*="grid-area-"].gap10{margin:0 -5px}
+							[class*="grid-area-"].gap10 > .colum{padding-left:5px; padding-right:5px}
+							[class*="grid-area-"].gap15{margin:0 -8px 0 -7px}
+							[class*="grid-area-"].gap15 > .colum{padding-left:7px; padding-right:8px}
+							[class*="grid-area-"].gap20{margin:0 -10px}
+							[class*="grid-area-"].gap20 > .colum{padding-left:10px; padding-right:10px}
+							[class*="grid-area-"].gap25{margin:0 -13px 0 -12px}
+							[class*="grid-area-"].gap25 > .colum{padding-left:12px; padding-right:13px}
+							[class*="grid-area-"].gap30{margin:0 -15px}
+							[class*="grid-area-"].gap30 > .colum{padding-left:15px; padding-right:15px}
+							/* 상하간격 */
+							[class*="grid-area-"].gap10 > .colum {margin-top:10px;}
+							[class*="grid-area-"].gap20 > .colum {margin-top:20px;}
+							[class*="grid-area-"].gap25 > .colum {margin-top:25px;}
+							[class*="grid-area-"].gap30 > .colum {margin-top:30px;}
+							/* 최상단 간격 초기화 */
+							.grid-area-span2 > .colum:nth-child(-n+2),
+							.grid-area-span3 > .colum:nth-child(-n+3),
+							.grid-area-span4 > .colum:nth-child(-n+4),
+							.grid-area-span5 > .colum:nth-child(-n+5),
+							.grid-area-span6 > .colum:nth-child(-n+6){margin-top:0 !important} 
+							/**** Colum width ****/
+							[class*="grid-area-"] .colum.col12{width:100%;}
+							[class*="grid-area-"] .colum.col11{width:91.66666667%;}
+							[class*="grid-area-"] .colum.col10{width:83.33333333%;}
+							[class*="grid-area-"] .colum.col9{width:75%;}
+							[class*="grid-area-"] .colum.col8{width:66.66666667%;}
+							[class*="grid-area-"] .colum.col7{width:58.33333333%;}
+							[class*="grid-area-"] .colum.col6{width:50%;}
+							[class*="grid-area-"] .colum.col5{width:41.66666667%;}
+							[class*="grid-area-"] .colum.col4{width:33.33333333%;}
+							[class*="grid-area-"] .colum.col3{width:25%;}
+							[class*="grid-area-"] .colum.col2{width:16.66666667%;}
+							[class*="grid-area-"] .colum.col1{width:8.33333333%;}
+						</style>
+					</div>
+				</div><!--// _pb-cnt-area -->
+			</article><!--// _pb-article  -->
+			
+			<article class="_pb-article">
+				<h3 class="_pb-article-tit">Flexbox</h3>
+				<div class="_pb-cnt-area">
+					<!-- <h4 class="_pb-cnt-tit">style {display:flex}</h4> -->
+					<div class="_pb-comp-view col2">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.grid-flex / .grid-flex.gap(n)</h5>
+							<!-- ========== Component ========== -->
+							<div class="grid-flex">
+								<div class="colum"><div class="_pb-temp-box1">.colum 1</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 2</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 3</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 4</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 5</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 6</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 7</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 8</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 9</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 10</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 11</div></div>
+							</div>
+							<div class="grid-flex gap10">
+								<div class="colum"><div class="_pb-temp-box1">.colum 1</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 2</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 3</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 4</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 5</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 6</div></div>
+							</div>
+							<!--// ========== Component ========== -->	
+						</div>
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.grid-flex-nowrap.flex- / -center / -end / -space</h5>
+							<!-- ========== Component ========== -->
+							<div class="grid-flex-nowrap">
+								<div class="colum"><div class="_pb-temp-box1">.colum 1</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 2</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 3</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 4</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 5</div></div>
+							</div>
+							<div class="grid-flex-nowrap flex-center">
+								<div class="colum"><div class="_pb-temp-box1">.colum 1</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 2</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 3</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 4</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 5</div></div>
+							</div>
+							<div class="grid-flex-nowrap flex-end">
+								<div class="colum"><div class="_pb-temp-box1">.colum 1</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 2</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 3</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 4</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 5</div></div>
+							</div>
+							<div class="grid-flex-nowrap flex-space-b">
+								<div class="colum"><div class="_pb-temp-box1">.colum 1</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 2</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 3</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 4</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 5</div></div>
+							</div>
+							<div class="grid-flex-nowrap flex-space-a">
+								<div class="colum"><div class="_pb-temp-box1">.colum 1</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 2</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 3</div></div>
+								<div class="colum"><div class="_pb-temp-box2">.colum 4</div></div>
+								<div class="colum"><div class="_pb-temp-box1">.colum 5</div></div>
+							</div>
+							<!--// ========== Component ========== -->	
+						</div>
+						<style>
+							
+							/*========================================================
+							 grid-flex
+							========================================================*/
+							.grid-flex{display:flex; /*flex-direction:row; flex-wrap:wrap;*/ flex-flow:row wrap; justify-content:start; background:#999;}
+							.grid-flex-nowrap{display:flex; flex-wrap:nowrap; align-items:stretch; background:#999;}
+
+							
+							.flex-space-b{justify-content:space-between;}
+							.flex-space-a{justify-content:space-around;}
+							.flex-center{justify-content:center;}
+							.flex-end{justify-content:flex-end;}
+							/**** gap ****/
+							[class*="grid-flex"].gap10{margin:-5px;}
+							[class*="grid-flex"].gap10 > .colum{margin:5px}
+							[class*="grid-flex"].gap15{margin:-8px -8px -7px -7px;}
+							[class*="grid-flex"].gap15 > .colum{margin:8px 8px 7px 7px}
+							[class*="grid-flex"].gap20{margin:-10px;}
+							[class*="grid-flex"].gap20 > .colum{margin:10px}
+							[class*="grid-flex"].gap25{margin:-13px -13px -12px -12px;}
+							[class*="grid-flex"].gap25 > .colum{margin:13px 13px 12px 12px}
+							/**** span ****/
+							/* .grid-flex-nowrap flex-center .colum{width:20%} */
+						</style>
+					</div>
+				</div><!--// _pb-cnt-area -->
+			</article><!--// _pb-article  -->
+
+			<article class="_pb-article">
+				<h3 class="_pb-article-tit">Table-layout</h3>
+				<div class="_pb-cnt-area">
+					<!-- <h4 class="_pb-cnt-tit">style {display:table}</h4> -->
+					<div class="_pb-comp-view col2">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.grid-table</h5>
+							<!-- ========== Component ========== -->
+							<div>//</div>
+							<!--// ========== Component ========== -->	
+						</div>
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.grid-table-span(n).gap(n)</h5>
+							<!-- ========== Component ========== -->
+							<div>//</div>
+							<!--// ========== Component ========== -->	
+						</div>
+					</div>
+				</div><!--// _pb-cnt-area -->
+			</article><!--// _pb-article  -->
+
+			<article class="_pb-article-rwd">
+				<h3 class="_pb-article-tit">Responsive</h3>
+				<div class="_pb-cnt-area">
+					<!-- <h4 class="_pb-cnt-tit">style {display:table}</h4> -->
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.grid-rwd</h5>
+							<!-- ========== Component ========== -->
+							<div>//</div>
+							<!--// ========== Component ========== -->	
+						</div>
+					</div>
+				</div><!--// _pb-cnt-area -->
+			</article><!--// _pb-article  -->
+		</div>
+	</section>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<button type="button" class="btn-gotop"><span>TOP</span></button>
+
+</body>
+</html>

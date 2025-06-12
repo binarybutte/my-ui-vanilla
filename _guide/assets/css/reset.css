@@ -1,0 +1,114 @@
+@charset "utf-8"; 
+
+:root { 
+    --colorPrimary: #ff776b;
+    --colorSecondary: #adb5bd;
+    --colorSuccess: #2ea369; /* #025959 */
+    --colorPoint: #038c7f; /* #038c7f */
+    --colorWarning: #f2c12e;
+    --colorDanger: #eb6d10; /* #c71313 */
+    --colorPrimaryLight: #ffeeed;
+    --colorSecondaryLight: #e9ecef;
+    --colorSuccessLight: #d1f3de; /* #b2ede3 */
+    --colorPointLight: #d2f3ee; /* #d2fdfa */
+    --colorWarningLight: #fdf2cf; 
+    --colorDangerLight: #ffd9bd; /* #ffe6d3 */
+    --colorPrimaryDark: #ad1a1a;
+    --colorSecondaryDark: #495057;
+    --colorSuccessDark: #196302; /* #032f41 */
+    --colorPointDark: #095750; /* #084d43 */
+    --colorWarningDark: #a36a15; 
+    --colorDangerDark: #a54600; /* #670000 */
+    --colorBlack: #000000; /* Emphasis */
+    --colorWhite: #ffffff;
+    --colorGray900: #212529;
+    --colorGray800: #343a40;
+    --colorGray700: #495057; /* txtDeafult */
+    --colorGray600: #6c757d; /* txtSecondary */
+    --colorGray500: #adb5bd; /* btnSecondary, btnborder, txtInactive */
+    --colorGray400: #ced4da;
+    --colorGray300: #dee2e6; /* bg, border(Element) */
+    --colorGray200: #e9ecef; /* bg (input disabled) */
+    --colorGray100: #f8f9fa; /* hover */
+    --rgbBlack: 0, 0, 0;
+    --rgbWhite: 255, 255, 255;
+    --rgbGray: 125, 125, 125;
+    --rgbPrimary: 255, 119, 107;
+    --rgbSuccess: ;
+    --rgbSecondary: ;
+    --max-width: 1440px;
+    --min-width: 320px;
+    --radius--xs: .4em;
+    --radius--sm: 1em;
+    --radius--md: 1.25em;
+    --fadeSpeed: .3s;
+}
+
+/* Font */
+/* @import url('https: //cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css'); */
+@font-face  { 
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url('../../../src/assets/font/Pretendard-Bold.subset.woff2') format('woff2'), url('../../../src/assets/font/Pretendard-Bold.subset.woff') format('woff');
+}
+@font-face  { 
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url('../../../src/assets/font/Pretendard-Medium.subset.woff2') format('woff2'), url('../../../src/assets/font/Pretendard-Medium.subset.woff') format('woff');
+}
+@font-face  { 
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url('../../../src/assets/font/Pretendard-Regular.subset.woff2') format('woff2'), url('../../../src/assets/font/Pretendard-Regular.subset.woff') format('woff');
+}
+
+
+/* Reset [ https://github.com/necolas/normalize.css ]
+========================================================*/
+html { line-height: 1.3; -webkit-text-size-adjust: 100%; }
+body { margin: 0; overflow-y: scroll; }
+html,body { color: var(--colorGray700); font-size: 16px; font-weight: 400; font-family: 'Pretendard', 'Malgun Gothic', sans-serif; min-height: 100vh; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video  { margin: 0; padding: 0; border: 0; vertical-align: baseline; -webkit-font-smoothing: antialiased; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+h1 { font-size: 2em; }
+hr { box-sizing: content-box; height: 0; overflow: visible; }
+pre { font-family: 'Pretendard', 'Malgun Gothic', sans-serif; font-size: 1rem; white-space: pre-wrap;}
+a { background-color: transparent; text-decoration: none; color: inherit; }
+a:hover, a:active { text-decoration: none; outline: 0; }
+abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; }
+b, strong { font-weight: bolder; }
+code, kbd, samp { font-family: 'Pretendard', 'Malgun Gothic', sans-serif; font-size: 1rem; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+img { border-style: none; max-width: 100%; }
+details { display: block; }
+summary { display: list-item; }
+template { display: none; }
+[hidden] { display: none; }
+caption { position: absolute; left: -99999px; display: block; width: 1px; height: 1px; overflow: hidden; text-indent: -99999px; clip: rect(0,0,0,0); }
+
+@media screen and ( max-width: 1024px ) {  
+    html,body { font-size: 14px; }
+}
+
+@media print {
+	body {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact; /* 표준 속성 */
+	}
+}
+
+/* 사용자가 애니메이션이나 전환 효과를 줄이길 원할 때 적용되는 스타일 
+	모션을 줄이기로 설정한 사용자에게는 애니메이션 비활성화. 웹접근성 향상을 위해 적용하는 미디어 쿼리 */
+/* @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+} */

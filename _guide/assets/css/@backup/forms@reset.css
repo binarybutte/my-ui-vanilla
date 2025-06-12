@@ -1,0 +1,18 @@
+/* Form Reset @20250116
+========================================================*/
+button, input, optgroup, select, textarea { font: inherit; color: inherit; margin: 0; padding: 0; box-sizing: border-box; -webkit-appearance: none; appearance: none; }
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+button,[type='button'],[type='reset'],[type='submit'] { -webkit-appearance: none; appearance: none; cursor: pointer; border: 0;padding: 0; background-image: none; background: transparent}
+button[disabled], html input[disabled], input[disabled] + label,button[readonly] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
+button:-moz-focusring,[type='button']:-moz-focusring,[type='reset']:-moz-focusring,[type='submit']:-moz-focusring { outline: none; }
+input[type='checkbox'], input[type='radio'] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0; }
+input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button { height: auto;  -webkit-appearance:  none; margin:  0; }
+input[type='search'] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* -webkit-appearance: textfield; */ outline-offset:-2px; }
+/* input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration { -webkit-appearance: none;} * /
+[hidden] { display: none; }
+select,textarea { -webkit-appearance: none; appearance: none; }
+select option[disabled] { color: #ddd; }
+input: focus, textarea: focus, select: focus { outline:  none; }
+button { background: none; cursor: pointer; outline: none; border: 0; margin: 0; padding: 0; }

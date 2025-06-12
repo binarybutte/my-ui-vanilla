@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Tips');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Copy &amp; paste</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">축약 코딩</h3>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://velog.io/@seokkitdo/25가지-JavaScript-축약코딩-기법</li>
+						</ul>
+					</div>
+
+					<h4 class="_pb-component-tit">삼항조건 연산자(The Ternary Operator)</h4>
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+const x = 20;
+let answer;
+
+if (x &gt; 10) { answer = "greater than 10"; }
+else { answer =  "less than 10"; }
+</pre>
+<pre>
+const answer = x &gt; 10 ? "greater than 10" : "less than 10";
+	or
+const answer = x &gt; 10 ? "greater than 10" : x &lt; 5 ? "less than 5" : "between 5 and 10";
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">간략계산법(Short-circuit Evaluation Shorthand)</h4>
+					<p class="_pb-component-desc">
+						예제설명: 기존 변수를 다른 변수에 할당하고 싶을 때, 기존 변수가 null, undefined 또는 비어있는 값이 아닌지 확인
+					</p>
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+if (variable1 !== null || variable1 !== undefined || variable1 !== '') { let variable2 = variable1; }
+</pre>
+<pre>
+const variable2 = variable1 || 'new';
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">반복문(For Loop)</h4>
+					<!-- <p class="_pb-component-desc"></p> -->
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+const fruits = ['mango', 'peach', 'banana'];
+for (let i = 0; i &lt; fruits.length; i++)
+</pre>
+<pre>
+for (let fruit of fruits)
+	or
+for (let index in fruits) -&gt; (단순히 인덱스에만 접근함)
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">화살표(Arrow) 함수</h4>
+					<!-- <p class="_pb-component-desc"></p> -->
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+function sayHello(name) { console.log('Hello', name); }
+
+setTimeout(function() { console.log('Loaded') }, 2000);
+
+list.forEach(function(item) { console.log(item); });
+</pre>
+<pre>
+sayHello = name =&gt; console.log('Hello', name);
+
+setTimeout(() =&gt; console.log('Loaded'), 2000);
+
+list.forEach(item =&gt; console.log(item));
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">Array.find</h4>
+					<p class="_pb-component-desc">
+						자바스크립트로 특정 값을 찾기 위해 for 루프를 이용하는 대신, ES6에서 생긴 find() 함수를 사용한다.
+					</p>
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+const pets = [
+	{ type: 'Dog', name: 'Max'},
+	{ type: 'Cat', name: 'Karl'},
+	{ type: 'Dog', name: 'Tommy'},
+]
+
+function findDog(name) {
+	for(let i = 0; i &lt; pets.length; ++i) {
+		if(pets[i].type === 'Dog' && pets[i].name === name) {
+			return pets[i];
+		}
+	}
+}
+</pre>
+<pre>
+pet = pets.find(pet =&gt; pet.type ==='Dog' && pet.name === 'Tommy');
+console.log(pet); // { type: 'Dog', name: 'Tommy' }
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">insertAdjacent-</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement</li>
+						</ul>
+					</div>
+					<h4 class="_pb-component-tit">insertAdjacentElement</h4>
+					<p class="_pb-component-desc">새로운 HTML 요소(노드)를 삽입할 때 사용</p>
+					<div class="_pb-component _pb-component--border">
+					<!-- ========== Component ========== -->
+<pre>
+parent.insertAdjacentElement("afterbegin", newElement);
+
+// beforebegin
+&lt;p&gt;
+// afterbegin
+foo
+// beforeend
+&lt;/p&gt;
+// afterend
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">insertAdjacentHTML</h4>
+					<p class="_pb-component-desc">HTML 문자열을 직접 삽입할 때 사용</p>
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+parent.insertAdjacentHTML("afterbegin", "&lt;div&gt;새로운 요소&lt;/div&gt;");
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

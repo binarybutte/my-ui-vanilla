@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Tips');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Scroll event</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">스크롤 움직임 감지</h3>
+					<!-- <div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item"></li>
+						</ul>
+					</div> -->
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+let scrolling;
+let movement;
+
+element.addEventListener('scroll', e => { 
+	if ( !scrolling ) { 
+		movement = true;
+		console.log('scrolling')
+	}
+
+	clearTimeout(scrolling);
+
+	scrolling = setTimeout(() => {
+		movement = false;
+		scrolling = undefined;
+		console.log('stop scrolling')
+	}, 200)
+});
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

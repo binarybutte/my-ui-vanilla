@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Toggle</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-basic btn-basic-md btn-primary"
+								data-js-behavior="toggle" data-toggle-target="toggle01"
+								aria-expanded="false" aria-controls="toggle01"
+								onclick="myDisplayUI.toggle(event, this);">
+							<span>Toggle</span>
+							<i class="icon-sm icon-caret-down bg-white ui-arrow" aria-label="열기"></i>
+						</button>
+						<div id="toggle01" class="_pb-temp-box1 collapsed">
+							<p>Toggle item 1</p>
+						</div>
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="collapse-container">
+							<a href="#toggle02" class="btn-basic btn-basic-md btn-primary-line"
+								data-js-behavior="toggle" data-toggle-target="toggle02"
+								role="button" aria-expanded="false" aria-controls="toggle02"
+								onclick="myDisplayUI.toggle(event, this);">
+								<span>Toggle</span>
+								<i class="icon-sm icon-caret-down bg-primary ui-arrow" aria-label="열기"></i>
+							</a>
+							<div id="toggle02" class="_pb-temp-box2 collapsed">
+								<p>Toggle item 2</p>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">&lt;TR&gt;</h3>
+					<p class="_pb-section-desc">활성화시 다른 항목들을 접힌 상태로 유지 : data-tr-items="collapse"</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped" data-js-behavior="trToggle" data-tr-items="collapse">
+							<table class="table-layout--fixed">
+								<caption>Caption</caption>
+								<colgroup>
+									<col style="width:40px" /><col style="width:100px"><col /><col style="width:120px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col"></th>
+									<th scope="col">Title 4</th>
+									<th scope="col" class="text-left">Title5</th>
+									<th scope="col">Title 6</th>
+								</tr>
+								</thead>
+								<tbody>
+									<!-- 1 -->
+									<tr class="tr-toggle-handler"
+										data-tr-target="trContent03"
+										role="button" aria-expanded="false" aria-controls="trContent03">
+										<td class="cell-handler">
+											<i class="icon-sm icon-chevron-down bg-black ui-arrow" aria-label="열기"></i>
+										</td>
+										<td class="text-left">Item 4</td>
+										<td class="text-left">Lorem ipsum dolor sit amet.</td>
+										<td>Item 4</td>
+									</tr>
+									<tr id="trContent03" class="tr-content tr-collapsed">
+										<td></td>
+										<td class="text-left">Item 4-1</td>
+										<td class="text-left">Lorem, ipsum dolor.</td>
+										<td>Item 4-2</td>
+									</tr>
+									<!-- 2 -->
+									<tr class="tr-toggle-handler"
+										data-tr-target="trContent04"
+										role="button" aria-expanded="false" aria-controls="trContent04">
+										<td class="cell-handler">
+											<i class="icon-sm icon-chevron-down bg-black ui-arrow" aria-label="열기"></i>
+										</td>
+										<td class="text-left">Item 5</td>
+										<td class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
+										<td>Item 5</td>
+									</tr>
+									<tr id="trContent04" class="tr-content tr-collapsed">
+										<td></td>
+										<td class="text-left">Item 5-1</td>
+										<td class="text-left">Lorem, ipsum dolor.</td>
+										<td>Item 5-2</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped" data-js-behavior="trToggle">
+							<table class="table-layout--fixed">
+								<caption>Caption</caption>
+								<colgroup>
+									<col style="width:40px" /><col style="width:100px"><col /><col style="width:120px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col"></th>
+									<th scope="col">Title 1</th>
+									<th scope="col" class="text-left">Title 2</th>
+									<th scope="col">Title 3</th>
+								</tr>
+								</thead>
+								<tbody>
+									<!-- 1 -->
+									<tr class="tr-toggle-handler"
+										data-tr-target="trContent01"
+										role="button" aria-expanded="false" aria-controls="trContent01">
+										<td class="cell-handler">
+											<i class="icon-sm icon-chevron-down bg-black ui-arrow" aria-label="열기"></i>
+										</td>
+										<td class="text-left">Item 1</td>
+										<td class="text-left">Lorem ipsum dolor sit amet.</td>
+										<td>Item 1</td>
+									</tr>
+									<tr id="trContent01" class="tr-content tr-collapsed">
+										<td></td>
+										<td class="text-left">Item 1-1</td>
+										<td class="text-left">Lorem, ipsum dolor.</td>
+										<td>Item 1-2</td>
+									</tr>
+									<!-- 2 -->
+									<tr class="tr-toggle-handler"
+										data-tr-target="trContent02"
+										role="button" aria-expanded="false" aria-controls="trContent02">
+										<td class="cell-handler">
+											<i class="icon-sm icon-chevron-down bg-black ui-arrow" aria-label="열기"></i>
+										</td>
+										<td class="text-left">Item 2</td>
+										<td class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
+										<td>Item 2</td>
+									</tr>
+									<tr id="trContent02" class="tr-content tr-collapsed">
+										<td></td>
+										<td class="text-left">Item 2-1</td>
+										<td class="text-left">Lorem, ipsum dolor.</td>
+										<td>Item 2-2</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">&lt;details&gt;</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details</li>
+						</ul>
+					</div>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<details>
+							<summary class="btn-basic btn-basic-md btn-primary">Details</summary>
+							Something small enough to escape casual notice.
+						</details>
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+<script>
+	document.querySelectorAll('[data-js-behavior="trToggle"]').forEach( item => { 
+		item.addEventListener('click', function (e) {
+			myDisplayUI.trToggle(e, item); 
+		})
+	});
+</script>
+</body>
+</html>

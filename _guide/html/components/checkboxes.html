@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Checkboxes &amp; Radios</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<!-- <h4 class="_pb-section-desc">background-image 사용</h4> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-row gap-15">
+							<div class="form-check">
+								<input type="checkbox" id="check-101" class="form-check-ctrl" name="check-item-100">
+								<label for="check-101" class="form-check-label">.form-check</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="check-102" class="form-check-ctrl" name="check-item-100" checked="">
+								<label for="check-102" class="form-check-label">:checked</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="check-103" class="form-check-ctrl form-check-readonly" name="check-item-100" checked="" onclick="return false;">
+								<label for="check-103" class="form-check-label">:checked, readonly</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="check-104" class="form-check-ctrl" name="check-item-100" disabled="disabled">
+								<label for="check-104" class="form-check-label">:disabled</label>
+							</div>
+						</div><!--// form-group -->
+						
+						<div class="flexbox flexbox-row gap-15">
+							<div class="form-check form-check-sm">
+								<input type="checkbox" id="check-sm-101" class="form-check-ctrl" name="check-item-101">
+								<label for="check-sm-101" class="form-check-label">.form-check form-check-sm</label>
+							</div>
+							<div class="form-check form-check-sm">
+								<input type="checkbox" id="check-sm-102" class="form-check-ctrl" name="check-item-101" checked="">
+								<label for="check-sm-102" class="form-check-label">:checked</label>
+							</div>
+							<div class="form-check form-check-sm">
+								<input type="checkbox" id="check-sm-103" class="form-check-ctrl form-check-readonly" name="check-item-101" checked="" onclick="return false;">
+								<label for="check-sm-103" class="form-check-label">:checked, readonly</label>
+							</div>
+							<div class="form-check form-check-sm">
+								<input type="checkbox" id="check-sm-104" class="form-check-ctrl" name="check-item-101" disabled="disabled">
+								<label for="check-sm-104" class="form-check-label">:disabled</label>
+							</div>
+						</div>
+
+						<div class="flexbox flexbox-row gap-15">
+							<div class="form-check">
+								<input type="radio" id="radio-101" class="form-check-ctrl" name="radio-item-100">
+								<label for="radio-101" class="form-check-label">.form-check</label>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="radio-102" class="form-check-ctrl" name="radio-item-100" checked="">
+								<label for="radio-102" class="form-check-label">:checked</label>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="radio-103" class="form-check-ctrl form-check-readonly" name="radio-item-100-1" checked="" onclick="return(false)">
+								<label for="radio-103" class="form-check-label">:checked, readonly</label>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="radio-104" class="form-check-ctrl" name="radio-item-100" disabled="disabled">
+								<label for="radio-104" class="form-check-label">:disabled</label>
+							</div>
+						</div>
+						
+						<div class="flexbox flexbox-row gap-15">
+							<div class="form-check form-check-sm">
+								<input type="radio" id="radio-sm-101" class="form-check-ctrl" name="radio-item-102">
+								<label for="radio-sm-101" class="form-check-label">.form-check form-check-sm</label>
+							</div>
+							<div class="form-check form-check-sm">
+								<input type="radio" id="radio-sm-102" class="form-check-ctrl" name="radio-item-102" checked="">
+								<label for="radio-sm-102" class="form-check-label">:checked</label>
+							</div>
+							<div class="form-check form-check-sm">
+								<input type="radio" id="radio-sm-103" class="form-check-ctrl form-check-readonly" name="radio-item-102-1" checked="" onclick="return(false)">
+								<label for="radio-sm-103" class="form-check-label">:checked, readonly</label>
+							</div>
+							<div class="form-check form-check-sm">
+								<input type="radio" id="radio-sm-104" class="form-check-ctrl" name="radio-item-102" disabled="disabled">
+								<label for="radio-sm-104" class="form-check-label">:disabled</label>
+							</div>
+						</div>
+						
+						<div class="flexbox flexbox-row gap-15">
+							<div class="form-check">
+								<label for="check-101-ex" class="form-check-label">.form-check (Reverse)</label>
+								<input type="checkbox" id="check-101-ex" class="form-check-ctrl" name="check-item-105">
+							</div>
+							<br />
+							<div class="form-check">
+								<label for="radio-104-ex" class="form-check-label">.form-check (Reverse)</label>
+								<input type="radio" id="radio-104-ex" class="form-check-ctrl" name="radio-item-105">
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-section-desc">라벨 없음: &lt;div class='form-check' /&gt;와 label을 제거하고 aria-label로 대체 텍스트를 제공.</h4>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-row gap-15">
+							<input type="checkbox" id="check-105" class="form-check-ctrl" name="check-item-100-2" aria-label="선택하기">
+							<input type="radio" id="radio-106" class="form-check-ctrl" name="radio-item-100-2" aria-label="선택하기">
+							<input type="checkbox" id="check-107" class="form-check form-check-sm form-check-ctrl" name="check-item-100-2" aria-label="선택하기">
+							<input type="radio" id="radio-108" class="form-check form-check-sm form-check-ctrl" name="radio-item-100-2" aria-label="선택하기">
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					
+					<h4 class="_pb-component-tit">width: 100%</h4>
+					<div class="_pb-component ">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-col gap-10">
+							<div class="form-check form-block">
+								<input type="checkbox" id="check-201" class="form-check-ctrl" name="check-item-200">
+								<label for="check-201" class="form-check-label">.form-check</label>
+							</div>
+							<div class="form-check form-block">
+								<input type="checkbox" id="check-202" class="form-check-ctrl" name="check-item-200" checked="">
+								<label for="check-202" class="form-check-label">:checked</label>
+							</div>
+							<div class="form-check form-block">
+								<input type="checkbox" id="check-203" class="form-check-ctrl form-check-readonly" name="check-item-200" checked="" onclick="return(false)">
+								<label for="check-203" class="form-check-label">:checked, readonly</label>
+							</div>
+							<div class="form-check form-block">
+								<input type="checkbox" id="check-204" class="form-check-ctrl" name="check-item-200" disabled="disabled">
+								<label for="check-204" class="form-check-label">:disabled</label>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-col gap-10">
+							<div class="form-check form-block">
+								<input type="radio" id="radio-201" class="form-check-ctrl" name="radio-item-200">
+								<label for="radio-201" class="form-check-label">.form-check</label>
+							</div>
+							<div class="form-check form-block">
+								<input type="radio" id="radio-202" class="form-check-ctrl" name="radio-item-200" checked="">
+								<label for="radio-202" class="form-check-label">:checked</label>
+							</div>
+							<div class="form-check form-block">
+								<input type="radio" id="radio-203" class="form-check-ctrl form-check-readonly" name="radio-item-200-1" checked="" onclick="return(false)">
+								<label for="radio-203" class="form-check-label">:checked, readonly</label>
+							</div>
+							<div class="form-check form-block">
+								<input type="radio" id="radio-204" class="form-check-ctrl" name="radio-item-200" disabled="disabled">
+								<label for="radio-204" class="form-check-label">:disabled</label>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Switch</h3>
+					<!-- <h4 class="_pb-section-desc"></h4> -->
+					<div class="_pb-component _pb-component--flex">
+						<!-- ========== Component ========== -->
+						<div class="form-switch">
+							<input type="checkbox" id="switch-101" name="switch-101" class="form-switch-ctrl">
+							<label for="switch-101" class="form-switch-label">ON/OFF</label>
+						</div>
+						<div class="form-switch--text">
+							<input type="checkbox" id="switch-201" name="switch-201" class="form-switch-ctrl">
+							<label for="switch-201" class="form-switch-label"><span class="on">ON</span><span class="off">OFF</span></label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Button type</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="form-button form-button--border">
+							<input type="radio" id="radio-button-101" class="form-button-ctrl" name="radio-button-100" checked>
+							<label for="radio-button-101" class="form-button-label">Lorem ipsum dolor sit amet.</label>
+						</div>
+						<div class="form-button form-button--border">
+							<input type="radio" id="radio-button-102" class="form-button-ctrl" name="radio-button-100">
+							<label for="radio-button-102" class="form-button-label">Lorem, ipsum dolor.</label>
+						</div>
+						<div class="form-button form-button--border">
+							<input type="radio" id="radio-button-103" class="form-button-ctrl" name="radio-button-100">
+							<label for="radio-button-103" class="form-button-label">Lorem ipsum dolor sit amet consectetur.</label>
+						</div>
+						<br>
+						<div class="form-button form-button--box">
+							<input type="radio" id="radio-button-301" class="form-button-ctrl" name="radio-button-300" checked>
+							<label for="radio-button-301" class="form-button-label">Lorem ipsum dolor sit amet.</label>
+						</div>
+						<div class="form-button form-button--box">
+							<input type="radio" id="radio-button-302" class="form-button-ctrl" name="radio-button-300">
+							<label for="radio-button-302" class="form-button-label">Lorem, ipsum dolor.</label>
+						</div>
+						<div class="form-button form-button--box">
+							<input type="radio" id="radio-button-303" class="form-button-ctrl" name="radio-button-300">
+							<label for="radio-button-303" class="form-button-label">Lorem ipsum dolor sit amet consectetur.</label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">Tab &amp; form-button-group</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-row gap-15">
+							<div class="form-check">
+								<input type="radio" id="radio-501" class="form-check-ctrl" name="radio-item-500" checked>
+								<label for="radio-501" class="form-check-label">.form-check</label>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="radio-502" class="form-check-ctrl" name="radio-item-500">
+								<label for="radio-502" class="form-check-label">.form-check</label>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="radio-503" class="form-check-ctrl form-check-readonly" name="radio-item-500" disabled onclick="return(false)">
+								<label for="radio-503" class="form-check-label">.form-check</label>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="radio-504" class="form-check-ctrl" name="radio-item-500">
+								<label for="radio-504" class="form-check-label">.form-check</label>
+							</div>
+						</div>
+						<div class="form-tab-contents" data-form-tab="radio-item-500">
+							<div class="form-tab-panel formTab-ui-active"><div class="_pb-temp-box1">Content 1 (myFormUI.formTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 2 (myFormUI.formTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 3 (myFormUI.formTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 4 (myFormUI.formTab)</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div>
+					<script>
+						const radios = document.querySelectorAll('[name="radio-item-500"]');
+						radios.forEach(btn => {
+							btn.addEventListener('change', (index) => 
+								myFormUI.formTab(btn, index)
+							);
+						})
+					</script>
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="form-button-group col-8">
+							<div class="form-button form-button--border">
+								<input type="radio" id="radio-button-501" class="form-button-ctrl" name="radio-button-500" checked>
+								<label for="radio-button-501" class="form-button-label">Lorem ipsum dolor sit amet.</label>
+							</div>
+							<div class="form-button form-button--border">
+								<input type="radio" id="radio-button-502" class="form-button-ctrl" name="radio-button-500">
+								<label for="radio-button-502" class="form-button-label">Lorem, ipsum dolor.</label>
+							</div>
+							<div class="form-button form-button--border">
+								<input type="radio" id="radio-button-503" class="form-button-ctrl" name="radio-button-500">
+								<label for="radio-button-503" class="form-button-label">Lorem ipsum dolor sit amet consectetur.</label>
+							</div>
+							<div class="form-button form-button--border">
+								<input type="radio" id="radio-button-504" class="form-button-ctrl" name="radio-button-500">
+								<label for="radio-button-504" class="form-button-label">Lorem ipsum dolor sit amet.</label>
+							</div>
+						</div>
+						<div class="form-tab-contents" data-form-tab="radio-button-500">
+							<div class="form-tab-panel formTab-ui-active"><div class="_pb-temp-box1">Content 1 (myFormUI.radioTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 2 (myFormUI.radioTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 3 (myFormUI.radioTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 4 (myFormUI.radioTab)</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						document.querySelectorAll('[name="radio-button-500"]').forEach((btn, index) => {
+							btn.addEventListener('change', () => myFormUI.radioTab(btn, index));
+						})
+					</script>
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="form-button-group col-8" data-js-behavior="multipleTab">
+							<div class="form-button form-button--box">
+								<input type="radio" id="radio-button-401" class="form-button-ctrl" name="radio-button-400" checked>
+								<label for="radio-button-401" class="form-button-label">Lorem ipsum dolor sit amet.</label>
+							</div>
+							<div class="form-button form-button--box">
+								<input type="radio" id="radio-button-402" class="form-button-ctrl" name="radio-button-400">
+								<label for="radio-button-402" class="form-button-label">Lorem, ipsum dolor. (disabled)</label>
+							</div>
+							<div class="form-button form-button--box">
+								<input type="radio" id="radio-button-403" class="form-button-ctrl" name="radio-button-400" disabled>
+								<label for="radio-button-403" class="form-button-label">Lorem ipsum dolor sit amet consectetur.</label>
+							</div>
+							<div class="form-button form-button--box">
+								<input type="radio" id="radio-button-404" class="form-button-ctrl" name="radio-button-400">
+								<label for="radio-button-404" class="form-button-label">Lorem ipsum dolor sit amet.</label>
+							</div>
+						</div>
+						<div class="form-tab-contents" data-form-tab="radio-button-400">
+							<div class="form-tab-panel formTab-ui-active"><div class="_pb-temp-box1">Content 1 (myFormUI.multipleTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 2 (myFormUI.multipleTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 3 (myFormUI.multipleTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 4 (myFormUI.multipleTab)</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						document.querySelectorAll('[name="radio-button-400"]').forEach((btn, index) => {
+							btn.addEventListener('change', () => myFormUI.multipleTab(btn, index));
+						})
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">TEXT type</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-row gap-24">
+							<div class="form-check form-check--text">
+								<input type="radio" id="radio-txt-101" class="form-check-ctrl" name="radio-item-300" checked="">
+								<label for="radio-txt-101" class="form-check-label">:checked</label>
+							</div>
+							<div class="form-check form-check--text">
+								<input type="radio" id="radio-txt-102" class="form-check-ctrl" name="radio-item-300">
+								<label for="radio-txt-102" class="form-check-label">.form-check</label>
+							</div>
+							<div class="form-check form-check--text">
+								<input type="radio" id="radio-txt-103" class="form-check-ctrl form-check-readonly" name="radio-item-300-1" checked="" onclick="return(false)">
+								<label for="radio-txt-103" class="form-check-label">:checked, readonly</label>
+							</div>
+							<div class="form-check form-check--text">
+								<input type="radio" id="radio-txt-104" class="form-check-ctrl" name="radio-item-300" disabled="disabled">
+								<label for="radio-txt-104" class="form-check-label">:disabled</label>
+							</div>
+						</div>
+
+						<div class="flexbox flexbox-row gap-24">
+							<div class="form-check form-check--text reverse">
+								<input type="radio" id="radio-txt-201" class="form-check-ctrl" name="radio-item-400">
+								<label for="radio-txt-201" class="form-check-label">.form-check(reverse)</label>
+							</div>
+							<div class="form-check form-check--text reverse">
+								<input type="radio" id="radio-txt-202" class="form-check-ctrl" name="radio-item-400" checked="">
+								<label for="radio-txt-202" class="form-check-label">:checked(reverse)</label>
+							</div>
+							<div class="form-check form-check--text reverse">
+								<input type="radio" id="radio-txt-203" class="form-check-ctrl form-check-readonly" name="radio-item-400-1" checked="" onclick="return(false)">
+								<label for="radio-txt-203" class="form-check-label">:checked, readonly(reverse)</label>
+							</div>
+							<div class="form-check form-check--text reverse">
+								<input type="radio" id="radio-txt-204" class="form-check-ctrl" name="radio-item-400" disabled="disabled">
+								<label for="radio-txt-204" class="form-check-label">:disabled(reverse)</label>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">전체 선택/해제</h3>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://css-tricks.com/indeterminate-checkboxes/</li>
+						</ul>
+					</div>
+					<p class="_pb-section-desc">(:indeterminate 포함)<br>선택하는 input의 name과 data-check-target, data-check-counter의 값을 동일하게 설정한다.</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="form-check">
+							<input type="checkbox" id="check-500" class="form-check-ctrl" name="check-group-01-all" data-check-target="check-group-01">
+							<label for="check-500" class="form-check-label">Check All</label>
+							<div class="text-md text-secondary" style="align-self: center;">
+								( Checked: <span data-check-counter="check-group-01" data-check-placehoder="모두 선택 가능">모두 선택 가능</span> )
+							</div>
+						</div>
+						<br />
+						<div class="form-check">
+							<input type="checkbox" id="check-501" class="form-check-ctrl" name="check-group-01">
+							<label for="check-501" class="form-check-label">체크 항목 1</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-502" class="form-check-ctrl" name="check-group-01">
+							<label for="check-502" class="form-check-label">체크 항목 2</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-503" class="form-check-ctrl" name="check-group-01">
+							<label for="check-503" class="form-check-label">체크 항목 3</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-504" class="form-check-ctrl" name="check-group-01">
+							<label for="check-504" class="form-check-label">체크 항목 4</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-505" class="form-check-ctrl" name="check-group-01" disabled>
+							<label for="check-505" class="form-check-label">체크 항목 5</label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="form-check">
+							<input type="checkbox" id="check-600" class="form-check-ctrl" name="check-group-02-all" data-check-target="check-group-02">
+							<label for="check-600" class="form-check-label">Check All</label>
+						</div>
+						<br />
+						<div class="form-check">
+							<input type="checkbox" id="check-601" class="form-check-ctrl" name="check-group-02">
+							<label for="check-601" class="form-check-label">체크 항목 1</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-602" class="form-check-ctrl" name="check-group-02">
+							<label for="check-602" class="form-check-label">체크 항목 2</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-603" class="form-check-ctrl" name="check-group-02">
+							<label for="check-603" class="form-check-label">체크 항목 3</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-604" class="form-check-ctrl form-check-readonly" name="check-group-02" checked onclick="return false;">
+							<label for="check-604" class="form-check-label">체크 항목 4</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-605" class="form-check-ctrl" name="check-group-02" disabled>
+							<label for="check-605" class="form-check-label">체크 항목 5</label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="text-md text-secondary" style="align-self: center;">
+							( Checked: <span data-check-counter="check-group-03" data-check-placehoder="Check an options">개별 체크</span> )
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-701" class="form-check-ctrl" name="check-group-03">
+							<label for="check-701" class="form-check-label">체크 항목 1</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-702" class="form-check-ctrl" name="check-group-03">
+							<label for="check-702" class="form-check-label">체크 항목 2</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-703" class="form-check-ctrl" name="check-group-03">
+							<label for="check-703" class="form-check-label">체크 항목 3</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-704" class="form-check-ctrl" name="check-group-03">
+							<label for="check-704" class="form-check-label">체크 항목 4</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-705" class="form-check-ctrl" name="check-group-03" disabled>
+							<label for="check-705" class="form-check-label">체크 항목 5</label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="text-md text-secondary" style="align-self: center;">
+							( <span data-check-counter="check-group-04" data-check-placehoder="Check an options">최대 3개 선택</span> )
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-801" class="form-check-ctrl" name="check-group-04">
+							<label for="check-801" class="form-check-label">체크 항목 1</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-802" class="form-check-ctrl" name="check-group-04">
+							<label for="check-802" class="form-check-label">체크 항목 2</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-803" class="form-check-ctrl" name="check-group-04">
+							<label for="check-803" class="form-check-label">체크 항목 3</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-804" class="form-check-ctrl" name="check-group-04">
+							<label for="check-804" class="form-check-label">체크 항목 4</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-805" class="form-check-ctrl" name="check-group-04">
+							<label for="check-805" class="form-check-label">체크 항목 5</label>
+						</div>
+						<p class="text-md text-primary" data-check-message="check-group-04"></p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="text-md text-secondary" style="align-self: center;">
+							( <span data-check-counter="check-group-05" data-check-placehoder="Check an options">최대 2개 선택</span> )
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-901" class="form-check-ctrl form-check-readonly" name="check-group-05" checked>
+							<label for="check-901" class="form-check-label">체크 항목 1</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-902" class="form-check-ctrl" name="check-group-05">
+							<label for="check-902" class="form-check-label">체크 항목 2</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-903" class="form-check-ctrl" name="check-group-05">
+							<label for="check-903" class="form-check-label">체크 항목 3</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-904" class="form-check-ctrl" name="check-group-05">
+							<label for="check-904" class="form-check-label">체크 항목 4</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-905" class="form-check-ctrl" name="check-group-05">
+							<label for="check-905" class="form-check-label">체크 항목 5</label>
+						</div>
+						<p class="text-md text-primary" data-check-message="check-group-05"></p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						myFormUI.checkAll('check-group-01');
+						myFormUI.checkAll('check-group-02');
+
+						const check03s = document.querySelectorAll(`input[name='check-group-03']:not(.form-check-readonly)`);
+						const check03s_counter = document.querySelector('[data-check-counter="check-group-03"]');
+
+						check03s.forEach(item => {
+							item.addEventListener('change', function () {
+								myFormUI.checkCounter(check03s, check03s_counter);
+							});
+						});
+
+						const check04s = document.querySelectorAll(`input[name='check-group-04']:not(.form-check-readonly)`);
+						const check04s_counter = document.querySelector('[data-check-counter="check-group-04"]');
+
+						check04s.forEach(item => {
+							item.addEventListener('change', function () {
+								myFormUI.checkCounter(check04s, check04s_counter, 3);
+							});
+						});
+
+						const check05s = document.querySelectorAll(`input[name='check-group-05']`);
+						const check05s_counter = document.querySelector('[data-check-counter="check-group-05"]');
+
+						check05s.forEach(item => {
+							item.addEventListener('change', function () {
+								myFormUI.checkCounter(check05s, check05s_counter, 2);
+							});
+						});
+					</script>
+
+					<h4 class="_pb-component-tit">Indeterminate Checkboxes</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						//
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">선택시 결과 출력/삭제</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="text-md text-secondary" style="align-self: center;">
+							( <span data-check-counter="check-group-06" data-check-placehoder="Check an options">최대 3개 선택</span> )
+							<p class="text-md text-primary" data-check-message="check-group-06" style="display: inline;"></p>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-1001" class="form-check-ctrl" name="check-group-06">
+							<label for="check-1001" class="form-check-label">체크 항목 1</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-1002" class="form-check-ctrl" name="check-group-06">
+							<label for="check-1002" class="form-check-label">체크 항목 2</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-1003" class="form-check-ctrl" name="check-group-06">
+							<label for="check-1003" class="form-check-label">체크 항목 3</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-1004" class="form-check-ctrl" name="check-group-06">
+							<label for="check-1004" class="form-check-label">체크 항목 4</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-1005" class="form-check-ctrl" name="check-group-06">
+							<label for="check-1005" class="form-check-label">체크 항목 5</label>
+						</div>
+						<div class="flexbox-wrap gap-10 mt-20" data-check-display="check-group-06"></div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const checkedItem1000 = document.querySelectorAll(`input[name='check-group-06']:not(:disabled)`);
+						const checkedItem1000_counter = document.querySelector('[data-check-counter="check-group-06"]');
+
+						checkedItem1000.forEach(item => {
+							item.addEventListener('change', function () {
+								myFormUI.checkCounter(checkedItem1000, checkedItem1000_counter, 3);
+								myFormUI.displayChecked(item, checkedItem1000, checkedItem1000_counter)
+							});
+						});
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-component-tit">Related</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Playground</th>
+									<td>Puzzle</td>
+                                    <td>
+										<a href="../playground/puzzle.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

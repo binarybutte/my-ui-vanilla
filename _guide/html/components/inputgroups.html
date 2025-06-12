@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Input group</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<!-- <h3 class="_pb-section-tit"></h3> -->
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						 <!-- 1 -->
+						<div class="input-group">
+							<input type="text" id="example-101" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<button type="button" class="btn-basic btn-basic-md btn-primary"><span>Confirm</span></button>
+						</div> 
+						<!-- 2 -->
+						<div class="input-group">
+							<div class="combobox combobox--select combobox-md col-4" data-js-behavior="combobox">
+								<button type="button" class="combobox-handler" aria-expanded="false">
+									<span class="combobox-value text-ellipsis combobox-value-selected">Item 1</span>
+									<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+								</button>
+								<div class="combobox-menu">
+									<ul class="combobox-list">
+										<li>
+											<button type="button" class="combobox--select-option ui-active">
+												<span class="combobox-option-txt text-ellipsis">Item 1</span>
+												<i class="icon-sm icon-check"></i>
+											</button>
+										</li>
+										<li>
+											<button type="button" class="combobox--select-option">
+												<span class="combobox-option-txt text-ellipsis">Item 2</span>
+												<i class="icon-sm icon-check"></i>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div><!--// combobox -->
+							<input type="text" id="example-102" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<!-- 1 -->
+						<div class="input-group">
+							<label for="example-201" class="input-group-label">Label for..</label>
+							<input type="text" id="example-201" class="input-text input-text-md" placeholder=".input-text">
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<!-- 1 -->
+						<div class="input-group">
+							<input type="text" id="example-401" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<input type="text" id="example-402" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<input type="text" id="example-403" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+						</div>
+						<!-- 2 -->
+						<div class="input-group">
+							<input type="text" id="example-404" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<span class="input-group-span">-</span>
+							<input type="text" id="example-405" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<span class="input-group-span">-</span>
+							<input type="text" id="example-406" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+						</div>
+						<!-- 3 -->
+						<div class="input-group"> 
+							<div class="combobox combobox--select combobox-md flex-auto-1" data-js-behavior="combobox">
+								<button type="button" class="combobox-handler" aria-expanded="false">
+									<span class="combobox-value text-ellipsis combobox-value-selected">Item 1</span>
+									<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+								</button>
+								<div class="combobox-menu">
+									<ul class="combobox-list">
+										<li>
+											<button type="button" class="combobox--select-option ui-active">
+												<span class="combobox-option-txt text-ellipsis">Item 1</span>
+												<i class="icon-sm icon-check"></i>
+											</button>
+										</li>
+										<li>
+											<button type="button" class="combobox--select-option">
+												<span class="combobox-option-txt text-ellipsis">Item 2</span>
+												<i class="icon-sm icon-check"></i>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div><!--// combobox -->
+							<span class="input-group-span">-</span>
+							<input type="text" id="example-501" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<span class="input-group-span">-</span>
+							<input type="text" id="example-502" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+						</div>
+						<!-- 4 -->
+						<div class="input-group">
+							<select class="select flex-auto-1">
+								<option value="">.select</option>
+								<option value="">item 2</option>
+							</select>
+							<span class="input-group-span">-</span>
+							<input type="text" id="example-503" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<span class="input-group-span">-</span>
+							<input type="text" id="example-504" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<div class="_pb-helper">
+							<div class="form-switch">
+								<input type="checkbox" id="switch-101" name="switch-101" class="form-switch-ctrl">
+								<label for="switch-101" class="form-switch-label">반응형 확인 (addClass .rwd-)</label>
+							</div>
+						</div>
+						<!-- ========== Component ========== -->
+						<!-- 2 -->
+						<div class="input-group">
+							<input type="text" id="example-202" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<div class="input-group-span col-4">
+								<div class="form-check">
+									<input type="checkbox" id="check-201" class="form-check-ctrl" name="check-item-100">
+									<label for="check-201" class="form-check-label">.form-check for Input text</label>
+								</div>
+							</div>
+						</div>
+						<!-- 3 -->
+						<div class="input-group">
+							<input type="text" id="example-203" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<div class="input-group-span col-4">
+								<div class="form-check">
+									<input type="radio" id="radio-204" class="form-check-ctrl" name="radio-item-100">
+									<label for="radio-204" class="form-check-label">Select 1</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="radio-205" class="form-check-ctrl" name="radio-item-100">
+									<label for="radio-205" class="form-check-label">Select 2</label>
+								</div>
+							</div>
+						</div>
+						<!-- 4 -->
+						<div class="input-group">
+							<input type="text" id="example-301" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<div class="input-group-span">
+								<div class="form-check">
+									<input type="checkbox" id="check-301" class="form-check-ctrl" name="check-item-100">
+									<label for="check-301" class="form-check-label">.form-check</label>
+								</div>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">검색</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="input-group input-group--underline">
+							<input type="search" id="example-602" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+							<span class="input-group-span">
+								<button type="button" class="btn-icon btn-icon-rect btn-icon-40"><i class="icon icon-magnifier bg-gray-700" aria-label="Plus"></i></button>
+							</span>
+						</div><!--// input-group -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+<script>
+	document.addEventListener('click', function (e) {
+		myFormUI.combobox(e);
+	});
+</script>
+
+</body>
+</html>

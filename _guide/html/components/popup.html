@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Popup</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<!-- <h3 class="_pb-section-tit">//</h3> -->
+					<div class="_pb-board">
+						<table>
+							<caption>목록</caption>
+							<colgroup>
+								<col style="width:25%"><col style="width:45%"><col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">Type</th>
+									<th scope="col">Class name</th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Box</th>
+									<th scope="row">.popup--box-lg</th>
+									<td>
+										<button type="button" class="btn-text btn-text-sm text-primary"
+												data-js-behavior="popup" data-popup-target="popup01-01" aria-haspopup="true" 
+												onclick="myPopupUI.popup(this, 'popup_box_lg.html')">
+												<strong>기본 팝업</strong>
+												<i class="icon icon-chevron-right"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<th scope="row">-</th>
+									<td>
+										<button type="button" class="btn-text btn-text-sm text-primary" 
+												data-js-behavior="popup" data-popup-target="popup04-01" aria-haspopup="true" 
+												onclick="myPopupUI.popup(this, 'popup_box_overlap.html')">
+												<strong>test: overlap</strong>
+												<i class="icon icon-chevron-right"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<th scope="row">-</th>
+									<td>
+										<!-- <button type="button" class="btn-text btn-text-sm text-primary"
+												data-js-behavior="popup" data-popup-target="popup03-01" aria-haspopup="true" 
+												onclick="myPopupUI.popup(this, 'popup_box_form.html')">
+												<strong>test: form</strong>
+												<i class="icon icon-chevron-right"></i>
+										</button> -->
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<th scope="row">.popup--box-md</th>
+									<td>
+										<button type="button" class="btn-text btn-text-sm text-primary"
+												data-js-behavior="popup" data-popup-target="popup01-02" aria-haspopup="true" 
+												onclick="myPopupUI.popup(this, 'popup_box_md.html')">
+												<strong>기본 팝업</strong>
+												<i class="icon icon-chevron-right"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<th scope="row">.popup--box-sm</th>
+									<td>
+										<button type="button" class="btn-text btn-text-sm text-primary"
+												data-js-behavior="popup" data-popup-target="popup01-03" aria-haspopup="true" 
+												onclick="myPopupUI.popup(this, 'popup_box_sm.html')">
+												<strong>기본 팝업</strong>
+												<i class="icon icon-chevron-right"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Bottom</th>
+									<th scope="row">.popup--bottom</th>
+									<td>
+										
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<th scope="row">-</th>
+									<td>
+										
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<th scope="row">-</th>
+									<td>
+										
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Full</th>
+									<th scope="row">.popup--full</th>
+									<td>
+										
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<th scope="row">-</th>
+									<td>
+										
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<th scope="row">-</th>
+									<td>
+										
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+				
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

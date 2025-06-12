@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Tips');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Tips &amp; Tech</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">JS 파일 실행/로딩</h3>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://kotlinworld.com/419</li>
+						</ul>
+					</div>
+
+					<h4 class="_pb-component-tit">defer &amp; async</h4>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+&lt;script defer src="script.js"&gt;&lt;/script&gt;  or  &lt;script src="script.js" defer&gt;&lt;/script&gt;
+&lt;script async src="script.js"&gt;&lt;/script&gt;  or  &lt;script src="script.js" async&gt;&lt;/script&gt;
+</pre>
+						<p class="_pb-pre-guide">
+							<ul class="bullet-list bullet-list--dashed">
+								<li>defer 속성을 사용하면 HTML Parser가 문서를 파싱하는 동안 JavaScript 코드가 백그라운드에서 로드된다. 이 경우 문서의 로딩 시간이 더 빨라진다. <br>또한 이 속성을 사용하면 문서가 파싱(로딩)되는 동안은 JavaScript 코드가 실행되지 않고 파싱이 완료된 후 실행된다.</li>
+								<li>async는 defer과 다르게 js script 다운로드가 완료되면 즉시 실행된다. async를 사용하면 스크립트가 실행되는 순서가 보장되지 않으므로<br>DOM 부분을 조작하는 스크립트에서는 사용을 지양해야 한다.</li>
+							</ul>
+						</p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">DOM Element &amp; querySelector</h3>
+					<p class="_pb-section-desc">item이 셀렉터 문자열이어도 자동으로 변환해줌 / item이 진짜 엘리먼트가 아닐 경우 에러 대응</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+function elemSetting(item) {
+	// 1. item이 문자열이면 querySelector로 찾는다
+	if (typeof item === 'string') {
+		item = document.querySelector(item);
+	}
+
+	// 2. item이 없거나 querySelector가 없으면 경고 후 종료
+	if (!item || typeof item.querySelector !== 'function') {
+		console.warn('Invalid item passed to elemSetting:', item);
+		return;
+	}
+
+	// 3. .elemChild를 찾는다
+	const elemChild = item.querySelector('.elemChild');
+
+	if (elemChild) {
+		console.log('aa');
+	} else {
+		console.warn('No .elemChild found inside item:', item);
+	}
+}
+</pre>
+						<p class="_pb-pre-guide">//</p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">DOM 요소의 속성 변화 감지</h3>
+					<h4 class="_pb-component-tit">void</h4>
+					<p class="_pb-component-desc">
+						js에서 void는 값을 평가하지만, 그 결과를 무시하고 undefined를 반환한다. 일종의 트릭같은 역할을 함. 강제성이 있어 성능에 영향을 미칠 수 있으므로,<br>
+						루프 안에서는 절대로 리플로우를 유발하지 말아야 한다! *한 번만 쓰고 끝나는 초기 애니메이션에 적절함.<br>
+						(리플로우: DOM 요소의 스타일/레이아웃이 변경될 때, 브라우저가 화면 전체 혹은 일부의 레이아웃을 다시 계산하는 과정) <br>
+					</p>
+					<div class="_pb-component _pb-component--border">
+<pre>
+void statusBar.offsetWidth; // 리플로우 강제 발생
+statusBar.style.width = `${Math.floor(percent)}%`; // 브라우저가 변화로 인식함
+</pre>
+						<p class="_pb-pre-guide">ex&#41; 페이지 진입시 트랜지션 애니메이션이 적용되지 않는 프로그레스바에서 사용함</p>
+					</div>
+
+					<h4 class="_pb-component-tit">Related</h4>
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+								<col span="3">
+                            </colgroup>
+                            <tbody>
+								<tr>
+									<th scope="row">myFormUI._progressbar()</th>
+									<td>컴포넌트 가이드에 적용된 함수</td>
+                                    <td>
+										<a href="../components/progress.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+                                    <th scope="row" rowspan="2">최적화하려면?</th>
+									<td>requestAnimationFrame</td>
+                                    <td>
+										<a href="../tips/requestAnimationFrame.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+								<tr>
+									<td>requestAnimationFrame 적용한 프로그레스바</td>
+                                    <td>
+										<a href="../components/progress.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+				
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">새창열기시 연관된 JS 실행</h3>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://developer.mozilla.org/ko/docs/Web/API/Window/sessionStorage</li>
+							<li class="_pb-info-item">https://ko.javascript.info/localstorage</li>
+							<li class="_pb-info-item">https://bmangrok.tistory.com/entry/Javascript-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%9D%B4%EB%8F%99-%ED%9B%84%EC%97%90%EB%8F%84-%EA%B0%92-%EC%9C%A0%EC%A7%80%ED%95%98%EA%B8%B0</li>
+							<li class="_pb-info-item">https://adjh54.tistory.com/56</li>
+						</ul>
+					</div>
+					<h4 class="_pb-component-tit">sessionStorage, localStorage</h4>
+					<p class="_pb-component-desc">
+						브라우저에 키, 값을 저장. (이 저장한 값을 이용해서 새 창 열기할 때 이전 페이지와 연관된 자바스크립트를 실행할 수 있다.) <br>
+						- sessionStorage: 오리진이 같은 브라우저 탭, iframe에서 공유. 페이지를 새로 고침 해도 남음. 탭이나 브라우저를 종료하면 사라짐. <br>
+						- localStorage: 오리진이 같은 탭, 창 전체에서 공유, 브라우저를 껐다 켜도 남아있다.
+					</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+// ex.1 : page01의 버튼 클릭시, page02가 새 창에서 열리면서 이벤트를 바로 실행할 수 있게 함
+// page01의 스크립트
+$('.btn').on('click', function () {
+	const btntxt = $(this).text();
+	if ( btntxt == 'example 1' ) {
+		var name = 'remember_example'
+		localStorage.setItem('name', name)
+	}
+})
+
+// page02의 스크립트
+var loadName = localStorage.getItem('name')
+.... script 작성....
+if ( loadName == 'example 1' ) {
+ ... 실행할 스크립트 ...
+ localStorage.clear();
+}
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">ETCs.</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="2">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Youtube IFrame Player API</th>
+                                    <td>
+										<a href="https://developers.google.com/youtube/iframe_api_reference" class="btn-text btn-text-sm text-primary" target="_blank" aria-haspopup="true">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

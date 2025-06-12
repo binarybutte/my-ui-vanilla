@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Input group (JS behavior)</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">파일첨부</h3>
+					<p class="_pb-section-desc">input에 accept=".png"를 추가하면 PNG 파일만 선택 가능. 그러나 사용자가 파일탐색기에서 바꿀 수 있으므로, 결국 js 로직이 필요함.</p>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://webdir.tistory.com/435</li>
+						</ul>
+					</div>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="input-group file-uploader">
+							<div class="input-text file-input-message">
+								<div class="file-upload-status" aria-live="polite"></div>
+								<div class="file-upload-view">
+									<p class="file-message text-ellipsis" data-file-placeholder="선택된 파일 없음(jpg,png,gif)">선택된 파일 없음(jpg,png,gif)</p>
+								</div>
+							</div>
+							<label for="example-file-01" class="btn-icon btn-icon-rounded btn-icon-40 btn-primary">
+								<i class="icon icon-clip bg-white" aria-label="file"></i>
+							</label>
+							<input type="file" id="example-file-01" class="ui-input-hidden" value=""
+									data-js-behavior="fileuploader" data-file-include="jpg,png,gif" aria-label="file input"
+									onchange="myFormUI.fileUploader(this)">
+							<div class="input-group-span col-6">
+								<div class="file-control file-control--text" data-file-control="text"></div>
+							</div>
+						</div><!--// input-group -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="file-uploader">
+							<div class="input-group col-6">
+								<label for="example-file-04" class="btn-icon btn-icon-rounded btn-icon-40 btn-primary">
+									<i class="icon icon-clip bg-white" aria-label="file"></i>
+								</label>
+								<div class="input-text file-input-message">
+									<div class="file-upload-status" aria-live="polite"></div>
+									<div class="file-upload-view">
+										<p class="file-message text-ellipsis" data-file-placeholder="선택된 파일 없음(multiple:jpg,png,gif)/최대2개">
+											선택된 파일 없음(multiple:jpg,png,gif)/최대2개
+										</p>
+									</div>
+								</div>
+								<input type="file" id="example-file-04" class="ui-input-hidden" value="" multiple
+										data-js-behavior="fileuploader" data-file-maximum="2" data-file-include="jpg,png,gif" aria-label="file input"
+										onchange="myFormUI.fileUploader(this)">
+							</div><!--// input-group -->
+							<div class="file-control file-control--text" data-file-control="text"></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="file-uploader">
+							<div class="input-group">
+								<input type="file" id="example-file-03" class="ui-input-hidden" value="" multiple
+										data-js-behavior="fileuploader" data-file-maximum="4" aria-label="file input" 
+										onchange="myFormUI.fileUploader(this)">
+								<div class="input-text file-input-message">
+									<div class="file-upload-view">
+										<p class="file-message text-ellipsis" data-file-placeholder="선택된 파일 없음(multiple)">선택된 파일 없음(multiple)/최대4개</p>
+									</div>
+									<div class="file-upload-status" aria-live="polite"></div>
+								</div>
+								<label for="example-file-03" class="btn-basic btn-basic-md btn-primary"><span>Find file</span></label>
+							</div><!--// input-group -->
+							<div class="file-preview file-preview--dashed file-drag-zone" data-js-behavior="fileDragUploader">
+								<div class="file-guide">
+									<i class="icon icon-lg icon-plus bg-gray-300" aria-label="Plus"></i>
+								</div>
+								<div class="file-control file-control--img" data-file-control="image"></div>
+							</div>
+						</div><!--// file-uploader -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Input 컨트롤</h3>
+					<p class="_pb-section-desc">
+						oninput 이벤트 적용: 키보드 입력뿐만 아니라 마우스로 붙여넣기, 드래그 앤 드롭, 자동 완성, 음성 입력 등 모든 입력 방식을 감지함.<br>
+						텍스트가 변경될 때마다 실행되므로 가장 정확하게 카운트를 반영할 수 있음. <br>
+						(keydown, keyup보다 좀 더 직관적이고 정확하다. keydown, keyup 등은 특정 키 이벤트 감지할 때 사용 권장)
+					</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="input-group col-6">
+							<input type="text" id="example-202-1" class="input-text input-text-md" placeholder="키보드 입력시 Reset 버튼 보여짐"
+									data-js-behavior="inputkey" aria-label="text input"
+									oninput="myFormUI.inputKey(this);">
+							<span class="input-group-add">
+								<button type="button" class="btn-chip chip-disc bg-gray-500 ui-input-clear"
+										data-js-behavior="inputClear" data-input-target="example-202-1"
+										onclick="myFormUI.inputClear(this);">
+										<i class="icon icon-x-bold bg-white" aria-label="Cancel"></i>
+								</button>
+							</span>
+						</div><!--// input-group -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="input-group col-6">
+							<input type="password" id="example-202-2" class="input-text input-text-md" placeholder="버튼 클릭시 패스워드 보여짐" aria-label="text input">
+							<span class="input-group-add">
+								<button type="button" class="btn-chip chip-rect btn-icon-32"
+										data-js-behavior="togglePassword" data-toggle-target="example-202-2"
+										onclick="myFormUI.togglePassword(this);">
+										<i class="icon icon-eye bg-gray-500" aria-label="Show"></i>
+								</button>
+							</span>
+						</div><!--// input-group -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="input-group col-6">
+							<input type="text" id="example-301" class="input-text input-text-md" aria-label="text input" placeholder="체크시 Readonly 해제" readonly>
+							<div class="input-group-span">
+								<div class="form-check">
+									<input type="checkbox" id="check-301" class="form-check-ctrl" name="check-item-100">
+									<label for="check-301" class="form-check-label">Readonly 해제</label>
+								</div>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const exampleCheckbox = document.querySelector('[name="check-item-100"]');
+						const exampleInput = document.getElementById('example-301');
+						const examplePlaceholder = exampleInput.placeholder;
+
+						exampleCheckbox.addEventListener('change', function() {
+							exampleInput.readOnly = !this.checked;
+							exampleInput.placeholder = this.checked ? '입력 가능' : examplePlaceholder;
+						});
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">폼 추가/삭제</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<!-- <h4 class="_pb-component-tit">Component sub title</h4> -->
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<div class="btn-group justify-start">
+							<button type="button" class="btn-basic btn-basic-sm btn-primary"
+									data-js-behavior="addForm" data-clone-target="email" data-clone-maximum="3"
+									onclick="myFormUI.addForm_inputs(this)">
+								<i class="icon icon-plus bg-white"></i>
+								<span>폼 추가</span>
+							</button>
+						</div>
+						<div class="list-group list-group--table">
+							<!-- 1 -->
+							<div class="list-group-item ui-clone-element" data-clone-element="email">
+								<div class="list-group-cell col-title">
+									<span>Form name</span>
+								</div><!--// list-group-cell -->
+								<div class="list-group-cell col-6">
+									<div class="input-group">
+										<input type="text" id="email-01-1" class="input-text input-text-md" placeholder="#email-01-01">
+										<span class="input-group-span">@</span>
+										<div class="combobox combobox--select combobox-md col-6" data-js-behavior="combobox">
+											<button type="button" class="combobox-handler" aria-expanded="false">
+												<span class="combobox-value text-ellipsis combobox-value-selected">Item 1</span>
+												<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+											</button>
+											<div class="combobox-menu">
+												<ul class="combobox-list">
+													<li>
+														<button type="button" class="combobox--select-option ui-active">
+															<span class="combobox-option-txt text-ellipsis">Item 1</span>
+															<i class="icon-sm icon-check"></i>
+														</button>
+													</li>
+													<li>
+														<button type="button" class="combobox--select-option">
+															<span class="combobox-option-txt text-ellipsis">Item 2</span>
+															<i class="icon-sm icon-check"></i>
+														</button>
+													</li>
+												</ul>
+											</div>
+										</div><!--// combobox -->
+									</div><!--// input-group -->
+								</div><!--// list-group-cell -->
+								<div class="list-group-cell col-last ui-clone-handler"></div>
+							</div><!--// list-group-item -->
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<div class="btn-group justify-start">
+							<button type="button" class="btn-basic btn-basic-sm btn-primary"
+									data-js-behavior="addForm" data-clone-target="phone" data-clone-maximum="5"
+									onclick="myFormUI.addForm_inputs(this)">
+								<i class="icon icon-plus bg-white"></i>
+								<span>폼 추가</span>
+							</button>
+						</div>
+						<div class="list-group list-group--table">
+							<!-- 1 -->
+							<div class="list-group-item ui-clone-element" data-clone-element="phone">
+								<div class="list-group-cell col-title">
+									<span>Form name</span>
+								</div><!--// list-group-cell -->
+								<div class="list-group-cell col-6">
+									<div class="input-group">
+										<input type="number" id="phone-01-01" class="input-text input-text-md" placeholder="#phone-01-01">
+										<span class="input-group-span">-</span>
+										<input type="number" id="phone-01-02" class="input-text input-text-md" placeholder="#phone-01-02">
+										<span class="input-group-span">-</span>
+										<input type="number" id="phone-01-03" class="input-text input-text-md" placeholder="#phone-01-03">
+									</div><!--// input-group -->
+								</div><!--// list-group-cell -->
+								<div class="list-group-cell col-last ui-clone-handler"></div>
+							</div><!--// list-group-item -->
+
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">파일 폼</h4>
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<!-- addForm 적용으로 복제 될 엘리먼트에 addClass ui-clone-element -->
+						<div class="input-group file-uploader ui-clone-element">
+							<div class="input-text file-input-message" style="max-width: 24em;">
+								<div class="file-upload-status" aria-live="polite"></div>
+								<div class="file-upload-view"><p class="file-message text-ellipsis" data-file-placeholder="선택된 파일 없음">선택된 파일 없음</p></div>
+							</div>
+							<label for="example-file-05" class="btn-icon btn-icon-rounded btn-icon-40 btn-primary">
+								<i class="icon icon-clip bg-white" aria-label="file"></i>
+							</label>
+							<input type="file" id="example-file-05" class="ui-input-hidden" value=""
+									data-js-behavior="fileuploader" aria-label="file input"
+									onchange="myFormUI.fileUploader(this)">
+							<button type="button" class="btn-icon btn-icon-rounded btn-icon-40 btn-secondary"
+									data-js-behavior="addForm_file" data-file-maximum="3" onclick="myFormUI.addForm_fileuploader(this)">
+									<i class="icon icon-plus bg-white" aria-label="Add file input"></i>
+							</button>
+							<div class="input-group-span">
+								<div class="file-control file-control--text" data-file-control="text"></div>
+							</div>
+						</div><!--// input-group -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">수량 체크</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="qty-group qty-group--box" data-js-behavior="updateQuantity">
+							<button type="button" class="btn-icon btn-icon-rect ui-qty-minus">
+								<i class="icon icon-minus-thin bg-gray-700" aria-label="Minus"></i>
+							</button>
+							<input type="text" id="example-601" class="input-text input-text-md text-center" value="1" readonly
+									data-qty-maximum="10" aria-label="수량 체크">
+							<button type="button" class="btn-icon btn-icon-rect ui-qty-plus">
+								<i class="icon icon-plus-thin bg-gray-700" aria-label="Plus"></i>
+							</button>
+						</div><!--// input-group -->
+
+						<br>
+						
+						<div class="qty-group qty-group--line" data-js-behavior="updateQuantity">
+							<button type="button" class="btn-icon btn-icon-rounded btn-icon-24 bg-secondary ui-qty-minus">
+								<i class="icon icon-minus bg-white" aria-label="Minus"></i>
+							</button>
+							<input type="text" id="example-602" class="input-text input-text-md text-center" value="0" readonly
+									data-qty-maximum="20" aria-label="수량 체크">
+							<button type="button" class="btn-icon btn-icon-rounded btn-icon-24 bg-secondary ui-qty-plus">
+								<i class="icon icon-plus bg-white" aria-label="Plus"></i>
+							</button>
+						</div><!--// input-group -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<script>
+						document.querySelectorAll('[data-js-behavior="updateQuantity"]').forEach( item => { 
+							item.addEventListener('click', function (event) {
+								myFormUI.updateQuantity(event, item); 
+							})
+						});
+					</script>
+				</section><!--// _pb-section  -->
+
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+<script>
+	document.addEventListener('click', function (e) {
+		myFormUI.combobox(e);
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Tips');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>requestAnimationFrame</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Ex1. 반복 실행</h3>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://velog.io/@sh0521/requestAnimationFrame</li>
+						</ul>
+					</div>
+					<p class="_pb-section-desc">
+                        문구 2개가 3초씩 번갈아가며 나타나다가 n초 후 사라짐
+                    </p>
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+setTimeout(function () { loadCls(); }, 1000) // n초 후 사라짐
+
+function loadCls () {
+    ...
+	cancelAnimationFrame(repeat); // 텍스트 반복 종료
+}
+
+let lastTime = 0;
+function messageChange (timestamp) {
+	const currentTime = new Date().getTime();
+	const message01 = $('.m01') // 문구 1
+	const message02 = $('.m02') // 문구 2
+	if ( currentTime - lastTime > 3000 ) {
+		message02.addClass('active');
+		message01.removeClass('active')
+	}
+	if ( currentTime - lastTime > 6000 ) {
+		message01.addClass('active');
+		message02.removeClass('active')
+		lastTime = currentTime // 재시작
+	}
+	repeat = requestAnimationFrame(messageChange)
+	repeat;
+}
+
+requestAnimationFrame(messageChange)
+...
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Ex2.</h3>
+					<!-- <div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://velog.io/@sh0521/requestAnimationFrame</li>
+						</ul>
+					</div> -->
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+<pre>
+//
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					
+					<h4 class="_pb-component-tit">Related</h4>
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+								<col span="3">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">Progress</th>
+									<td>프로그레스바의 width 변화 감지 최적화</td>
+                                    <td>
+										<a href="../components/progress.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Tabs &amp; Selection</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<!-- <p class="_pb-section-desc">설명</p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<!-- https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes -->
+						<div class="tab-container" data-js-behavior="tab">
+							<nav class="tab-nav tab-nav--boundary">
+								<ul class="tab-list" role="tablist">
+									<li class="ui-active" role="presentation">
+										<button type="button" id="tab01-01" class="tab-handler"
+												data-tab-target="tabpanel01-01" role="tab" aria-selected="true" aria-controls="tabpanel01-01">
+											<span>Tab 1</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab01-02" class="tab-handler"
+												data-tab-target="tabpanel01-02" role="tab" aria-selected="false" aria-controls="tabpanel01-02">
+											<span>Tab 2</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab01-03" class="tab-handler"
+												data-tab-target="tabpanel01-03" role="tab" aria-selected="false" aria-controls="tabpanel01-03">
+											<span>Tab 3</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab01-03" class="tab-handler"
+												data-tab-target="tabpanel01-04" role="tab" aria-selected="false" aria-controls="tabpanel01-04" disabled>
+											<span>Tab 4 (Disabled)</span>
+										</button>
+									</li>
+								</ul>
+							</nav><!--// tab-nav -->
+							<div class="tab-contents">
+								<div id="tabpanel01-01" class="tab-panel ui-active" role="tabpanel" aria-labelledby="tab01-01" tabindex="0">
+									<div class="_pb-temp-box1">Content 1 (myNavUI)</div>
+								</div>
+								<div id="tabpanel01-02" class="tab-panel" role="tabpanel" aria-labelledby="tab01-02" tabindex="0">
+									<div class="_pb-temp-box2">Content 2 (myNavUI)</div>
+								</div>
+								<div id="tabpanel01-03" class="tab-panel" role="tabpanel" aria-labelledby="tab01-03" tabindex="0">
+									<div class="_pb-temp-box1">Content 3 (myNavUI)</div>
+								</div>
+								<div id="tabpanel01-04" class="tab-panel" role="tabpanel" aria-labelledby="tab01-04" tabindex="0">
+									<div class="_pb-temp-box1">Content 4 (myNavUI)</div>
+								</div>
+							</div><!--// tab-contents -->
+						</div><!--// tab-container -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="tab-container" data-js-behavior="tab" data-tab-effect="slide">
+							<nav class="tab-nav tab-nav--fill">
+								<ul class="tab-list" role="tablist">
+									<li class="ui-active" role="presentation">
+										<button type="button" id="tab02-01" class="tab-handler"
+												data-tab-target="tabpanel02-01" role="tab" aria-selected="true" aria-controls="tabpanel02-01">
+											<span>Tab 1</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab02-02" class="tab-handler"
+												data-tab-target="tabpanel02-02" role="tab" aria-selected="false" aria-controls="tabpanel02-02">
+											<span>Tab 2</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab02-03" class="tab-handler"
+												data-tab-target="tabpanel02-03" role="tab" aria-selected="false" aria-controls="tabpanel02-03">
+											<span>Tab 3</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab02-04" class="tab-handler tab-handler-interrupt"
+												data-tab-target="tabpanel02-04" role="tab" aria-selected="false" aria-controls="tabpanel02-04">
+											<span>Tab 4 (Interrupt)</span>
+										</button>
+									</li>
+								</ul>
+							</nav><!--// tab-nav -->
+							<div class="tab-contents">
+								<div id="tabpanel02-01" class="tab-panel ui-active" role="tabpanel" aria-labelledby="tab02-01" tabindex="0">
+									<div class="_pb-temp-box1">Content 1 (myNavUI)</div>
+								</div>
+								<div id="tabpanel02-02" class="tab-panel" role="tabpanel" aria-labelledby="tab02-02" tabindex="0">
+									<div class="_pb-temp-box2">Content 2 (myNavUI)</div>
+								</div>
+								<div id="tabpanel02-03" class="tab-panel" role="tabpanel" aria-labelledby="tab02-03" tabindex="0">
+									<div class="_pb-temp-box1">Content 3 (myNavUI)</div>
+								</div>
+								<div id="tabpanel02-04" class="tab-panel" role="tabpanel" aria-labelledby="tab02-04" tabindex="0">
+									<div class="_pb-temp-box2">Content 4 (myNavUI)</div>
+								</div>
+							</div><!--// tab-contents -->
+						</div><!--// tab-container -->
+						<!--// ========== Component ========== -->
+						<script>
+							document.querySelectorAll('[data-js-behavior="tab"]').forEach( item => { 
+								item.addEventListener('click', function (event) {
+									myNavUI.tab(event, item); 
+								})
+							});
+						</script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Selection</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<h4 class="_pb-component-tit">Slide</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						https://vuetifyjs.com/en/components/slide-groups/#usage
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">
+						Scrollable
+						<a href="pages/tab_scroll.html" class="btn-basic btn-basic-xs btn-primary-line" role="button" target="_blank">
+							<span>새 창에서 보기</span><i class="icon icon-window bg-primary" aria-label="window"></i>
+						</a>
+					</h3>
+					<p class="_pb-section-desc">
+						스크롤 이벤트가 div 엘리먼트 안에서 발생할 때:  data-tab-scroll="element" 
+					</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="tab-container" data-js-behavior="scrollTab">
+							<nav class="tab-nav tab-nav--pills tab-nav--scrollable">
+								<ul class="tab-list" role="tablist">
+									<li class="ui-active" role="presentation">
+										<button type="button" id="tab03-01" class="tab-handler"
+												data-tab-target="tabpanel03-01" role="tab" aria-selected="true" aria-controls="tabpanel03-01">
+											<span>Tab 1</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab03-02" class="tab-handler"
+												data-tab-target="tabpanel03-02" role="tab" aria-selected="false" aria-controls="tabpanel03-02">
+											<span>Tab 2</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab03-03" class="tab-handler"
+												data-tab-target="tabpanel03-03" role="tab" aria-selected="false" aria-controls="tabpanel03-03">
+											<span>Tab 3</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab03-04" class="tab-handler"
+												data-tab-target="tabpanel03-04" role="tab" aria-selected="false" aria-controls="tabpanel03-04">
+											<span>Tab 4</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab03-05" class="tab-handler"
+												data-tab-target="tabpanel03-05" role="tab" aria-selected="false" aria-controls="tabpanel03-05">
+											<span>Tab 5</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab03-06" class="tab-handler"
+												data-tab-target="tabpanel03-06" role="tab" aria-selected="false" aria-controls="tabpanel03-06">
+											<span>Tab 6</span>
+										</button>
+									</li>
+								</ul>
+							</nav><!--// tab-nav -->
+							<div class="tab-scroll-box" style="height: 450px; overflow-y: scroll;">
+								<div class="tab-contents" data-tab-scroll="element">
+									<div id="tabpanel03-01" class="tab-scrollpanel ui-active" role="tabpanel" aria-labelledby="tab03-01" tabindex="0">
+										<div class="_pb-temp-box1" style="height: 300px;">Content 1 (myNavUI)</div>
+									</div>
+									<div id="tabpanel03-02" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-02" tabindex="0">
+										<div class="_pb-temp-box2" style="height: 400px;">Content 2 (myNavUI)</div>
+									</div>
+									<div id="tabpanel03-03" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-03" tabindex="0">
+										<div class="_pb-temp-box1" style="height: 350px;">Content 3 (myNavUI)</div>
+									</div>
+									<div id="tabpanel03-04" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-04" tabindex="0">
+										<div class="_pb-temp-box2" style="height: 250px;">Content 4 (myNavUI)</div>
+									</div>
+									<div id="tabpanel03-05" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-05" tabindex="0">
+										<div class="_pb-temp-box1" style="height: 423px;">Content 5 (myNavUI)</div>
+									</div>
+									<div id="tabpanel03-06" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-06" tabindex="0">
+										<div class="_pb-temp-box2" style="height: 726px;">Content 6 (myNavUI)</div>
+									</div>
+								</div><!--// tab-contents -->
+							</div>
+						</div><!--// tab-container -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="tab-container" data-js-behavior="scrollTab">
+							<nav class="tab-nav tab-nav--pills tab-nav--scrollable">
+								<ul class="tab-list" role="tablist">
+									<li class="ui-active" role="presentation">
+										<button type="button" id="tab04-01" class="tab-handler"
+												data-tab-target="tabpanel04-01" role="tab" aria-selected="true" aria-controls="tabpanel04-01">
+											<span>Tab 1</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab04-02" class="tab-handler"
+												data-tab-target="tabpanel04-02" role="tab" aria-selected="false" aria-controls="tabpanel04-02">
+											<span>Tab 2</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab04-03" class="tab-handler"
+												data-tab-target="tabpanel04-03" role="tab" aria-selected="false" aria-controls="tabpanel04-03">
+											<span>Tab 3</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab04-04" class="tab-handler"
+												data-tab-target="tabpanel04-04" role="tab" aria-selected="false" aria-controls="tabpanel04-04">
+											<span>Tab 4</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab04-05" class="tab-handler"
+												data-tab-target="tabpanel04-05" role="tab" aria-selected="false" aria-controls="tabpanel04-05">
+											<span>Tab 5</span>
+										</button>
+									</li>
+									<li role="presentation">
+										<button type="button" id="tab04-06" class="tab-handler"
+												data-tab-target="tabpanel04-06" role="tab" aria-selected="false" aria-controls="tabpanel04-06">
+											<span>Tab 6</span>
+										</button>
+									</li>
+								</ul>
+							</nav><!--// tab-nav -->
+							<div class="tab-scroll-box" style="height: 380px; overflow-y: scroll;">
+								<div class="tab-contents" data-tab-scroll="element">
+									<div id="tabpanel04-01" class="tab-scrollpanel ui-active" role="tabpanel" aria-labelledby="tab04-01" tabindex="0">
+										<div class="_pb-temp-box1" style="height: 300px;">Content 1 (myNavUI)</div>
+									</div>
+									<div id="tabpanel04-02" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab04-02" tabindex="0">
+										<div class="_pb-temp-box2" style="height: 400px;">Content 2 (myNavUI)</div>
+									</div>
+									<div id="tabpanel04-03" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab04-03" tabindex="0">
+										<div class="_pb-temp-box1" style="height: 350px;">Content 3 (myNavUI)</div>
+									</div>
+									<div id="tabpanel04-04" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab04-04" tabindex="0">
+										<div class="_pb-temp-box2" style="height: 250px;">Content 4 (myNavUI)</div>
+									</div>
+									<div id="tabpanel04-05" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab04-05" tabindex="0">
+										<div class="_pb-temp-box1" style="height: 423px;">Content 5 (myNavUI)</div>
+									</div>
+									<div id="tabpanel04-06" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab04-06" tabindex="0">
+										<div class="_pb-temp-box2" style="height: 326px;">Content 6 (myNavUI)</div>
+									</div>
+								</div><!--// tab-contents -->
+							</div>
+
+						</div><!--// tab-container -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						document.querySelectorAll('[data-js-behavior="scrollTab"]').forEach( item => { myNavUI.scrollTab(item); });
+					</script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="../../pb_inc.js"></script>
+<script>
+    var baseURL = '../../../basis';
+    var assetURL = '../../../assets';
+    var commonURL = '../../../../common';
+</script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script src="../../../assets/js/common_ui.js"></script>
+<script src="../../../assets/js/dialogue.js"></script>
+<script src="../../../assets/js/navigation.js"></script>
+<script src="../../../assets/js/display.js"></script>
+<script src="../../../assets/js/form.js"></script>
+<!--// ======================== CSS / JS ======================== -->
+<style>
+.tab-nav--scrollable { position: fixed; top:0; left:0; z-index: 10;}
+.tab-nav--scrollable .tab-list {  max-width: 768px; margin: 0 auto; }
+.tab-contents--scroll { max-width: 768px; margin: 0 auto; padding-top: 40px}
+</style>
+<title>tab_scroll</title>
+</head>
+
+<body>
+<div class="_pb-blank">
+    <div class="tab-container" data-js-behavior="scrollTab">
+        <nav class="tab-nav tab-nav--pills tab-nav--scrollable">
+            <ul class="tab-list" role="tablist">
+                <li class="ui-active" role="presentation">
+                    <button type="button" id="tab03-01" class="tab-handler" data-tab-target="tabpanel03-01" role="tab" aria-selected="true" aria-controls="tabpanel03-01">
+                        <span>Tab 1</span>
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button type="button" id="tab03-02" class="tab-handler" data-tab-target="tabpanel03-02" role="tab" aria-selected="false" aria-controls="tabpanel03-02">
+                        <span>Tab 2</span>
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button type="button" id="tab03-03" class="tab-handler" data-tab-target="tabpanel03-03" role="tab" aria-selected="false" aria-controls="tabpanel03-03">
+                        <span>Tab 3</span>
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button type="button" id="tab03-04" class="tab-handler" data-tab-target="tabpanel03-04" role="tab" aria-selected="false" aria-controls="tabpanel03-04">
+                        <span>Tab 4</span>
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button type="button" id="tab03-05" class="tab-handler" data-tab-target="tabpanel03-05" role="tab" aria-selected="false" aria-controls="tabpanel03-05">
+                        <span>Tab 5</span>
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button type="button" id="tab03-06" class="tab-handler" data-tab-target="tabpanel03-06" role="tab" aria-selected="false" aria-controls="tabpanel03-06">
+                        <span>Tab 6</span>
+                    </button>
+                </li>
+            </ul>
+        </nav><!--// tab-nav -->
+        <div class="tab-contents">
+            <div id="tabpanel03-01" class="tab-scrollpanel ui-active" role="tabpanel" aria-labelledby="tab03-01" tabindex="0">
+                <div class="_pb-temp-box1" style="height: 300px;">Content 1 (myNavUI)</div>
+            </div>
+            <div id="tabpanel03-02" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-02" tabindex="0">
+                <div class="_pb-temp-box2" style="height: 400px;">Content 2 (myNavUI)</div>
+            </div>
+            <div id="tabpanel03-03" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-03" tabindex="0">
+                <div class="_pb-temp-box1" style="height: 350px;">Content 3 (myNavUI)</div>
+            </div>
+            <div id="tabpanel03-04" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-04" tabindex="0">
+                <div class="_pb-temp-box2" style="height: 250px;">Content 4 (myNavUI)</div>
+            </div>
+            <div id="tabpanel03-05" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-05" tabindex="0">
+                <div class="_pb-temp-box1" style="height: 423px;">Content 5 (myNavUI)</div>
+            </div>
+            <div id="tabpanel03-06" class="tab-scrollpanel" role="tabpanel" aria-labelledby="tab03-06" tabindex="0">
+                <div class="_pb-temp-box2" style="height: 326px;">Content 6 (myNavUI)</div>
+            </div>
+        </div><!--// tab-contents -->
+    </div><!--// tab-container -->
+</div>
+<script>
+    myNavUI.scrollTab('[data-js-behavior="scrollTab"]');
+</script>
+</body>
+</html>

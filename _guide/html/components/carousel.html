@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Carousel</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<!-- <h3 class="_pb-section-tit">기본</h3> -->
+					<p class="_pb-component-desc">
+						[data-carousel-effect="<span class="text-primary">slide</span>"] [data-carousel-auto="<span class="text-primary">false</span>"]
+						[data-carousel-rotate="<span class="text-primary">false</span>"]
+					</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="carousel-container" data-js-behavior="carousel" 
+							data-carousel-effect="slide" data-carousel-auto="false" data-carousel-rotate="false">
+							<div class="carousel" id="carousel-01">
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+							</div>
+							<button type="button" class="btn-icon btn-icon-50 ui-carousel-control btn-disabled" 
+									data-carousel-control="prev" disabled>
+								<i class="icon-md icon-chevron-left bg-gray-500" aria-label="Previous"></i>
+							</button>
+							<button type="button" class="btn-icon btn-icon-50 ui-carousel-control" 
+									data-carousel-control="next" tabindex="0">
+								<i class="icon-md icon-chevron-right bg-gray-500" aria-label="Next"></i>
+							</button>
+							<!-- <div class="carousel-pagination" aria-live="polite">1/4</div> -->
+							<div class="carousel-indicators"></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+
+					<p class="_pb-component-desc">
+						[data-carousel-effect="<span class="text-primary">fade</span>"] [data-carousel-auto="<span class="text-primary">false</span>"]
+						[data-carousel-rotate="<span class="text-primary">true</span>"]
+					</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="carousel-container" data-js-behavior="carousel"
+							data-carousel-effect="fade" data-carousel-auto="false" data-carousel-rotate="true">
+							<div class="carousel" id="carousel-02">
+								<div class="carousel-item"><img src="../../assets/images/sample_800x600_4to3.png" class="img object-cover" alt="Sample image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_800x1000_4to5.png" class="img object-cover" alt="Sample image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_600x600.png" class="img object-cover" alt="Sample image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+							</div>
+							<button type="button" class="btn-icon btn-icon-50 ui-carousel-control btn-disabled" 
+									data-carousel-control="prev" disabled>
+								<i class="icon-md icon-chevron-left bg-black" aria-label="Previous"></i>
+							</button>
+							<button type="button" class="btn-icon btn-icon-50 ui-carousel-control" 
+									data-carousel-control="next" tabindex="0">
+								<i class="icon-md icon-chevron-right bg-black" aria-label="Next"></i>
+							</button>
+							<div class="carousel-pagination" aria-live="polite">1/4</div>
+							<!-- <div class="carousel-indicators"></div> -->
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<p class="_pb-component-desc">
+						[data-carousel-effect="<span class="text-primary">slide</span>"] [data-carousel-auto="<span class="text-primary">true</span>"]
+						[data-carousel-rotate="<span class="text-primary">true</span>"] [data-carousel-start="<span class="text-primary">2</span>"]
+					</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="carousel-container" data-js-behavior="carousel" data-carousel-start="2"
+							data-carousel-effect="slide" data-carousel-auto="true" data-carousel-rotate="true">
+							<div class="carousel" id="carousel-03">
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+								<div class="carousel-item"><img src="../../assets/images/sample_1280x720_16to9.png" class="img object-cover" alt="Image"></div>
+							</div>
+							<button type="button" class="btn-icon btn-icon-50 ui-carousel-control btn-disabled" 
+									data-carousel-control="prev" disabled>
+								<i class="icon-md icon-chevron-left bg-gray-500" aria-label="Previous"></i>
+							</button>
+							<button type="button" class="btn-icon btn-icon-50 ui-carousel-control" 
+									data-carousel-control="next" tabindex="0">
+								<i class="icon-md icon-chevron-right bg-gray-500" aria-label="Next"></i>
+							</button>
+							<div class="carousel-pagination" aria-live="polite">1/4</div>
+							<!-- <div class="carousel-indicators"></div> -->
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+
+					<style>
+						.carousel-item::before { display: block; content:''; width: 100%; position: absolute; font-size: 1.5rem; font-weight: 700; bottom: 1.75em; text-align: center; z-index: 5;}
+						.carousel-item:nth-child(1)::before { content:'1'; }
+						.carousel-item:nth-child(2)::before { content:'2'; }
+						.carousel-item:nth-child(3)::before { content:'3'; }
+						.carousel-item:nth-child(4)::before { content:'4'; }
+					</style>
+					<script>
+						const carousels = document.querySelectorAll('[data-js-behavior="carousel"]');
+
+						carousels.forEach((item) => {
+							myDisplayUI.carousel(item)
+						})
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-component-tit">Related</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">고차함수와 클로저</th>
+									<td>carouselSlide함수(동작 관련)를 외부로 분리하면서,<br>내부 상태 접근을 위해 사용</td>
+                                    <td>
+										<a href="../tips/function.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section>
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+	<script>include.bottom();</script>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Basic Tables</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Column type</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped">
+							<table class="table-layout--auto">
+								<caption>Caption</caption>
+								<colgroup>
+									<col span="4" style="width:25%">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">Title 1</th>
+									<th scope="col">Title 2</th>
+									<th scope="col">Title 3</th>
+									<th scope="col">Title 4</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Item 1</td>
+										<td>Item 2</td>
+										<td>Item 3</td>
+										<td>Item 4</td>
+									</tr>
+									<tr>
+										<td>Item 1</td>
+										<td>Item 2</td>
+										<td>Item 3</td>
+										<td>Item 4</td>
+									</tr>
+									<tr>
+										<td>Item 1</td>
+										<td>Item 2</td>
+										<td>Item 3</td>
+										<td>Item 4</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped">
+							<table class="table-layout--fixed">
+								<caption>Caption</caption>
+								<colgroup>
+									<col style="width:120px"><col /><col style="width:120px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">Title 1</th>
+									<th scope="col" class="text-left">Title 2</th>
+									<th scope="col">Title 3</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Item 1</td>
+										<td class="text-left">Lorem ipsum dolor sit amet.</td>
+										<td>Item 1</td>
+									</tr>
+									<tr>
+										<td>Item 2</td>
+										<td class="text-left">Lorem, ipsum dolor.</td>
+										<td>Item 2</td>
+									</tr>
+									<tr>
+										<td>Item 3</td>
+										<td class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
+										<td>Item 3</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped">
+							<table class="table-layout--fixed">
+								<caption>Caption</caption>
+								<colgroup>
+									<col style="width:70px"><col /><col style="width:120px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">
+											<input type="checkbox" id="check-all" class="form-check-ctrl" aria-label="선택하기" name="check-item-all" data-check-target="check-item">
+										</th>
+										<th scope="col" class="text-left">Title 2</th>
+										<th scope="col">Title 3</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="checkbox" id="check-101" class="form-check-ctrl" aria-label="선택하기" name="check-item">
+										</td>
+										<td class="text-left">Lorem ipsum dolor sit amet.</td>
+										<td>Item 1</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="check-102" class="form-check-ctrl" aria-label="선택하기" name="check-item">
+										</td>
+										<td class="text-left">Lorem, ipsum dolor.</td>
+										<td>Item 2</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="check-103" class="form-check-ctrl" aria-label="선택하기" name="check-item">
+										</td>
+										<td class="text-left">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
+										<td>Item 3</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						myFormUI.checkAll('check-item');
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Row type</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-row table-row--bordered">
+							<table class="table-layout--fixed">
+								<caption>Caption</caption>
+								<colgroup>
+									<col style="width:15%" /><col style="width:35%" /><col style="width:15%" /><col style="width:35%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">Title 1</th>
+										<td>Lorem ipsum dolor sit amet.</td>
+										<th scope="row">Title 2</th>
+										<td>Lorem, ipsum.</td>
+									</tr>
+									<tr>
+										<th scope="row">Title 3</th>
+										<td>Lorem ipsum dolor sit.</td>
+										<th scope="row">Title 4</th>
+										<td>Lorem ipsum dolor sit amet consectetur.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+				
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">테이블 컨트롤</h3>
+
+					<h4 class="_pb-component-tit">행 추가/삭제</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped">
+							<table class="table-layout--fixed">
+								<caption>Caption</caption>
+								<colgroup>
+									<col style="width:120px"><col><col style="width:120px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">Title 1</th>
+									<th scope="col" class="text-left">Title 2</th>
+									<th scope="col"></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr class="ui-clone-element" data-clone-element="input">
+										<td>Item 1-<span class="ui-number">1</span></td>
+										<td class="text-left">
+											<div class="input-group">
+												<input type="text" id="input-01-01" class="input-text input-text-md" aria-label="text input" placeholder="#input-01-01">
+												<input type="text" id="input-01-02" class="input-text input-text-md" aria-label="text input" placeholder="#input-01-02">
+												<button type="button" class="btn-basic btn-basic-md btn-primary"><span>Confirm</span></button>
+											</div>
+										</td>
+										<td class="text-left ui-clone-handler">
+											<button type="button" class="btn-icon btn-icon-rounded btn-icon-40 btn-secondary"
+													data-js-behavior="addForm" data-clone-target="input" data-clone-maximum="5"
+													onclick="myFormUI.addForm_inputs(this)">
+												<i class="icon icon-plus bg-white" aria-label="Add"></i>
+											</button>
+										</td>
+									</tr>
+									<tr class="ui-clone-element" data-clone-element="check">
+										<td>Item 2-<span class="ui-number">1</span></td>
+										<td class="text-left">
+											<div class="input-group">
+												<input type="text" id="check-01-01" class="input-text input-text-md" aria-label="text input" placeholder="#check-01-01">
+												<div class="input-group-span col-4">
+													<div class="form-check">
+														<input type="checkbox" id="check-01-02" class="form-check-ctrl" name="check-item-100">
+														<label for="check-01-02" class="form-check-label">.form-check for Input text</label>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="text-left ui-clone-handler">
+											<button type="button" class="btn-icon btn-icon-rounded btn-icon-40 btn-secondary"
+													data-js-behavior="addForm" data-clone-target="check" data-clone-maximum="4"
+													onclick="myFormUI.addForm_inputs(this)">
+												<i class="icon icon-plus bg-white" aria-label="Add"></i>
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped">
+							<table class="table-layout--fixed">
+								<caption>Caption</caption>
+								<colgroup>
+									<col style="width:120px"><col><col style="width:120px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">Title 1</th>
+									<th scope="col" class="text-left">Title 2</th>
+									<th scope="col"></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr class="ui-clone-element" data-clone-element="email">
+										<td rowspan="1">Item 1-<span class="ui-number">1</span><br>(rowspan)</td>
+										<td class="text-left">
+											<div class="input-group">
+												<input type="text" id="email-01-01" class="input-text input-text-md" placeholder="#email-01-01">
+												<span class="input-group-span">@</span>
+												<div class="combobox combobox--select combobox-md col-6" data-js-behavior="combobox">
+													<button type="button" class="combobox-handler" aria-expanded="false">
+														<span class="combobox-value text-ellipsis combobox-value-selected">Item 1</span>
+														<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+													</button>
+													<div class="combobox-menu">
+														<ul class="combobox-list">
+															<li>
+																<button type="button" class="combobox--select-option ui-active">
+																	<span class="combobox-option-txt text-ellipsis">Item 1</span>
+																	<i class="icon-sm icon-check"></i>
+																</button>
+															</li>
+															<li>
+																<button type="button" class="combobox--select-option">
+																	<span class="combobox-option-txt text-ellipsis">Item 2</span>
+																	<i class="icon-sm icon-check"></i>
+																</button>
+															</li>
+														</ul>
+													</div>
+												</div><!--// combobox -->
+											</div>
+										</td>
+										<td class="text-left ui-clone-handler">
+											<button type="button" class="btn-icon btn-icon-rounded btn-icon-40 btn-secondary"
+													data-js-behavior="addForm" data-clone-target="email" data-clone-maximum="6"
+													onclick="myFormUI.addForm_inputs(this)">
+												<i class="icon icon-plus bg-white" aria-label="Add"></i>
+											</button>
+										</td>
+									</tr>
+									<tr class="ui-clone-element" data-clone-element="phone">
+										<td rowspan="1">Item 2-<span class="ui-number">1</span><br>(rowspan)</td>
+										<td class="text-left">
+											<div class="input-group">
+												<input type="text" id="phone-01-01" class="input-text input-text-md" aria-label="text input" placeholder="#phone-01-01">
+												<span class="input-group-span">-</span>
+												<input type="text" id="phone-01-02" class="input-text input-text-md" aria-label="text input" placeholder="#phone-01-02">
+												<span class="input-group-span">-</span>
+												<input type="text" id="phone-01-03" class="input-text input-text-md" aria-label="text input" placeholder="#phone-01-03">
+											</div>
+										</td>
+										<td class="text-left ui-clone-handler">
+											<button type="button" class="btn-icon btn-icon-rounded btn-icon-40 btn-secondary"
+													data-js-behavior="addForm" data-clone-target="phone" data-clone-maximum="5"
+													onclick="myFormUI.addForm_inputs(this)">
+												<i class="icon icon-plus bg-white" aria-label="Add"></i>
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">행 순서 변경</h4>
+					
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+<script>
+	document.addEventListener('click', function (e) {
+		myFormUI.combobox(e);
+	});
+</script>
+
+</body>
+</html>

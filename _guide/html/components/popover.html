@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Popover &amp; Tooltip</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Popover</h3>
+					<p class="_pb-section-desc">타이틀이 있는 긴 설명글일 때.</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-basic btn-basic-md btn-primary"
+								data-js-behavior="popover" data-popover-direction="top" data-popover-target="MYDIALGUI_POPOVER01"
+								onclick="myDialgUI.popover(this);">
+								<span>Popover on top</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-primary"
+								data-js-behavior="popover" data-popover-direction="right" data-popover-target="MYDIALGUI_POPOVER02"
+								onclick="myDialgUI.popover(this);">
+								<span>Popover on right</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="popover" data-popover-direction="bottom" data-popover-target="MYDIALGUI_POPOVER03"
+								onclick="myDialgUI.popover(this);">
+								<span>Popover on bottom</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="popover" data-popover-direction="left" data-popover-target="MYDIALGUI_POPOVER04"
+								onclick="myDialgUI.popover(this)">
+								<span>Popover on left</span>
+						</button>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component --> 
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						// data-popover-direction="top-start" <br>
+						data-popover-direction="top" <br>
+						data-popover-direction="top-end"<br>
+						<br>
+						direction 다양화 필요. 나중에..
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component --> 
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-icon btn-icon-disc btn-icon-32 bg-primary"
+								data-js-behavior="popover" data-popover-direction="top" data-popover-target="MYDIALGUI_POPOVER05"
+								onclick="myDialgUI.popover(this);">
+								<i class="icon icon-caret-up bg-white" aria-label="열기"></i>
+						</button>
+						<button type="button" class="btn-icon btn-icon-disc btn-icon-32 bg-primary"
+								data-js-behavior="popover" data-popover-direction="right" data-popover-target="MYDIALGUI_POPOVER06"
+								onclick="myDialgUI.popover(this);">
+								<i class="icon icon-caret-right bg-white" aria-label="열기"></i>
+						</button>
+						<button type="button" class="btn-icon btn-icon-disc btn-icon-32 bg-primary" 
+								data-js-behavior="popover" data-popover-direction="bottom" data-popover-target="MYDIALGUI_POPOVER07"
+								onclick="myDialgUI.popover(this);">
+								<i class="icon icon-caret-down bg-white" aria-label="열기"></i>
+						</button>
+						<button type="button" class="btn-icon btn-icon-disc btn-icon-32 bg-primary" 
+								data-js-behavior="popover" data-popover-direction="left" data-popover-target="MYDIALGUI_POPOVER08"
+								onclick="myDialgUI.popover(this)">
+								<i class="icon icon-caret-left bg-white" aria-label="열기"></i>
+						</button>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component --> 
+
+					<div class="_pb-component _pb-component--flex">
+						<!-- ========== Component ========== -->
+						<div class="popover popover-visible popover-effect popover-bottom" style="position: relative;">
+							<div class="popover-content">
+								<ul>
+									<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perspiciatis repellendus ducimus incidunt a.</li>
+									<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus.</li>
+								</ul>
+							</div>
+							<button type="button" class="btn-icon btn-icon-24 ui-popover-close"><i class="icon icon-x-thin bg-black"></i></button>
+							<i class="chip-border-triangle"></i>
+						</div>
+
+						<div class="popover popover-visible popover-effect popover-left" style="position: relative;">
+							<div class="popover-content">
+								<dl>
+									<dt class="popover-title">Lorem ipsum dolor sit amet.</dt>
+									<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, velit.</dd>
+									<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eos, autem doloremque tenetur</dd>
+								</dl>
+							</div>
+							<button type="button" class="btn-icon btn-icon-24 ui-popover-close"><i class="icon icon-x-thin bg-black"></i></button>
+							<i class="chip-border-triangle"></i>
+						</div>
+
+						<div class="popover popover-visible popover-effect popover-right" style="position: relative;">
+							<div class="popover-content">
+								<ul>
+									<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perspiciatis repellendus ducimus incidunt a.</li>
+									<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus.</li>
+								</ul>
+							</div>
+							<button type="button" class="btn-icon btn-icon-24 ui-popover-close"><i class="icon icon-x-thin bg-black"></i></button>
+							<i class="chip-border-triangle"></i>
+						</div>
+
+						<div class="popover popover-visible popover-effect popover-top" style="position: relative;">
+							<div class="popover-content">
+								<ul>
+									<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perspiciatis repellendus ducimus incidunt a.</li>
+									<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus.</li>
+								</ul>
+							</div>
+							<button type="button" class="btn-icon btn-icon-24 ui-popover-close"><i class="icon icon-x-thin bg-black"></i></button>
+							<i class="chip-border-triangle"></i>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const popoverContents = [
+							{
+								id: 'MYDIALGUI_POPOVER01',
+								title: 'Lorem ipsum dolor sit amet.',
+								content: '<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, velit.</dd><dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eos, autem doloremque tenetur recusandae nulla?</dd>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER02',
+								content: '<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perspiciatis repellendus ducimus incidunt a.</li><li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus.</li>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER03',
+								content: '<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates dolore repellendus! Praesentium necessitatibus itaque quidem veniam!</li>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER04',
+								title: 'Lorem ipsum dolor sit.',
+								content: '<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque impedit laudantium architecto ipsam vitae id numquam dicta dolores?</dd><dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, amet ipsa?</dd>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER01_01',
+								title: 'Lorem ipsum dolor sit amet.',
+								content: '<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, velit.</dd><dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eos, autem doloremque tenetur recusandae nulla?</dd>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER02_01',
+								content: '<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perspiciatis repellendus ducimus incidunt a.</li><li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus.</li>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER03_01',
+								content: '<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates dolore repellendus! Praesentium necessitatibus itaque quidem veniam!</li>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER04_01',
+								title: 'Lorem ipsum dolor sit.',
+								content: '<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque impedit laudantium architecto ipsam vitae id numquam dicta dolores?</dd><dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, amet ipsa?</dd>',
+							},
+
+							{
+								id: 'MYDIALGUI_POPOVER05',
+								title: 'Lorem ipsum dolor sit amet.',
+								content: '<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, velit.</dd><dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eos, autem doloremque tenetur recusandae nulla?</dd>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER06',
+								content: '<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perspiciatis repellendus ducimus incidunt a.</li><li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus.</li>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER07',
+								content: '<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates dolore repellendus! Praesentium necessitatibus itaque quidem veniam!</li>',
+							},
+							{
+								id: 'MYDIALGUI_POPOVER08',
+								title: 'Lorem ipsum dolor sit.',
+								content: '<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque impedit laudantium architecto ipsam vitae id numquam dicta dolores?</dd><dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, amet ipsa?</dd>',
+							},
+						]
+					</script>
+				</section><!--// _pb-section  -->
+				
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Tooltip</h3>
+					<p class="_pb-section-desc">1~2줄 내외의 짧은 알림 메세지일 때</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-basic btn-basic-md btn-point-line" 
+								data-js-behavior="tooltip" data-tooltip-direction="top" data-tooltip-open="auto" data-tooltip-close="auto" data-tooltip-target="MYDIALGUI_TOOLTIP01"
+								data-tooltip-content="Lorem, ipsum dolor sit amet&lt;br&gt;consectetur adipisicing elit. Delectus."
+								onclick="myDialgUI.tooltip(this)">
+								<span>Opens/Close auto</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-point-line" 
+								data-js-behavior="tooltip" data-tooltip-direction="right" data-tooltip-open="auto" data-tooltip-target="MYDIALGUI_TOOLTIP02"
+								data-tooltip-content="Lorem ipsum dolor sit amet consectetur."
+								onclick="myDialgUI.tooltip(this)">
+								<span>Opens auto, Click to close</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-point-line" 
+								data-js-behavior="tooltip" data-tooltip-direction="left" data-tooltip-open="click" data-tooltip-target="MYDIALGUI_TOOLTIP03"
+								data-tooltip-content="Lorem ipsum dolor sit amet."
+								onclick="myDialgUI.tooltip(this)">
+								<span>Click to open/close</span>
+						</button>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-basic btn-basic-md btn-point-line" 
+								data-js-behavior="tooltip" data-tooltip-direction="left" data-tooltip-open="click" data-tooltip-target="MYDIALGUI_TOOLTIP01"
+								data-tooltip-content="Lorem, ipsum dolor sit amet&lt;br&gt;consectetur adipisicing elit. Delectus."
+								onclick="myDialgUI.tooltip(this)">
+								<span>Tooltip on left</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-point-line" 
+								data-js-behavior="tooltip" data-tooltip-direction="right" data-tooltip-open="click" data-tooltip-target="MYDIALGUI_TOOLTIP02"
+								data-tooltip-content="Lorem ipsum dolor sit amet consectetur."
+								onclick="myDialgUI.tooltip(this)">
+								<span>Tooltip on right</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-point-line" 
+								data-js-behavior="tooltip" data-tooltip-direction="bottom" data-tooltip-open="click" data-tooltip-target="MYDIALGUI_TOOLTIP03"
+								data-tooltip-content="Lorem ipsum dolor sit amet."
+								onclick="myDialgUI.tooltip(this)">
+								<span>Tooltip on bottom</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-point-line" 
+								data-js-behavior="tooltip" data-tooltip-direction="top" data-tooltip-open="click" data-tooltip-target="MYDIALGUI_TOOLTIP04"
+								data-tooltip-content="Lorem ipsum, dolor sit amet consectetur adipisicing."
+								onclick="myDialgUI.tooltip(this)">
+								<span>Tooltip on top</span>
+						</button>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--flex">
+						<!-- ========== Component ========== -->
+						<div class="tooltip tooltip-bottom tooltip-visible tooltip-effect" style="position: relative; z-index: 1">
+							<div class="tooltip-content"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+							<button type="button" class="btn-icon btn-icon-20 ui-tooltip-close">
+								<i class="icon-x-thin bg-white" aria-label="close"></i>
+							</button>
+							<i class="chip-triangle"></i>
+						</div>
+
+						<div class="tooltip tooltip-left tooltip-visible tooltip-effect" style="position: relative; z-index: 1;">
+							<div class="tooltip-content"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+							<button type="button" class="btn-icon btn-icon-20 ui-tooltip-close">
+								<i class="icon-x-thin bg-white" aria-label="close"></i>
+							</button>
+							<i class="chip-triangle"></i>
+						</div>
+
+						<div class="tooltip tooltip-top tooltip-visible tooltip-effect" style="position: relative; z-index: 1">
+							<div class="tooltip-content"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+							<button type="button" class="btn-icon btn-icon-20 ui-tooltip-close">
+								<i class="icon-x-thin bg-white" aria-label="close"></i>
+							</button>
+							<i class="chip-triangle"></i>
+						</div>
+
+						<div class="tooltip tooltip-right tooltip-visible tooltip-effect" style="position: relative; z-index: 1">
+							<div class="tooltip-content"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+							<button type="button" class="btn-icon btn-icon-20 ui-tooltip-close">
+								<i class="icon-x-thin bg-white" aria-label="close"></i>
+							</button>
+							<i class="chip-triangle"></i>
+						</div>
+
+						
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						document.addEventListener('DOMContentLoaded', function () {
+							// myDialgUI.tooltipInit('[data-js-behavior="tooltip"]');
+							document.querySelectorAll('[data-js-behavior="tooltip"]').forEach( item => { myDialgUI.tooltipInit(item); });
+						})
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">speech-bubble</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<!-- <h4 class="_pb-component-tit">Component sub title</h4> -->
+					<div class="_pb-component _pb-component--flex">
+						<!-- ========== Component ========== -->
+						<div class="speech-bubble speech-bubble-lt" style="position: relative; z-index: 1;">
+							<div class="speech-bubble-content"><p>Lorem ipsum dolor sit.</p></div>
+							<i class="chip-isotriangle"></i>
+						</div>
+
+						<div class="speech-bubble speech-bubble-rt" style="position: relative; z-index: 1;">
+							<div class="speech-bubble-content"><p>Lorem ipsum dolor sit.</p></div>
+							<i class="chip-isotriangle"></i>
+						</div>
+
+						<div class="speech-bubble speech-bubble-lb" style="position: relative; z-index: 1;">
+							<div class="speech-bubble-content"><p>Lorem ipsum dolor sit.</p></div>
+							<i class="chip-isotriangle"></i>
+						</div>
+
+						<div class="speech-bubble speech-bubble-rb" style="position: relative; z-index: 1;">
+							<div class="speech-bubble-content"><p>Lorem ipsum dolor sit.</p></div>
+							<i class="chip-isotriangle"></i>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-component-tit">Related</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<!-- <h4 class="_pb-component-tit">Component sub title</h4> -->
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">resizeObserver API</th>
+									<td>스크롤시 DOM 요소(header)의 높이 변화 감지하여 위치값 재계산</td>
+                                    <td>
+										<a href="../tips/observer.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+								<tr>
+                                    <th scope="row">Promise 객체</th>
+									<td>팝오버와 툴팁의 위치를 미리 계산한 후, 오픈 실행</td>
+                                    <td>
+										<a href="../tips/promise.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+								<tr>
+                                    <th scope="row">_(Underscore) Prefix</th>
+									<td>ex&#41; ._resizePopoverHandler<br>DOM 요소에 커스텀 속성을 동적으로 추가하여 외부 함수에서도 접근 가능하게 함.</td>
+                                    <td></td>
+                                </tr>
+								<tr>
+                                    <th scope="row">구조 분해 할당<br>(Destructuring Assignment)</th>
+									<td>배열의 각 요소를 변수에 한 번에 할당하는 문법</td>
+                                    <td></td>
+                                </tr>
+								<tr class="_pb-etc">
+                                    <th scope="row">이벤트 버블링</th>
+									<td></td>
+                                    <td>
+										<a href="https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/" class="btn-text btn-text-sm text-primary" target="_blank" aria-haspopup="true">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                                <tr class="_pb-etc">
+                                    <th scope="row">영역 외 클릭 감지</th>
+									<td>
+										모달이나 드롭다운같은 요소에 상태를 나타내는 플래그 변수 선언 (isOpen = false)<br>
+										오픈하면 isOpen = true (닫기함수실행), 닫히면 false (열기함수실행)
+									</td>
+                                    <td>
+										<a href="https://ramincoding.tistory.com/entry/JavaScriptReact-%EC%98%81%EC%97%AD-%EC%99%B8-%ED%81%B4%EB%A6%AD-%EA%B0%90%EC%A7%80%EB%A1%9C-%EB%AA%A8%EB%8B%AC%ED%94%84%EB%A1%9C%ED%95%84-%EB%B0%95%EC%8A%A4-%EB%8B%AB%EA%B8%B0-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84" class="btn-text btn-text-sm text-primary" target="_blank" aria-haspopup="true">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

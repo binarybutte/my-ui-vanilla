@@ -1,0 +1,198 @@
+/* Utilities
+========================================================*/
+/** Display **/
+.blind { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0 }
+.hide { display: none !important; }
+.visually-hidden { visibility: hidden; }
+.opacity-0 { opacity: 0;}
+.display-block { display: block; }
+.display-flex { display: flex; }
+.display-inline { display: inline; }
+.display-inline-flex { display: inline-flex; }
+.display-inline-block { display: inline-block; }
+hr { border: 0; background-color: var(--colorGray200); width:100%; height: 1px; }
+
+/** Float / Position **/
+.float-left { float: left; }
+.float-right { float: right; }
+.float-none { float: none; }
+
+/** Spacing **/
+.mt-5 { margin-top: 0.313rem }
+.mt-10 { margin-top: 0.625rem }
+.mt-15 { margin-top: 0.938rem }
+.mt-20 { margin-top: 1.25rem }
+.mt-25 { margin-top: 1.563rem }
+.mt-30 { margin-top: 1.875rem }
+.mt-35 { margin-top: 2.188rem }
+.mt-40 { margin-top: 2.5rem }
+.mt-50 { margin-top: 3.1250rem }
+/* col- */
+.col-1 { width: 8.33333333%; }
+.col-2 { width: 16.66666667%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33333333%; }
+.col-5 { width: 41.66666667%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33333333%; }
+.col-8 { width: 66.66666667% !important; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33333333%; }
+.col-11 { width: 91.66666667%; }
+.col-12 { width: 100%; }
+/* gap */
+.gap-5 { gap: .313rem; }
+.gap-10 { gap: .625rem; }
+.gap-15 { gap: .938rem }
+.gap-24 { gap: 1.5rem }
+/* flex- */
+.flex-auto-1 { display: flex; flex: 1 1 auto; width: 1%; min-width: 0; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+/* align */
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.align-center { align-items: center;}
+
+/* [ Tips ]
+    1. overflow: overlay 
+    - 스크롤바가 콘텐츠 위에 겹쳐서 표시되도록 설정, 브라우저마다 처리 방식 상이, 대부분의 브라우저에서 overlay 값은 auto로 간주  
+    2. scrollbar-gutter: stable; (auto: 기본 / stable both-edges: 양쪽 가장자리에 스크롤바 공간 예약/양쪽 방향 스크롤이 가능한 경우 유용)
+    - 스크롤바가 표시될 때 레이아웃이 변경되지 않도록 스크롤바 공간을 예약하거나 조정할 수 있는 속성. 스크롤바로 인해 레이아웃이 흔들리는 문제를 해결하는 데 유용 */
+.scrollable { scrollbar-gutter: stable; overflow: overlay; }
+.scrollable::-webkit-scrollbar { width: .188em; height: .188em; }
+.scrollable::-webkit-scrollbar-thumb { background: var(--colorGray300); border-radius: 0.094rem; }
+.scrollable::-webkit-scrollbar-track { display: none; }
+
+/* for Script */
+.ui-arrow { transition: .2s; flex-shrink: 0; }
+.ui-active > td .ui-arrow,
+.ui-active > .ui-arrow,
+.dropdown-ui-active .ui-arrow,
+.toggle-ui-active .ui-arrow,
+.combobox-ui-active .ui-arrow { transform: rotate(180deg); }
+
+/** Color **/
+.bg-primary { background-color: var(--colorPrimary); }
+.bg-secondary { background-color: var(--colorSecondary); }
+.bg-success { background-color: var(--colorSuccess); }
+.bg-point { background-color: var(--colorPoint); }
+.bg-warning { background-color: var(--colorWarning); }
+.bg-danger { background-color: var(--colorDanger); }
+.color-primary { color: var(--colorPrimary); }
+.color-secondary { color: var(--colorSecondary); }
+.color-success { color: var(--colorSuccess); }
+.color-point { color: var(--colorPoint); }
+.color-warning { color: var(--colorWarning); }
+.color-danger { color: var(--colorDanger); }
+.border-primary { border-color: var(--colorPrimary); }
+.border-secondary { border-color: var(--colorSecondary); }
+.border-success { border-color: var(--colorSuccess); }
+.border-point { border-color: var(--colorPoint); }
+.border-warning { border-color: var(--colorWarning); }
+.border-danger { border-color: var(--colorDanger); }
+/* light */
+.bg-primary-light { background-color: var(--colorPrimaryLight); }
+.bg-secondary-light { background-color: var(--colorSecondaryLight); }
+.bg-success-light { background-color: var(--colorSuccessLight); }
+.bg-point-light { background-color: var(--colorPointLight); }
+.bg-warning-light { background-color: var(--colorWarningLight); }
+.bg-danger-light { background-color: var(--colorDangerLight); }
+.color-primary-light { color: var(--colorPrimaryLight); }
+.color-secondary-light { color: var(--colorSecondaryLight); }
+.color-success-light { color: var(--colorSuccessLight); }
+.color-point-light { color: var(--colorPointLight); }
+.color-warning-light { color: var(--colorWarningLight); }
+.color-danger-light { color: var(--colorDangerLight); }
+.border-primary-light { border-color: var(--colorPrimaryLight); }
+.border-secondary-light { border-color: var(--colorSecondaryLight); }
+.border-success-light { border-color: var(--colorSuccessLight); }
+.border-point-light { border-color: var(--colorPointLight); }
+.border-warning-light { border-color: var(--colorWarningLight); }
+.border-danger-light { border-color: var(--colorDangerLight); }
+/* dark */
+.bg-primary-dark { background-color: var(--colorPrimaryDark); }
+.bg-secondary-dark { background-color: var(--colorSecondaryDark); }
+.bg-success-dark { background-color: var(--colorSuccessDark); }
+.bg-point-dark { background-color: var(--colorPointDark); }
+.bg-warning-dark { background-color: var(--colorWarningDark); }
+.bg-danger-dark { background-color: var(--colorDangerDark); }
+.color-primary-dark { color: var(--colorPrimaryDark); }
+.color-secondary-dark { color: var(--colorSecondaryDark); }
+.color-success-dark { color: var(--colorSuccessDark); }
+.color-point-dark { color: var(--colorPointDark); }
+.color-warning-dark { color: var(--colorWarningDark); }
+.color-danger-dark { color: var(--colorDangerDark); }
+.border-primary-dark { border-color: var(--colorPrimaryDark); }
+.border-secondary-dark { border-color: var(--colorSecondaryDark); }
+.border-success-dark { border-color: var(--colorSuccessDark); }
+.border-point-dark { border-color: var(--colorPointDark); }
+.border-warning-dark { border-color: var(--colorWarningDark); }
+.border-danger-dark { border-color: var(--colorDangerDark); }
+/* gradient */
+.grd-primary-dark { background: linear-gradient(330deg, var(--colorPrimaryDark) 10%, var(--colorPrimary) 100%); }
+.grd-primary-light { background: linear-gradient(330deg, var(--colorPrimaryLight) 10%, var(--colorWhite) 100%); }
+.grd-primary { background: linear-gradient(330deg, var(--colorPrimary) 10%, var(--colorPrimaryLight) 100%); }
+.grd-secondary-light { background: linear-gradient(330deg, var(--colorSecondaryLight) 10%, var(--colorWhite) 100%); }
+.grd-secondary-dark { background: linear-gradient(330deg, var(--colorSecondaryDark) 10%, var(--colorSecondary) 100%); }
+.grd-secondary { background: linear-gradient(330deg, var(--colorSecondary) 10%, var(--colorSecondaryLight) 100%); }
+.grd-success-light { background: linear-gradient(330deg, var(--colorSuccessLight) 10%, var(--colorWhite) 100%); }
+.grd-success-dark { background: linear-gradient(330deg, var(--colorSuccessDark) 10%, var(--colorSuccess) 100%); }
+.grd-success { background: linear-gradient(330deg, var(--colorSuccess) 10%, var(--colorSuccessLight) 100%); }
+.grd-point-light { background: linear-gradient(330deg, var(--colorPointLight) 10%, var(--colorWhite) 100%); }
+.grd-point-dark { background: linear-gradient(330deg, var(--colorPointDark) 10%, var(--colorPoint) 100%); }
+.grd-point { background: linear-gradient(330deg, var(--colorPoint) 10%, var(--colorPointLight) 100%); }
+.grd-warning-light { background: linear-gradient(330deg, var(--colorWarningLight) 10%, var(--colorWhite) 100%); }
+.grd-warning-dark { background: linear-gradient(330deg, var(--colorWarningDark) 10%, var(--colorWarning) 100%); }
+.grd-warning { background: linear-gradient(330deg, var(--colorWarning) 10%, var(--colorWarningLight) 100%); }
+.grd-danger-light { background: linear-gradient(330deg, var(--colorDangerLight) 10%, var(--colorWhite) 100%); }
+.grd-danger-dark { background: linear-gradient(330deg, var(--colorDangerDark) 10%, var(--colorDanger) 100%); }
+.grd-danger { background: linear-gradient(330deg, var(--colorDanger) 10%, var(--colorDangerLight) 100%); }
+/* grayscale */
+.bg-black { background-color: var(--colorBlack); }
+.bg-white { background-color: var(--colorWhite); }
+.bg-gray-900 { background-color: var(--colorGray900); }
+.bg-gray-800 { background-color: var(--colorGray800); }
+.bg-gray-700 { background-color: var(--colorGray700); }
+.bg-gray-600 { background-color: var(--colorGray600); }
+.bg-gray-500 { background-color: var(--colorGray500); }
+.bg-gray-400 { background-color: var(--colorGray400); }
+.bg-gray-300 { background-color: var(--colorGray300); }
+.bg-gray-200 { background-color: var(--colorGray200); }
+.bg-gray-100 { background-color: var(--colorGray100); }
+.color-black { color: var(--colorBlack); }
+.color-white { color: var(--colorWhite); }
+.color-gray-900 { color: var(--colorGray900); }
+.color-gray-800 { color: var(--colorGray800); }
+.color-gray-700 { color: var(--colorGray700); }
+.color-gray-600 { color: var(--colorGray600); }
+.color-gray-500 { color: var(--colorGray500); }
+.color-gray-400 { color: var(--colorGray400); }
+.color-gray-300 { color: var(--colorGray300); }
+.color-gray-200 { color: var(--colorGray200); }
+.color-gray-100 { color: var(--colorGray100); }
+.border-black { border-color: var(--colorBlack); }
+.border-white { border-color: var(--colorWhite); }
+.border-gray-900 { border-color: var(--colorGray900); }
+.border-gray-800 { border-color: var(--colorGray800); }
+.border-gray-700 { border-color: var(--colorGray700); }
+.border-gray-600 { border-color: var(--colorGray600); }
+.border-gray-500 { border-color: var(--colorGray500); }
+.border-gray-400 { border-color: var(--colorGray400); }
+.border-gray-300 { border-color: var(--colorGray300); }
+.border-gray-200 { border-color: var(--colorGray200); }
+.border-gray-100 { border-color: var(--colorGray100); }
+/* opacity */
+.bg-black-opa-70 { background-color: rgba(var(--rgbBlack), .7) }
+.bg-black-opa-50 { background-color: rgba(var(--rgbBlack), .5) }
+.bg-black-opa-30 { background-color: rgba(var(--rgbBlack), .3) }
+
+/* svg */
+.stroke-primary { stroke: var(--colorPrimary); }
+.stroke-secondary { stroke: var(--colorSecondary); }
+.stroke-success { stroke: var(--colorSuccess); }
+.stroke-point { stroke: var(--colorPoint); }
+.stroke-warning { stroke: var(--colorWarning); }
+.stroke-danger { stroke: var(--colorDanger); }

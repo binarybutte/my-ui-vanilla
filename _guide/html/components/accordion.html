@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Accordion</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<p class="_pb-section-desc">활성화시 다른 아코디언 항목들을 접힌 상태로 유지 : data-accordion-items="collapse"</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="accordion-container" data-js-behavior="accordion" data-accordion-items="collapse">
+							<ul class="accordion accordion--box">
+								<!-- 1 -->
+								<li class="accordion-item">
+									<div class="accordion-header">
+										<a href="#accordionCollapse02-01" class="accordion-handler"
+											data-accordion-target="accordionCollapse02-01"
+											role="button" aria-expanded="false" aria-controls="accordionCollapse02-01">
+											<span>Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+											<i class="icon-md icon-chevron-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+										</a>
+									</div>
+									<div id="accordionCollapse02-01" class="accordion-collapsed">
+										<div class="accordion-body">
+											<div class="_pb-temp-box2">Accordion content 1</div>
+										</div>
+									</div>
+								</li><!--// accordion-item -->
+								<!-- 2 -->
+								<li class="accordion-item">
+									<div class="accordion-header">
+										<button type="button" class="accordion-handler"
+											data-accordion-target="accordionCollapse02-02"
+											aria-expanded="false" aria-controls="accordionCollapse02-02">
+											<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil vero rerum et neque beatae, aliquam assumenda.</span>
+											<i class="icon-md icon-chevron-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+										</button>
+									</div>
+									<div id="accordionCollapse02-02" class="accordion-collapsed">
+										<div class="accordion-body">
+											<div class="_pb-temp-box2">Accordion content 2</div>
+										</div>
+									</div>
+								</li><!--// accordion-item -->
+								<!-- 3 -->
+								<li class="accordion-item">
+									<div class="accordion-header">
+										<button type="button" class="accordion-handler"
+											ata-accordion-target="accordionCollapse02-03"
+											aria-expanded="false" aria-controls="accordionCollapse02-03">
+											<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, qui sequi.</span>
+											<i class="icon-md icon-chevron-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+										</button>
+									</div>
+									<div id="accordionCollapse02-03" class="accordion-collapsed">
+										<div class="accordion-body">
+											<div class="_pb-temp-box1">Accordion content</div>
+										</div>
+									</div>
+								</li><!--// accordion-item -->
+							</ul>
+						</div><!--// accordion-container -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="accordion-container" data-js-behavior="accordion">
+							<ul class="accordion accordion--box">
+								<!-- 1 -->
+								<li class="accordion-item">
+									<div class="accordion-header">
+										<a href="#accordionCollapse01-01" class="accordion-handler"
+											data-accordion-target="accordionCollapse01-01"
+											role="button" aria-expanded="false" aria-controls="accordionCollapse01-01">
+											<span>Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+											<i class="icon-md icon-chevron-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+										</a>
+									</div>
+									<div id="accordionCollapse01-01" class="accordion-collapsed">
+										<div class="accordion-body">
+											<div class="_pb-temp-box2">Accordion content 1</div>
+										</div>
+									</div>
+								</li><!--// accordion-item -->
+								<!-- 2 -->
+								<li class="accordion-item">
+									<div class="accordion-header">
+										<button type="button" class="accordion-handler"
+												data-accordion-target="accordionCollapse01-02"
+												aria-expanded="false" aria-controls="accordionCollapse01-02">
+											<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil vero rerum et neque beatae, aliquam assumenda.</span>
+											<i class="icon-md icon-chevron-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+										</button>
+									</div>
+									<div id="accordionCollapse01-02" class="accordion-collapsed">
+										<div class="accordion-body">
+											<div class="_pb-temp-box2">Accordion content 2</div>
+										</div>
+									</div>
+								</li><!--// accordion-item -->
+								<!-- 3 -->
+								<li class="accordion-item">
+									<div class="accordion-header">
+										<button type="button" class="accordion-handler"
+											data-accordion-target="accordionCollapse01-03"
+											aria-expanded="false" aria-controls="accordionCollapse01-03">
+											<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, qui sequi.</span>
+											<i class="icon-md icon-chevron-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+										</button>
+									</div>
+									<div id="accordionCollapse01-03" class="accordion-collapsed">
+										<div class="accordion-body">
+											<div class="_pb-temp-box1">Accordion content</div>
+										</div>
+									</div>
+								</li><!--// accordion-item -->
+							</ul>
+						</div><!--// accordion-container -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Dynamic</h3>
+					<p class="_pb-section-desc">슬라이드 업다운 애니 추가</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						//
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+<script>
+	document.querySelectorAll('[data-js-behavior="accordion"]').forEach( item => { 
+		item.addEventListener('click', function (e) {
+			myDisplayUI.accordion(e, item); 
+		})
+	});
+</script>
+</body>
+</html>

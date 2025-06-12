@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Tips');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>EventListener 설정 옵션</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">{ once: true }</h3>
+					<!-- <div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item"></li>
+						</ul>
+					</div> -->
+					<p class="_pb-section-desc">
+						once: true를 사용하면 이벤트 리스너가 한 번만 실행되고 자동으로 삭제됨. onclick 인라인으로 적용할 때에는 함수 내부의 클릭이벤트에만 걸어줘도 된다.<br>
+						버튼 클릭 시 한 번만 실행되는 로직에 유용.
+					</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+btn1.addEventListener("click", function btnclickHandler() {
+	btn2.addEventListener("click", function () { console.log("버튼2 클릭!"); }, { once: true });
+}, { once: true });
+
+&lt;button id="btn1" onclick="btnClickHandler()"&gt;버튼1 클릭&lt;/button&gt;
+&lt;button id="btn2"&gt;버튼2 클릭&lt;/button&gt;
+
+function btnClickHandler() {
+	const btn2 = document.getElementById("btn2");
+	btn2.addEventListener("click", function () {
+		console.log("버튼2 클릭!");
+	}, { once: true }); 
+}
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">{ passive: false }</h3>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=crazymonlong&logNo=221580029479</li>
+						</ul>
+					</div>
+					<p class="_pb-section-desc">
+                        passive 속성이 false인 경우에 touchstart, touchmove와 같은 이벤트가 발생하면 preventDefault를 이용하여 실제 이벤트 자체를 막을 수 있다. <br>
+						모바일에서 터치 스크롤을 제어하고 싶을 때 preventDefault()가 필요한 경우 사용.
+                    </p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+touchBlock: function () {
+	const touchBtns = document.querySelectorAll('.btns');
+	touchBtns.forEach(function (item) {
+		item.addEventListenter('touchstart', e => {
+			e.preventDefault;
+			e.stopImmediateProoagation();
+		}, {passive: false})
+	})
+}
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

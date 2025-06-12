@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Inputs &amp; Textarea</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<input type="text" id="example-101" class="input-text input-text input-text-lg" aria-label="text input" placeholder=".input-text">
+						<input type="text" id="example-102" class="input-text input-text-md" aria-label="text input" placeholder=".input-text">
+						<input type="text" id="example-103" class="input-text input-text-sm" aria-label="text input" placeholder=".input-text">
+						<input type="text" id="example-104" class="input-text input-text-md" aria-label="text input" readonly value="Readonly">
+						<input type="text" id="example-105" class="input-text input-text-md" aria-label="text input" disabled placeholder="Disabled">
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">취소(초기화) 버튼</h3>
+					<p class="_pb-section-desc">input[type='search'] 일때 각각의 브라우저에서는 초기화 버튼을 자동 생성한다.<br>
+						css에서 input[type='search'] 의 초기화 버튼 속성을 없애고, 버튼 디자인의 통일을 위해 input 옆에 .input-clear-btn 버튼을 생성하여 만든다<br />
+						input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}<br /></p>
+					<style>
+						._pb-search-btn-example::-webkit-search-cancel-button,
+						._pb-search-btn-example::-webkit-search-decoration { -webkit-appearance: auto !important; appearance: auto !important; }
+					</style>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<input type="search" id="example-201" class="input-text input-text-md _pb-search-btn-example" style="width:100%;" placeholder="초기 설정 예시: input[type='search']">
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Datalist</h3>
+					<p class="_pb-section-desc">브라우저 지원 확인 필요. 셀렉트박스와 비슷하나 목록 표시에 디자인 차이가 있다.</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<label for="exampleDataList" class="_pb-temp-tit">Datalist Label</label>
+						<input class="input-text input-text-md" list="datalistOptions" id="exampleDataList" placeholder="datalist" style="width:100%;">
+						<datalist id="datalistOptions">
+							<option value="datalist sample 1">
+							<option value="datalist sample 2">
+							<option value="datalist sample 3">
+						</datalist>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Textarea</h3>
+					<p class="_pb-section-desc">
+						oninput 이벤트 적용: 키보드 입력뿐만 아니라 마우스로 붙여넣기, 드래그 앤 드롭, 자동 완성, 음성 입력 등 모든 입력 방식을 감지함.<br>
+						텍스트가 변경될 때마다 실행되므로 가장 정확하게 카운트를 반영할 수 있음. <br>
+						(keydown, keyup보다 좀 더 직관적이고 정확하다. keydown, keyup 등은 특정 키 이벤트 감지할 때 사용 권장)
+					</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<label for="example-textarea-01">.textarea-box</label>
+						<div class="textarea-box mt-5">
+							<textarea id="example-textarea-01" class="textarea" placeholder="내용을 입력하세요."
+									data-js-behavior="textareaCount" maxlength="200"></textarea>
+							<div class="textarea-box-count">
+								<div class="count"><span class="length"></span> / <span class="max">200</span></div>
+								<button type="button" class="btn-basic btn-basic-xs btn-secondary" 
+										data-js-behavior="textareaClear" onclick="myFormUI.textareaClear('example-textarea-01');">
+									<span>삭제</span>
+								</button>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						myFormUI.textareaCount('example-textarea-01');
+					</script>
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="input-group">
+							<label for="example-textarea-02" class="input-group-label">.textarea</label>
+							<textarea id="example-textarea-02" rows="1" class="textarea" placeholder="내용을 입력하세요." maxlength="200"></textarea>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

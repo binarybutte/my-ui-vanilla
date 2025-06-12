@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Typography</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">제목</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-font-light _pb-component--border">
+						<!-- ========== Component ========== -->
+						<h4 class="title-xlg">h1.title-xlg</h4>
+						<h4 class="title-lg">h2.title-lg</h4>
+						<h4 class="title-md">h3.title-md</h4>
+						<h4 class="sub-title-lg">h4.sub-title-lg</h4>
+						<h4 class="sub-title-md">h5.sub-title-md</h4>
+						<h4 class="sub-title-sm">h6.sub-title-sm</h4>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-componentW -->
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<h4 class="sub-title-lg">
+							h4.sub-title-lg
+							<small class="title-assist">small.title--assist : Lorem ipsum dolor, sit amet consectetur adipisicing.</small>
+						</h4>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">크기, 두께</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-font-light _pb-component--border">
+						<!-- ========== Component ========== -->
+						<p class="text-lg">.text-lg : Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+						<p class="text-md">.text-md : Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+						<p class="text-sm">.text-sm : Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+						<p class="text-xs">.text-xs : Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component _pb-font-light _pb-component--border">
+						<!-- ========== Component ========== -->
+						<p class="text-md text-bold">.text-bold : Lorem, ipsum dolor.</p>
+						<p class="text-md text-medium">.text-medium : Lorem, ipsum dolor</p>
+						<p class="text-md text-normal">.text-normal : Lorem, ipsum dolor</p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component _pb-font-light _pb-component--border">
+						<!-- ========== Component ========== -->
+						<div class="paragraph-box">
+							<p>
+								Lorem ipsum dolor sit amet <u class="text-lg-em text-bold text-primary">(text-lg-em) consectetur adipisicing elit.</u> Similique sunt autem nostrum? Quisquam <u class="text-sm-em text-bold text-primary">(text-sm-em) repellendus</u> voluptatibus eligendi libero accusantium dignissimos corporis.
+							</p>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">정렬</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<div class="text-md text-left">(.text-left) Lorem ipsum dolor sit.</div>
+						<div class="text-md text-center">(.text-center) Lorem ipsum dolor sit.</div>
+						<div class="text-md text-right">(.text-right) Lorem ipsum dolor sit.</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Bullet</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<h4 class="_pb-component-tit">아이콘 (btn-chip과 동일)</h4>
+					<!-- <p class="_pb-section-desc">btn-chip과 동일</p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<ul class="bullet-list bullet-list--icon">
+							<li>
+								<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-excla bg-white" aria-label="!"></i></span>
+								<div>Lorem ipsum dolor sit amet.</div>
+							</li>
+							<li>
+								<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-excla bg-white" aria-label="!"></i></span>
+								<div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Exercitationem, unde?</p>
+							</li>
+							<li>
+								<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-excla bg-white" aria-label="!"></i></span>
+								<div>Lorem ipsum dolor sit amet consectetur.</div>
+							</li>
+							<li>
+								<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-excla bg-white" aria-label="!"></i></span>
+								<div>Lorem ipsum dolor sit.</div>
+							</li>
+						</ul>
+
+						<div class="bullet-list bullet-list--icon">
+							<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-info bg-white" aria-label="infomation"></i></span>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Exercitationem, unde?</p>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component _pb-component--inline _pb-component--border">
+						<!-- ========== Component ========== -->
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-x-bold bg-primary" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-x bg-primary" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-plus bg-primary" aria-label="Plus"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-minus bg-primary" aria-label="Minus"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-chevron-down bg-primary" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-caret-down bg-primary" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-check bg-primary" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-excla bg-primary" aria-label="!"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-question bg-primary" aria-label="?"></i></span>
+						<span class="bullet-chip chip-disc border-primary"><i class="icon icon-info bg-primary" aria-label="infomation"></i></span>
+						<br>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-x-bold bg-gray-500" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-x bg-gray-500" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-plus bg-gray-500" aria-label="Plus"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-minus bg-gray-500" aria-label="Minus"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-chevron-down bg-gray-500" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-caret-down bg-gray-500" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-check bg-gray-500" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-excla bg-gray-500" aria-label="!"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-question bg-gray-500" aria-label="?"></i></span>
+						<span class="bullet-chip chip-rounded border-gray-500"><i class="icon icon-info bg-gray-500" aria-label="infomation"></i></span>
+						<br>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-x-bold bg-point" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-x bg-point" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-plus bg-point" aria-label="Plus"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-minus bg-point" aria-label="Minus"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-chevron-down bg-point" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-caret-down bg-point" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-check bg-point" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-excla bg-point" aria-label="!"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-question bg-point" aria-label="?"></i></span>
+						<span class="bullet-chip chip-rect border-point"><i class="icon icon-info bg-point" aria-label="infomation"></i></span>
+						<br>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-x-bold bg-white" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-x bg-white" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-plus bg-white" aria-label="Plus"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-minus bg-white" aria-label="Minus"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-chevron-down bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-caret-down bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-check bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-excla bg-white" aria-label="!"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-question bg-white" aria-label="?"></i></span>
+						<span class="bullet-chip chip-disc bg-primary"><i class="icon icon-info bg-white" aria-label="infomation"></i></span>
+						<br>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-x-bold bg-white" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-x bg-white" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-plus bg-white" aria-label="Plus"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-minus bg-white" aria-label="Minus"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-chevron-down bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-caret-down bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-check bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-excla bg-white" aria-label="!"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-question bg-white" aria-label="?"></i></span>
+						<span class="bullet-chip chip-rounded bg-secondary"><i class="icon icon-info bg-white" aria-label="infomation"></i></span>
+						<br>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-x-bold bg-white" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-x bg-white" aria-label="Delete"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-plus bg-white" aria-label="Plus"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-minus bg-white" aria-label="Minus"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-chevron-down bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-caret-down bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-check bg-white" aria-label="Arrow"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-excla bg-white" aria-label="!"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-question bg-white" aria-label="?"></i></span>
+						<span class="bullet-chip chip-rect bg-point"><i class="icon icon-info bg-white" aria-label="infomation"></i></span>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">특수 기호</h4>
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<ul class="bullet-list bullet-list--asterisk">
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, unde?</li>
+							<li>Lorem ipsum dolor sit amet consectetur.</li>
+							<li>Lorem ipsum dolor sit.</li>
+						</ul>
+						<br>
+						<p class="bullet-list bullet-list--asterisk">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Mollitia, assumenda.</p>
+						<!--// ========== Component ========== -->
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<ul class="bullet-list bullet-list--dashed">
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, unde?</li>
+							<li>Lorem ipsum dolor sit amet consectetur.</li>
+							<li>Lorem ipsum dolor sit.</li>
+						</ul>
+						<br>
+						<p class="bullet-list bullet-list--dashed">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Mollitia, assumenda.</p>
+						<!--// ========== Component ========== -->
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<ul class="bullet-list bullet-list--dotted">
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, unde?</li>
+							<li>Lorem ipsum dolor sit amet consectetur.</li>
+							<li>Lorem ipsum dolor sit.</li>
+						</ul>
+						<br>
+						<p class="bullet-list bullet-list--dotted">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Mollitia, assumenda.</p>
+						<!--// ========== Component ========== -->
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">넘버링</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<ol class="order-list order-list--number">
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, unde?</li>
+							<li>Lorem ipsum dolor sit amet consectetur.</li>
+							<li>Lorem ipsum dolor sit.</li>
+						</ol>
+						<br>
+						<ol class="order-list order-list--number-brackets">
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, unde?</li>
+							<li>Lorem ipsum dolor sit amet consectetur.</li>
+							<li>Lorem ipsum dolor sit.</li>
+						</ol>
+						<!--// ========== Component ========== -->
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component _pb-component--border">
+						<!-- ========== Component ========== -->
+						<ol class="order-list order-list--roman-upper">
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, unde?</li>
+							<li>Lorem ipsum dolor sit amet consectetur.</li>
+							<li>Lorem ipsum dolor sit.</li>
+						</ol>
+						<br>
+						<ol class="order-list order-list--roman-lower">
+							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, unde?</li>
+							<li>Lorem ipsum dolor sit amet consectetur.</li>
+							<li>Lorem ipsum dolor sit.</li>
+						</ol>
+						<!--// ========== Component ========== -->
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+	<script>include.bottom();</script>
+
+</body>
+</html>

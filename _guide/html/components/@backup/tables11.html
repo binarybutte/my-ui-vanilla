@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="pb_inc_pc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+<style>
+/*========================================================
+ Table
+========================================================*/
+table.table-fixed{table-layout:fixed !important;}
+table.table-auto{table-layout:auto !important;}
+
+/**** board-list ****/
+.board-list{position:relative; width:100%; border-top:1px solid #333;}
+.board-list table{width:100%; border-collapse:collapse; table-layout:auto;}
+.board-list table thead th{text-align:center; border-bottom:1px solid #bbb; vertical-align:top; background:#f4f4f4}
+.board-list table tbody td{border-bottom:1px solid #ddd; vertical-align:middle;}
+.board-list table tbody tr:last-child td{border-top:0}
+.board-list table th,.board-list table td{padding:8px 0; text-align:center;}
+
+/**** board-form ****/
+.board-form{width:100%; border-top:1px solid #333;}
+.board-form table{width:100%; table-layout:fixed;}
+.board-form table tbody th,
+.board-form table tbody td{border-bottom:1px solid #ddd; vertical-align:top; word-break:break-all; padding:8px 15px; text-align:left;}
+.board-form table tbody th{background:#f4f4f4}
+
+/**** 공통 : _pb 컴포넌트 간격 ****/
+</style>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<section class="_pb-container">
+		<div class="_pb-page-tit">
+			<h2>Table</h2>
+			<div class="_pb-sub-menu">
+				<ul>
+					<li><a href="#article1">Default</a></li>
+					<li><a href="#article2">Scroll</a></li>
+                    <li><a href="#article3">Head fixed</a></li>
+					<li><a href="#article4">Responsive</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="_pb-article-wrap">
+			<article class="_pb-article">
+				<h3 class="_pb-article-tit">Default</h3>
+				<div class="_pb-cnt-area">
+					<h4 class="_pb-cnt-tit">List type</h4>
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.board-list</h5>
+							<!-- ========== Component ========== -->
+							<div class="board-list">
+								<table>
+									<caption>Caption</caption>
+									<colgroup>
+										<col span="4" style="width:25%">
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">Title 1</th>
+                                        <th scope="col">Title 2</th>
+                                        <th scope="col">Title 3</th>
+                                        <th scope="col">Title 4</th>
+									</tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// ========== Component ========== -->	
+							<style>
+								
+							</style>
+						</div>
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.board-list > .table-fixed</h5>
+							<!-- ========== Component ========== -->
+							<div class="board-list">
+								<table class="table-fixed">
+									<caption>Caption</caption>
+									<colgroup>
+										<col span="2" style="width:100px"><col /><col style="width:100px">
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">Title 1</th>
+                                        <th scope="col">Title 2</th>
+                                        <th scope="col">Title 3</th>
+                                        <th scope="col">Title 4</th>
+									</tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// ========== Component ========== -->	
+							<style>
+								
+							</style>
+						</div>
+					</div>
+				</div><!--// _pb-cnt-area -->
+                <div class="_pb-cnt-area">
+					<h4 class="_pb-cnt-tit">Data type</h4>
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.board-form</h5>
+							<!-- ========== Component ========== -->
+							<div class="board-form">
+								<table>
+									<caption>Caption</caption>
+									<colgroup>
+										<col style="width:15%" /><col style="width:35%" /><col style="width:15%" /><col style="width:35%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">Title 1</th>
+											<td>Item 1</td>
+											<th scope="row">Title 2</th>
+											<td>Item 2</td>
+										</tr>
+										<tr>
+											<th scope="row">Title 3</th>
+											<td>Item 3</td>
+											<th scope="row">Title 4</th>
+											<td>Item 4</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// ========== Component ========== -->	
+						</div>
+					</div>
+				</div><!--// _pb-cnt-area -->
+			</article><!--// _pb-article  -->
+
+            <article class="_pb-article">
+				<h3 class="_pb-article-tit">Scroll </h3>
+				<div class="_pb-cnt-area">
+					<!-- <h4 class="_pb-cnt-tit">Scroll-X</h4> -->
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.board-list.scroll-x</h5>
+							<!-- ========== Component ========== -->
+							<div class="board-list scroll-x">
+								<table>
+									<caption>Caption</caption>
+									<colgroup>
+										<col span="8" style="width:250px">
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">Title 1</th>
+                                        <th scope="col">Title 2</th>
+                                        <th scope="col">Title 3</th>
+                                        <th scope="col">Title 4</th>
+                                        <th scope="col">Title 5</th>
+                                        <th scope="col">Title 6</th>
+                                        <th scope="col">Title 7</th>
+                                        <th scope="col">Title 8</th>
+									</tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+											<td>Item 5</td>
+											<td>Item 6</td>
+                                            <td>Item 7</td>
+                                            <td>Item 8</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+											<td>Item 5</td>
+											<td>Item 6</td>
+                                            <td>Item 7</td>
+                                            <td>Item 8</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// ========== Component ========== -->	
+							<style>
+								/* 스크롤테이블 */
+                                .board-list.scroll-x{overflow-x:auto;}
+                                .board-list.scroll-x > table{min-width:1440px;}
+                                .board-list.scroll-x > table thead th{white-space:nowrap;}
+							</style>
+						</div>
+                        <div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.board-list.scroll-y</h5>
+							<!-- ========== Component ========== -->
+							<div class="board-list scroll-y">
+								<table>
+									<caption>Caption</caption>
+									<colgroup>
+										<col span="8" style="width:20%">
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">Title 1</th>
+                                        <th scope="col">Title 2</th>
+                                        <th scope="col">Title 3</th>
+                                        <th scope="col">Title 4</th>
+                                        <th scope="col">Title 5</th>
+									</tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// ========== Component ========== -->	
+							<style>
+								/* 스크롤테이블 */
+                                .board-list.scroll-y{overflow-y:auto; max-height:150px}
+                                .board-list.scroll-y > table thead th{white-space:nowrap;}
+							</style>
+						</div>
+                        <div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.board-list.scroll-xy</h5>
+							<!-- ========== Component ========== -->
+							<div class="board-list scroll-xy">
+								<table>
+									<caption>Caption</caption>
+									<colgroup>
+										<col span="8" style="width:250px">
+									</colgroup>
+									<thead>
+                                        <tr>
+                                            <th scope="col">Title 1</th>
+                                            <th scope="col">Title 2</th>
+                                            <th scope="col">Title 3</th>
+                                            <th scope="col">Title 4</th>
+                                            <th scope="col">Title 5</th>
+                                            <th scope="col">Title 6</th>
+                                            <th scope="col">Title 7</th>
+                                            <th scope="col">Title 8</th>
+                                        </tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+											<td>Item 6</td>
+                                            <td>Item 7</td>
+                                            <td>Item 8</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+											<td>Item 6</td>
+                                            <td>Item 7</td>
+                                            <td>Item 8</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+											<td>Item 6</td>
+                                            <td>Item 7</td>
+                                            <td>Item 8</td>
+										</tr>
+                                        <tr>
+                                            <td>Item 1</td>
+											<td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+											<td>Item 6</td>
+                                            <td>Item 7</td>
+                                            <td>Item 8</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--// ========== Component ========== -->	
+							<style>
+								/* 스크롤테이블 */
+                                .board-list.scroll-xy{overflow:auto; max-height:150px;}
+                                .board-list.scroll-xy > table{min-width:1440px;}
+                                .board-list.scroll-xy > table thead th{white-space:nowrap;}
+							</style>
+						</div>
+					</div>
+				</div><!--// _pb-cnt-area -->
+			</article><!--// _pb-article  -->
+
+            <article class="_pb-article">
+				<h3 class="_pb-article-tit">Head fixed</h3>
+				<div class="_pb-cnt-area">
+					<!-- <h4 class="_pb-cnt-tit">List type</h4> -->
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.sticky-table</h5>
+                            <p class="_pb-comp-guide">IE 11미지원</p>
+							<!-- ========== Component ========== --> 
+                            <div class="sticky-table">
+                                <table>
+                                    <caption>Caption</caption>
+									<colgroup>
+										<col span="5" style="width:20%">
+									</colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>Title 1</th>
+                                            <th>Title 2</th>
+                                            <th>Title 3</th>
+                                            <th>Title 4</th>
+                                            <th>Title 5</th>
+                                        </tr>    
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Item 1</td>
+                                            <td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item 1</td>
+                                            <td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item 1</td>
+                                            <td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item 1</td>
+                                            <td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item 1</td>
+                                            <td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item 1</td>
+                                            <td>Item 2</td>
+                                            <td>Item 3</td>
+                                            <td>Item 4</td>
+                                            <td>Item 5</td>
+                                        </tr>
+                                    </tbody>
+                                  
+                                </table>
+                            </div>
+							<!--// ========== Component ========== -->	
+							<style>
+                                .sticky-table{width:100%; height:200px; overflow: auto;}
+                                .sticky-table table{width:100%; min-width:1440px; border-collapse: collapse;}
+                                .sticky-table table thead th{position:sticky; top: 0px; background:#fff;}
+                                .sticky-table table thead th:after{position:absolute; display:block; content:''; bottom:0; width:100%; height:1px; background:#333;}
+                                .sticky-table table th,.sticky-table table td{border-bottom:1px solid #ddd; padding:10px 0; text-align:center;}
+							</style>
+						</div>
+                        <div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.scroll-table</h5>
+							<!-- ========== Component ========== --> 
+                            <div>//</div>
+							<!--// ========== Component ========== -->	
+							<style>
+								/* 스크롤테이블 */
+								.board-list.scroll-table{overflow-x:auto; }
+								.board-list.fix-type > table{table-layout:fixed;}
+								.board-list.scroll-table > table{min-width:1440px; table-layout:fixed;}
+								.board-list.scroll-table > table thead th{white-space:nowrap;}
+							</style>
+						</div>
+					</div>
+				</div><!--// _pb-cnt-area -->
+			</article><!--// _pb-article  -->
+
+            <article class="_pb-article-rwd">
+				<h3 class="_pb-article-tit">Responsive</h3>
+				<div class="_pb-cnt-area">
+					<!-- <h4 class="_pb-cnt-tit">List type</h4> -->
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<h5 class="_pb-comp-tit">.rwd-table</h5>
+							<!-- ========== Component ========== --> 
+                            <div>//</div>
+							<!--// ========== Component ========== -->	
+							<style>
+							</style>
+						</div>
+					</div>
+				</div><!--// _pb-cnt-area -->
+			</article><!--// _pb-article  -->
+		</div>
+	</section>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<button type="button" class="btn-gotop"><span>TOP</span></button>
+
+</body>
+</html>

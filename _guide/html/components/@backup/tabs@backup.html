@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<section class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<main class="_pb-article-wrap">
+				<div class="_pb-page-tit">
+					<h2>Tabs</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<article class="_pb-article">
+					<h3 class="_pb-article-tit">기본</h3>
+					<!-- <p class="_pb-comp-guide">설명</p> -->
+					<div class="_pb-comp-view">
+						<h3 class="_pb-comp-tit">Table-layout</h3>
+						<p class="_pb-comp-guide">table 속성</p>
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+							<div class="tab-table ui-tab">
+								<ul>
+									<li class="active"><a href="#tab1-1"><span>tab-table 1</span></a></li>
+									<li><a href="#tab1-2"><span>tab-table 2</span></a></li>
+									<li><a href="#tab1-3"><span>tab-table 3</span></a></li>
+								</ul>
+							</div><!--// tab-table -->
+							<div class="tab-container ui-tab-container">
+								<div id="tab1-1" class="ui-tab-content active">
+									<div class="_pb-inner-ex _pb-temp-box1">Content 1 (Jquery)</div>
+								</div>
+								<div id="tab1-2" class="ui-tab-content">
+									<div class="_pb-inner-ex _pb-temp-box2">Content 2 (Jquery)</div>
+								</div>
+								<div id="tab1-3" class="ui-tab-content">
+									<div class="_pb-inner-ex _pb-temp-box1">Content 3 (Jquery)</div>
+								</div>
+							</div><!--// tab-container -->
+							<!--// ========== Component ========== -->	
+							<script>
+								$(function () { 
+									uiTab ();
+								});
+							</script>
+						</div><!--// _pb-comp-item -->
+						
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+							<div class="tab-table ui-js-tab">
+								<ul>
+									<li class="active"><a href="#tab2-1" data-tab="tab2-1"><span>tab-table 1</span></a></li>
+									<li><a href="#tab2-2" data-tab="tab2-2"><span>tab-table 2</span></a></li>
+									<li><a href="#tab2-3" data-tab="tab2-3"><span>tab-table 3</span></a></li>
+								</ul>
+							</div><!--// tab-table -->
+							<div class="tab-container ui-js-tab-container">
+								<div id="tab2-1" class="ui-js-tab-content active">
+									<div class="_pb-inner-ex _pb-temp-box1">Content 1 (Vanilla)</div>
+								</div>
+								<div id="tab2-2" class="ui-js-tab-content">
+									<div class="_pb-inner-ex _pb-temp-box2">Content 2 (Vanilla)</div>
+								</div>
+								<div id="tab2-3" class="ui-js-tab-content">
+									<div class="_pb-inner-ex _pb-temp-box1">Content 3 (Vanilla)</div>
+								</div>
+							</div><!--// tab-container -->
+							<!--// ========== Component ========== -->	
+							<script>
+								//uiJsTab();
+								
+							</script>
+						</div><!--// _pb-comp-item -->
+
+						<h3 class="_pb-comp-tit">Flexible</h3>
+						<p class="_pb-comp-guide">Flex 속성</p>
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+							<div data-element="tab">
+								<div class="tab-flex">
+									<ul>
+										<li class="active"><a href="#tab3-1"><span>tab-flex 1</span></a></li>
+										<li><a href="#tab3-2"><span>tab-flex 2</span></a></li>
+										<li><a href="#tab3-3"><span>tab-flex 3</span></a></li>
+									</ul>
+								</div><!--// tab-table -->
+								<div class="tab-container ui-tab-container">
+									<div id="tab3-1" class="ui-tab-content active">
+										<div class="_pb-inner-ex _pb-temp-box1">Content 1 (myTabUI)</div>
+									</div>
+									<div id="tab3-2" class="ui-tab-content">
+										<div class="_pb-inner-ex _pb-temp-box2">Content 2 (myTabUI)</div>
+									</div>
+									<div id="tab3-3" class="ui-tab-content">
+										<div class="_pb-inner-ex _pb-temp-box1">Content 3 (myTabUI)</div>
+									</div>
+								</div><!--// tab-container -->
+							</div>
+							<!--// ========== Component ========== -->	
+							<script>
+								myNavUI.tabMenu('[data-element="tab"]');
+							</script>
+						</div><!--// _pb-comp-item -->
+					</div><!--// _pb-comp-view -->
+				</article><!--// _pb-article  -->
+
+				<article class="_pb-article">
+					<h3 class="_pb-article-tit">Misc</h3>
+					<!-- <p class="_pb-comp-guide">Tab in tab</p> -->
+					<div class="_pb-comp-view">
+						<h3 class="_pb-comp-tit">Tabs in tab</h3>
+						<p class="_pb-comp-guide">탭안의 탭</p>
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+							<div class="tab-flex ui-tab">
+								<ul>
+									<li class="active"><a href="#tab3-1"><span>tab-flex 1</span></a></li>
+									<li><a href="#tab3-2"><span>tab-flex 2</span></a></li>
+									<li><a href="#tab3-3"><span>tab-flex 3</span></a></li>
+								</ul>
+							</div><!--// tab-table -->
+							<div class="tab-container ui-tab-container">
+								<div id="tab3-1" class="ui-tab-content active">
+									<div class="_pb-inner-ex _pb-temp-box1">Content 1 (Jquery)</div>
+								</div>
+								<div id="tab3-2" class="ui-tab-content">
+									<div class="_pb-inner-ex _pb-temp-box2">Content 2 (Jquery)</div>
+								</div>
+								<div id="tab3-3" class="ui-tab-content">
+									<div class="_pb-inner-ex _pb-temp-box1">Content 3 (Jquery)</div>
+								</div>
+							</div><!--// tab-container -->
+							<!--// ========== Component ========== -->	
+							<script></script>
+						</div><!--// _pb-comp-item -->
+
+						<h3 class="_pb-comp-tit">가로 스크롤 tab</h3>
+						<p class="_pb-comp-guide">모바일을 위한 가로 스크롤 tab</p>
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+							<div class="tab-flex ui-tab">
+								<ul>
+									<li class="active"><a href="#tab3-1"><span>tab-flex 1</span></a></li>
+									<li><a href="#tab3-2"><span>tab-flex 2</span></a></li>
+									<li><a href="#tab3-3"><span>tab-flex 3</span></a></li>
+								</ul>
+							</div><!--// tab-table -->
+							<div class="tab-container ui-tab-container">
+								<div id="tab3-1" class="ui-tab-content active">
+									<div class="_pb-inner-ex _pb-temp-box1">Content 1 (Jquery)</div>
+								</div>
+								<div id="tab3-2" class="ui-tab-content">
+									<div class="_pb-inner-ex _pb-temp-box2">Content 2 (Jquery)</div>
+								</div>
+								<div id="tab3-3" class="ui-tab-content">
+									<div class="_pb-inner-ex _pb-temp-box1">Content 3 (Jquery)</div>
+								</div>
+							</div><!--// tab-container -->
+							<!--// ========== Component ========== -->	
+							<script></script>
+						</div><!--// _pb-comp-item -->
+					</div><!--// _pb-comp-view -->
+				</article><!--// _pb-article  -->
+			</main>
+		</div>
+	</section>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+</body>
+</html>

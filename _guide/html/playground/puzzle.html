@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Playground');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Title</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Component title</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="puzzle-wrap" data-puzzle="puzzle-one">
+							<!-- <div class="cube"></div>
+							<div class="cube off"></div>
+							<div class="cube on"></div> -->
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<style>
+						.puzzle-wrap{display: flex;  flex-wrap: wrap;  width:500px; height:500px; background-color: #eee;}
+						.cube{width:50px; height:50px; background-color: #ddd;}
+						.cube.inactive{background-color: #999;}
+						.cube.active{background-color: salmon;}
+					</style>
+					<script>
+						const puzzleWrap = document.querySelector('.puzzle-wrap');
+
+						for ( let i = 0; i < 100; i++ ) {
+							const cubeElem = document.createElement('div');
+							cubeElem.className = 'cube';
+							cubeElem.dataset.cube = `${i}`;
+							puzzleWrap.appendChild(cubeElem);
+
+							const innerElem = document.createElement('div');
+							innerElem.className = 'cube-inner';
+							cubeElem.append(innerElem);
+
+							const checkELem = document.createElement('input');
+							checkELem.setAttribute('type','checkbox');
+							checkELem.setAttribute('id',`cube-check-${i}`);
+							checkELem.setAttribute('disabled','disabled');
+
+							const labelELem = document.createElement('label');
+							labelELem.setAttribute('for',`cube-check-${i}`);
+							// labelELem.innerHTML = '<span></span>';
+							labelELem.textContent = '...';
+
+							innerElem.append(checkELem, labelELem);
+						} 
+
+						const puzzleOneArray = [0, 65, 33, 12, 14, 16, 44, 55, 78, 90, 4, 32, 21]; // 13개
+						for( let i = 0; i < puzzleOneArray.length; i++ ) {
+							// console.log(puzzleOne[i]);
+							const cubeDiv = puzzleWrap.querySelector(`div[data-cube="${puzzleOneArray[i]}"]`);
+							const cubeInput = cubeDiv.querySelector('input');
+							cubeDiv.classList.add('inactive');
+							cubeInput.removeAttribute('disabled');
+						}
+
+						const puzzleOneRandom = [];
+						while( puzzleOneArray.length > 8 ) { // 전체 - 원하는 수 : 13 - 5
+							let target = puzzleOneArray.splice(Math.floor(Math.random() * puzzleOneArray.length), 1)[0];
+							//let target = puzzleOneArray[Math.floor(Math.random() * puzzleOneArray.length)];
+							puzzleOneRandom.push(target);
+						}
+						console.log(puzzleOneRandom);
+						console.log(puzzleOneRandom[4]);
+
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Misc</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="border">
+							<div class="_test-inputbox">
+							  <input type="text" class="_test-input-text">
+							 <input type="text" class="_test-input-text">
+							</div>
+							 <button class="btn">버튼</button>
+						  </div>
+						  <div class="border">
+							 <div class="_test-inputbox">
+							  <input type="text" class="_test-input-text">
+							 <input type="text" class="_test-input-text">
+							</div>
+							 <button class="btn">버튼</button>
+						  </div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<style>
+						.btn{visibility: hidden;}
+						.btn.on{visibility: visible;}
+					</style>
+					<script>
+						const wrapper = document.querySelectorAll('.wrapper');
+						const inputs = document.querySelectorAll('.input-text');
+
+						inputs.forEach(function(item){
+							item.addEventListener('keyup', () => {
+								const inputbox = item.parentNode;
+								const myinputs = inputbox.querySelectorAll('.input-text');
+								const btn = inputbox.nextelementsibling;
+
+								let hasValue = false; 
+								console.log(myinputs)
+
+								for(let i = 0; i < myinputs.length; i++){
+									if(myinputs[0].value !== null || myinputs[1].value !== null){
+										hasValue = true;
+										console.log('y')
+									} else if ( myinputs[0].value === '' || myinputs[1].value === '') {
+										console.log('n')
+									}
+								}
+									
+								if(hasValue){
+									console.log('yy')
+								}else{
+									console.log('nn')
+								}
+
+							});
+						})
+					</script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Layout');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Inline-block</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<p class="_pb-section-desc">컬럼 갯수에 따라 .block-area--span(N)</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="block-area--span2">
+							<div class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box2">.colum</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box2">.colum</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</div>
+						</div>
+						<ul class="block-area--span3">
+							<li class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box2">.colum</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box1">.colum<br />second Line</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box2">.colum<br />second Line</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box2">.colum</div>
+							</li>
+						</ul>
+						<div class="block-area--span4">
+							<div class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box2">.colum<br />second Line</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box2">.colum</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box2">.colum</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box2">.colum<br />second Line</div>
+							</div>
+							<div class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">간격</h3>
+					<p class="_pb-section-desc">부모요소에 addClass .gap(N)</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<ul class="block-area--span3 gap20">
+							<li class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box2">.colum <br />second Line</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box2">.colum</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box1">.colum</div>
+							</li>
+							<li class="colum">
+								<div class="_pb-temp-box2">.colum<br />second Line</div>
+							</li>
+						</ul>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

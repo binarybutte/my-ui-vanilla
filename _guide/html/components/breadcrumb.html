@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Breadcrumb &amp; Pagination</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Breadcrumb</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<nav class="breadcrumb breadcrumb-divider--bar" aria-label="breadcrumb">
+							<ol class="justify-start">
+								<li class="breadcrumb-item"><a href="#"><i class="icon-md icon-home bg-secondary"></i></a></li>
+								<li class="breadcrumb-item"><a href="#">Menu 1</a></li>
+								<li class="breadcrumb-item"><a href="#">Menu 2</a></li>
+								<li class="breadcrumb-item ui-active" aria-current="page">
+									<a href="#">Menu 3</a>
+								</li>
+							</ol>
+						</nav>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<nav class="breadcrumb breadcrumb-divider--angle" aria-label="breadcrumb">
+							<ol class="justify-center">
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item"><a href="#">Menu 1</a></li>
+								<li class="breadcrumb-item"><a href="#">Menu 2</a></li>
+								<li class="breadcrumb-item ui-active" aria-current="page">
+									<div class="dropdown">
+										<a href="#" data-js-behavior="dropdown" data-dropdown-direction="bottom"
+											aria-expanded="false"
+											onclick="myNavUI.dropdown(event, this);">
+											<span>Menu 3</span>
+											<i class="icon-sm icon-caret-down bg-black ui-arrow" aria-label="열기"></i>
+										</a>
+										<div class="dropdown-menu scrollable">
+											<ul class="dropdown-list">
+												<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+												<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ol>
+						</nav>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<nav class="breadcrumb breadcrumb-divider--angle" aria-label="breadcrumb">
+							<ol class="justify-end" data-js-behavior="dropdownGroup">
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item">
+									<div class="dropdown">
+										<a href="#" data-js-behavior="dropdown" data-dropdown-direction="bottom"
+											aria-expanded="false">
+											<span>Menu 3</span>
+											<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+										</a>
+										<div class="dropdown-menu scrollable">
+											<ul class="dropdown-list">
+												<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+												<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="breadcrumb-item">
+									<div class="dropdown">
+										<a href="#" data-js-behavior="dropdown" data-dropdown-direction="bottom"
+											aria-expanded="false">
+											<span>Menu 3</span>
+											<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+										</a>
+										<div class="dropdown-menu scrollable">
+											<ul class="dropdown-list">
+												<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+												<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="breadcrumb-item ui-active" aria-current="page">
+									<div class="dropdown">
+										<a href="#" data-js-behavior="dropdown" data-dropdown-direction="bottom"
+											aria-expanded="false">
+											<span>Menu 3</span>
+											<i class="icon-sm icon-caret-down bg-black ui-arrow" aria-label="열기"></i>
+										</a>
+										<div class="dropdown-menu scrollable">
+											<ul class="dropdown-list">
+												<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+												<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+												<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ol>
+						</nav>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const dropdownGroup = document.querySelector('[data-js-behavior="dropdownGroup"]');
+						const dropdownBtns = dropdownGroup.querySelectorAll('[data-js-behavior="dropdown"]')
+						
+						dropdownBtns.forEach(item => { 
+							item.addEventListener('click', function (event) {
+								myNavUI.dropdown(event, item); 
+							})
+						});
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Pagination</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<nav class="pagination" aria-label="Page navigation">
+							<ul class="justify-center">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" aria-label="First">
+										<i class="icon icon-skip-prev bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Previous">
+										<i class="icon icon-chevron-left bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item ui-active" aria-current="page"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Next">
+										<i class="icon icon-chevron-right bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Last">
+										<i class="icon icon-skip-next bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<!--// ========== Component ========== -->
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<div class="_pb-helper">
+							<div class="form-switch">
+								<input type="checkbox" id="switch-101" name="switch-101" class="form-switch-ctrl">
+								<label for="switch-101" class="form-switch-label">반응형 확인 (addClass .rwd-)</label>
+							</div>
+						</div>
+						<!-- ========== Component ========== -->
+						<nav class="pagination pagination-group-div" aria-label="Page navigation">
+							<button type="button" class="btn-basic btn-basic-md btn-secondary"><span>Button</span></button>
+							<ul class="justify-center">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" aria-label="First">
+										<i class="icon icon-skip-prev bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Previous">
+										<i class="icon icon-chevron-left bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item ui-active" aria-current="page"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Next">
+										<i class="icon icon-chevron-right bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Last">
+										<i class="icon icon-skip-next bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+							<button type="button" class="btn-basic btn-basic-md btn-primary"><span>Button</span></button>
+						</nav>
+
+						<br>
+
+						<nav class="pagination pagination-group-div" aria-label="Page navigation">
+							<div class="pagination-group-left">
+								<button type="button" class="btn-basic btn-basic-md btn-secondary-line"><span>Button</span></button>
+								<button type="button" class="btn-basic btn-basic-md btn-secondary-line"><span>Button</span></button>
+							</div>
+							<ul class="justify-center">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" aria-label="First">
+										<i class="icon icon-skip-prev bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Previous">
+										<i class="icon icon-chevron-left bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item ui-active" aria-current="page"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Next">
+										<i class="icon icon-chevron-right bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#" aria-label="Last">
+										<i class="icon icon-skip-next bg-black" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+							<div class="pagination-group-right">
+								<button type="button" class="btn-basic btn-basic-md btn-primary-line"><span>Button</span></button>
+								<button type="button" class="btn-basic btn-basic-md btn-primary-line"><span>Button</span></button>
+							</div>
+						</nav>
+						<!--// ========== Component ========== -->
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+	<script>include.bottom();</script>
+
+</body>
+</html>

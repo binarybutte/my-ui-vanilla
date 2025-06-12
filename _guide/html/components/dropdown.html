@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Dropdown</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="dropdown">
+							<button type="button" class="btn-basic btn-basic-md btn-primary"
+									data-js-behavior="dropdown" data-dropdown-direction="bottom"
+									aria-expanded="false"
+									onclick="myNavUI.dropdown(event, this);">
+								<span>Dropdown: scrollable</span>
+								<i class="icon-sm icon-caret-down bg-white ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="dropdown-menu scrollable">
+								<ul class="dropdown-list">
+									<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+									<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<button type="button" class="btn-basic btn-basic-md btn-primary-line"
+									data-js-behavior="dropdown" data-dropdown-direction="bottom"
+									aria-expanded="false"
+									onclick="myNavUI.dropdown(event, this);">
+								<span>Dropdown</span>
+								<i class="icon-sm icon-caret-down bg-primary ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="dropdown-menu">
+								<ul class="dropdown-list">
+									<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+									<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+								</ul>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">아이콘 버튼 적용(방향)</h4>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="dropdown">
+							<button type="button" class="btn-icon btn-icon-disc btn-icon-32 bg-primary"
+									data-js-behavior="dropdown" data-dropdown-direction="right"
+									aria-expanded="false" onclick="myNavUI.dropdown(event, this);">
+								<i class="icon icon-caret-right bg-white" aria-label="열기"></i>
+							</button>
+							<div class="dropdown-menu">
+								<ul class="dropdown-list">
+									<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+									<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<button type="button" class="btn-icon btn-icon-disc btn-icon-32 bg-primary"
+									data-js-behavior="dropdown" data-dropdown-direction="bottom"
+									aria-expanded="false" onclick="myNavUI.dropdown(event, this);">
+								<i class="icon icon-caret-down bg-white" aria-label="열기"></i>
+							</button>
+							<div class="dropdown-menu">
+								<ul class="dropdown-list">
+									<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+									<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<button type="button" class="btn-icon btn-icon-disc btn-icon-32 bg-primary"
+									data-js-behavior="dropdown" data-dropdown-direction="left"
+									aria-expanded="false" onclick="myNavUI.dropdown(event, this);">
+								<i class="icon icon-caret-left bg-white" aria-label="열기"></i>
+							</button>
+							<div class="dropdown-menu">
+								<ul class="dropdown-list">
+									<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+									<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<button type="button" class="btn-icon btn-icon-disc btn-icon-32 bg-primary"
+									data-js-behavior="dropdown" data-dropdown-direction="top"
+									aria-expanded="false" onclick="myNavUI.dropdown(event, this);">
+								<i class="icon icon-caret-up bg-white" aria-label="열기"></i>
+							</button>
+							<div class="dropdown-menu">
+								<ul class="dropdown-list">
+									<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+									<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 2: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+									<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+								</ul>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">그룹</h4>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<ul class="flexbox gap-5" data-js-behavior="dropdownGroup">
+							<li class="dropdown">
+								<button type="button" class="btn-basic btn-basic-md btn-primary-line"
+										data-js-behavior="dropdown" data-dropdown-direction="bottom"
+										aria-expanded="false">
+									<span>Dropdown</span>
+									<i class="icon-sm icon-caret-down bg-primary ui-arrow" aria-label="열기"></i>
+								</button>
+								<div class="dropdown-menu">
+									<ul class="dropdown-list">
+										<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 1: Lorem ipsum dolor sit amet.</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 2</a></li>
+										<li><a href="#" class="dropdown-item text-ellipsis">dropdown-menu 3: Lorem, ipsum dolor.</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+									</ul>
+								</div>
+							</li><!--// dropdown -->
+							<li class="dropdown">
+								<button type="button" class="btn-basic btn-basic-md btn-primary-line"
+										data-js-behavior="dropdown" data-dropdown-direction="bottom"
+										aria-expanded="false">
+									<span>Dropdown</span>
+									<i class="icon-sm icon-caret-down bg-primary ui-arrow" aria-label="열기"></i>
+								</button>
+								<div class="dropdown-menu">
+									<ul class="dropdown-list">
+										<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 2</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+									</ul>
+								</div>
+							</li><!--// dropdown -->
+							<li class="dropdown">
+								<button type="button" class="btn-basic btn-basic-md btn-primary-line"
+										data-js-behavior="dropdown" data-dropdown-direction="bottom"
+										aria-expanded="false">
+									<span>Dropdown</span>
+									<i class="icon-sm icon-caret-down bg-primary ui-arrow" aria-label="열기"></i>
+								</button>
+								<div class="dropdown-menu">
+									<ul class="dropdown-list">
+										<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 2</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+									</ul>
+								</div>
+							</li><!--// dropdown -->
+							<li class="dropdown">
+								<button type="button" class="btn-basic btn-basic-md btn-primary-line"
+										data-js-behavior="dropdown" data-dropdown-direction="bottom"
+										aria-expanded="false">
+									<span>Dropdown</span>
+									<i class="icon-sm icon-caret-down bg-primary ui-arrow" aria-label="열기"></i>
+								</button>
+								<div class="dropdown-menu">
+									<ul class="dropdown-list">
+										<li><a href="#" class="dropdown-item">dropdown-menu 1</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 2</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 4</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 5</a></li>
+										<li><a href="#" class="dropdown-item">dropdown-menu 6</a></li>
+									</ul>
+								</div>
+							</li><!--// dropdown -->
+						</ul>
+						<!--// ========== Component ========== -->	
+						<script>
+							const dropdownGroup = document.querySelector('[data-js-behavior="dropdownGroup"]');
+							const dropdownBtns = dropdownGroup.querySelectorAll('[data-js-behavior="dropdown"]')
+							
+							dropdownBtns.forEach(item => { 
+								item.addEventListener('click', function (event) {
+									myNavUI.dropdown(event, item); 
+								})
+							});
+						</script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">2depth ~ 4depth 포함</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						 // 나중에.. <br>
+						https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-component-tit">Related</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<!-- <h4 class="_pb-component-tit"></h4> -->
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <tbody>
+								<tr class="_pb-etc">
+                                    <th scope="row">영역 외 클릭 감지</th>
+									<td>
+										모달이나 드롭다운같은 요소에 상태를 나타내는 플래그 변수 선언 (isOpen = false)<br>
+										오픈하면 isOpen = true (닫기함수실행), 닫히면 false (열기함수실행)
+									</td>
+                                    <td>
+										<a href="https://ramincoding.tistory.com/entry/JavaScriptReact-%EC%98%81%EC%97%AD-%EC%99%B8-%ED%81%B4%EB%A6%AD-%EA%B0%90%EC%A7%80%EB%A1%9C-%EB%AA%A8%EB%8B%AC%ED%94%84%EB%A1%9C%ED%95%84-%EB%B0%95%EC%8A%A4-%EB%8B%AB%EA%B8%B0-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84" class="btn-text btn-text-sm text-primary" target="_blank" aria-haspopup="true">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+					<script></script>
+				</section><!--// _pb-section  -->
+
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

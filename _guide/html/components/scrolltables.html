@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+<script>
+	// 테이블 목록 스크롤 테스트
+	function tableScroll_test (elem, line) {
+		const table = document.querySelector(`[data-scroll-table="${elem}"]`);
+		const tbody = table.querySelector('tbody');
+		const tr = table.querySelector('._pb-scrolltest-tr');
+		
+		for ( let i = 0; i < line; i++ ) {
+			const cloneTr = tr.cloneNode(true);
+			tbody.append(cloneTr);
+		}
+	}
+</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Scroll Tables</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">일반</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+
+					<h4 class="_pb-component-tit">가로</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped table-scroll-xy" data-scroll-table="test01">
+							<table class="table-layout--auto">
+								<caption>Caption</caption>
+								<colgroup>
+									<col span="5">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Title 1</th>
+										<th scope="col">Title 2</th>
+										<th scope="col">Title 3</th>
+										<th scope="col">Title 4</th>
+										<th scope="col">Title 5</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><div class="_pb-scrolltest-td" style="width: 100px;">Item 1</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 200px;">Item 2</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 300px;">Item 3</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 400px;">Item 4</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 300px;">Item 5</div></td>
+									</tr>
+									<tr class="_pb-scrolltest-tr">
+										<td colspan="5">Scroll test</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">세로</h4>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped table-scroll-xy" data-scroll-table="test02">
+							<table class="table-layout--auto">
+								<caption>Caption</caption>
+								<colgroup>
+									<col span="4" style="width: 15%"><col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Title 1</th>
+										<th scope="col">Title 2</th>
+										<th scope="col">Title 3</th>
+										<th scope="col">Title 4</th>
+										<th scope="col">Title 5</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><div class="_pb-scrolltest-td">Item 1</div></td>
+										<td><div class="_pb-scrolltest-td">Item 2</div></td>
+										<td><div class="_pb-scrolltest-td">Item 3</div></td>
+										<td><div class="_pb-scrolltest-td">Item 4</div></td>
+										<td><div class="_pb-scrolltest-td">Item 5</div></td>
+									</tr>
+									<tr class="_pb-scrolltest-tr">
+										<td colspan="5">Scroll test</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h3 class="_pb-component-tit">양방향</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped table-scroll-xy" data-scroll-table="test03">
+							<table class="table-layout--auto">
+								<caption>Caption</caption>
+								<colgroup>
+									<col span="5">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Title 1</th>
+										<th scope="col">Title 2</th>
+										<th scope="col">Title 3</th>
+										<th scope="col">Title 4</th>
+										<th scope="col">Title 5</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><div class="_pb-scrolltest-td" style="width: 100px;">Item 1</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 200px;">Item 2</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 300px;">Item 3</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 400px;">Item 4</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 300px;">Item 5</div></td>
+									</tr>
+									<tr class="_pb-scrolltest-tr">
+										<td colspan="5">Scroll test</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<script>
+						tableScroll_test('test01', 2)
+						tableScroll_test('test02', 12)
+						tableScroll_test('test03', 12)
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Sticky</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://adrianroselli.com/2020/01/fixed-table-headers.html</li>
+						</ul>
+					</div>
+					<h4 class="_pb-component-tit">상단 고정</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped table-scroll-xy" data-scroll-table="test04">
+							<table class="table-layout--auto table-sticky col-12">
+								<caption>Caption</caption>
+								<colgroup>
+									<col span="4" style="width: 20%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="sticky-col" scope="col">Title 1</th>
+										<th class="sticky-col" scope="col">Title 2</th>
+										<th class="sticky-col" scope="col">Title 3</th>
+										<th class="sticky-col" scope="col">Title 4</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><div class="_pb-scrolltest-td">Item 1</div></td>
+										<td><div class="_pb-scrolltest-td">Item 2</div></td>
+										<td><div class="_pb-scrolltest-td">Item 3</div></td>
+										<td><div class="_pb-scrolltest-td">Item 4</div></td>
+									</tr>
+									<tr class="_pb-scrolltest-tr">
+										<td colspan="4">Scroll test</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">사이드 고정</h4>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped table-scroll-xy" data-scroll-table="test05">
+							<table class="table-layout--auto table-sticky">
+								<caption>Caption</caption>
+								<colgroup>
+									<col span="5">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="sticky-row"><div class="_pb-scrolltest-td" style="width: 100px;">Item 1</div></th>
+										<td><div class="_pb-scrolltest-td" style="width: 200px;">Item 2</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 200px;">Item 3</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 400px;">Item 4</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 500px;">Item 5</div></td>
+									</tr>
+									<tr class="_pb-scrolltest-tr">
+										<th scope="row" class="sticky-row"></th>
+										<td colspan="4">Scroll test</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">상단 + 사이드 고정</h4>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-container table-column table-column--striped table-scroll-xy" data-scroll-table="test06">
+							<table class="table-layout--auto table-sticky">
+								<caption>Caption</caption>
+								<colgroup>
+									<col span="5">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="sticky-col sticky-corner" scope="col">Title 1</th>
+										<th class="sticky-col" scope="col">Title 2</th>
+										<th class="sticky-col" scope="col">Title 3</th>
+										<th class="sticky-col" scope="col">Title 4</th>
+										<th class="sticky-col" scope="col">Title 5</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" class="sticky-row"><div class="_pb-scrolltest-td" style="width: 100px;">Item 1</div></th>
+										<td><div class="_pb-scrolltest-td" style="width: 200px;">Item 2</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 200px;">Item 3</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 400px;">Item 4</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 500px;">Item 5</div></td>
+									</tr>
+									<tr class="_pb-scrolltest-tr">
+										<th scope="row" class="sticky-row"></th>
+										<td colspan="4">Scroll test</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	 
+					</div><!--// _pb-component -->
+
+					<script>
+						tableScroll_test('test04', 12)
+						tableScroll_test('test05', 12)
+						tableScroll_test('test06', 12)
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">테이블 컨트롤</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<h4 class="_pb-component-tit">스크롤 이동 버튼</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="table-scroll-handlers">
+							<div class="left-handler">
+								<button type="button" class="btn-icon btn-icon-40 btn-icon-disc"
+									data-js-behavior="scrollTableBtn" data-scroll-target="test07" data-scroll-move="start">
+									<i class="icon icon-chevron-back bg-gray-600" aria-label="start"></i>
+								</button>
+								<button type="button" class="btn-icon btn-icon-40 btn-icon-disc"
+									data-js-behavior="scrollTableBtn" data-scroll-target="test07" data-scroll-move="left">
+									<i class="icon icon-chevron-left bg-gray-600" aria-label="left"></i>
+								</button>
+							</div>
+							<div class="right-handler">
+								<button type="button" class="btn-icon btn-icon-40 btn-icon-disc"
+									data-js-behavior="scrollTableBtn" data-scroll-target="test07" data-scroll-move="right">
+									<i class="icon icon-chevron-right bg-gray-600" aria-label="right"></i>
+								</button>
+								<button type="button" class="btn-icon btn-icon-40 btn-icon-disc"
+									data-js-behavior="scrollTableBtn" data-scroll-target="test07" data-scroll-move="end">
+								<i class="icon icon-chevron-forward bg-gray-600" aria-label="end"></i>
+								</button>
+							</div>
+						</div><!--// table-scroll-handlers -->
+						<div class="table-container table-column table-column--striped table-scroll-xy" 
+									data-js-behavior="scrollTable" data-scroll-table="test07">
+							<table class="table-layout--auto table-sticky">
+								<caption>Caption</caption>
+								<colgroup>
+									<col span="5">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="sticky-col sticky-corner" scope="col">Title 1</th>
+										<th class="sticky-col" scope="col">Title 2</th>
+										<th class="sticky-col" scope="col">Title 3</th>
+										<th class="sticky-col" scope="col">Title 4</th>
+										<th class="sticky-col" scope="col">Title 5</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" class="sticky-row"><div class="_pb-scrolltest-td" style="width: 100px;">Item 1</div></th>
+										<td><div class="_pb-scrolltest-td" style="width: 200px;">Item 2</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 200px;">Item 3</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 400px;">Item 4</div></td>
+										<td><div class="_pb-scrolltest-td" style="width: 500px;">Item 5</div></td>
+									</tr>
+									<tr class="_pb-scrolltest-tr">
+										<th scope="row" class="sticky-row"></th>
+										<td colspan="4">Scroll test</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// ========== Component ========== -->	 
+					</div><!--// _pb-component -->
+
+					<script>
+						tableScroll_test('test07', 12);
+						myNavUI.scrollTableInit('test07');
+					</script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

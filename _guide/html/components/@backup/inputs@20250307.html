@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Inputs &amp; Textarea</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<input type="text" id="example-101" class="input-text input-text input-text-lg" style="width:100%;" placeholder=".input-text input-text input-text-lg">
+						<input type="text" id="example-101" class="input-text" style="width:100%;" placeholder=".input-text">
+						<input type="text" id="example-101" class="input-text input-text-sm" style="width:100%;" placeholder=".input-text input-text-sm">
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">비활성화</h3>
+					<p class="_pb-section-desc">Readonly, Disabled 속성 추가</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<input type="text" id="example-102" class="input-text" style="width:100%;" readonly value="Readonly">
+						<input type="text" id="example-103" class="input-text" style="width:100%;" disabled placeholder="Disabled">
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">초기화 버튼</h3>
+					<p class="_pb-section-desc">input[type='search'] 일때 각각의 브라우저에서는 초기화 버튼을 자동 생성한다. 버튼 디자인의 통일을 위해 input 옆에 .btn-input-clear 버튼을 생성해주고, css에서 input[type='search'] 의 초기화 버튼 속성을 없앤다. (하기 예시를 위해 주석처리함)<br />
+						/* input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;} */<br /></p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<input type="search" id="example-105" class="input-text" style="width:100%;" placeholder="input[type='search']">
+						<input type="text" id="example-104" class="input-text" style="width:100%;" placeholder="내용을 입력하세요.">
+						<button type="button" class="btn-input-clear"><i class="ico-x-white--xs"></i><span class="blind">삭제</span></button>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Datalist</h3>
+					<p class="_pb-section-desc">브라우저 지원 확인 필요. 셀렉트박스와 비슷하나 목록 표시에 디자인 차이가 있다.</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<label for="exampleDataList" class="_pb-temp-tit">Datalist Label</label>
+						<input class="input-text" list="datalistOptions" id="exampleDataList" placeholder="datalist" style="width:100%;">
+						<datalist id="datalistOptions">
+							<option value="datalist sample 1">
+							<option value="datalist sample 2">
+							<option value="datalist sample 3">
+						</datalist>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Textarea</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<label for="example-201" class="_pb-temp-tit">Textarea</label>
+							<div class="textarea-box">
+								<textarea id="example-201" placeholder="내용을 입력하세요.(Jquery)"></textarea>
+								<div class="textarea-count">
+									<button type="button" class="btn-func btn-default"><span>삭제</span></button>
+									<span class="count">0</span> / <span class="total">20</span>
+								</div>
+							</div>
+							<div class="textarea-box">
+								<textarea id="example-202" placeholder="내용을 입력하세요. (Vanilla)"></textarea>
+								<div class="textarea-count">
+									<button type="button" class="btn-func btn-default"><span>삭제</span></button>
+									<span class="count">0</span> / <span class="total">30</span>
+								</div>
+							</div>
+							<br />
+							<label for="example-203" class="_pb-temp-tit">Textarea Readonly</label>
+							<div class="textarea-box inactive">
+								<textarea id="example-203" placeholder="내용을 입력하세요." readonly>내용이 있는 경우 텍스트가 보여집니다.(Jquery)</textarea>
+								<div class="textarea-count">
+									<button type="button" class="btn-func btn-default"><span>삭제</span></button>
+									<span class="count">0</span> / <span class="total">40</span>
+								</div>
+							</div>
+							<div class="textarea-box inactive">
+								<textarea id="example-204" placeholder="내용을 입력하세요." readonly>내용이 있는 경우 텍스트가 보여집니다.(Vanilla)</textarea>
+								<div class="textarea-count">
+									<button type="button" class="btn-func btn-default"><span>삭제</span></button>
+									<span class="count">0</span> / <span class="total">50</span>
+								</div>
+							</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* Table
+========================================================*/
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+table td, table th { word-break: keep-all; word-wrap: break-word; font-size: 1rem; }
+.table-container { position: relative; width: 100%; }
+.table-layout--fixed { table-layout: fixed; }
+.table-layout--auto { table-layout: auto; }
+
+/* table-column */
+.table-column thead th { color: var(--colorBlack); vertical-align: middle; font-weight: 500; }
+.table-column th,.table-column td { padding: .75em; color: var(--colorGray700); }
+.table-column td.cell-handler { padding: .75em 0; }
+.table-column td.cell-handler > [class*='icon-'] { vertical-align: middle; }
+/* table-row */
+.table-row { table-layout: fixed; }
+.table-row tbody th,
+.table-row tbody td { padding: 1em 1.4em; vertical-align: top; text-align: left; }
+.table-row tbody th { color: var(--colorBlack); font-weight: 500; }
+.table-row tbody td { color: var(--colorGray700); font-weight: 400; }
+
+/** table-column--striped **/
+.table-column--striped thead th { border-bottom: 1px solid var(--colorBlack); text-align: center; }
+.table-column--striped tbody th,
+.table-column--striped tbody td { border-top: 1px solid var(--colorGray300); vertical-align: middle; }
+.table-column--striped tbody tr:first-child th,
+.table-column--striped tbody tr:first-child td { border-top: 0; }
+.table-column--striped tbody th { border-right: 1px solid var(--colorGray300); }
+.table-column--striped tbody tr:last-child td { border-bottom: 1px solid var(--colorGray300); }
+.table-column--striped th,.table-column--striped td { text-align: center; }
+
+/** table-row--bordered **/
+.table-row--bordered { border-top: 1px solid var(--colorBlack); }
+.table-row--bordered tbody th,
+.table-row--bordered tbody td { border-bottom: 1px solid var(--colorGray300) }
+.table-row--bordered tbody th { border-right: 1px solid var(--colorGray300) }
+.table-row--bordered tbody td + th { border-left: 1px solid var(--colorGray300) } 
+
+/** table-sticky **/
+.table-sticky { border-collapse: separate; margin: 0; padding: 0; }
+.table-sticky .sticky-col { position: sticky; top: 0; z-index: 1; background: var(--colorWhite) }
+.table-sticky .sticky-row { position: sticky; left: 0; z-index: 1; background-color: var(--colorGray200);}
+.table-sticky thead .sticky-corner { left: 0; z-index: 2; }
+
+/* Scroll */
+.table-scroll-x { overflow-x: auto; }
+.table-scroll-y { overflow-y: auto; max-height: 15.625em; }
+.table-scroll-xy { overflow: auto; max-height: 15.625em;  }
+.table-scroll-x,
+.table-scroll-y,
+.table-scroll-xy { scrollbar-gutter: stable; overflow: overlay; scroll-behavior: smooth; }
+.table-scroll-x::-webkit-scrollbar,
+.table-scroll-y::-webkit-scrollbar,
+.table-scroll-xy::-webkit-scrollbar { width: .375em; height: .375em; }
+.table-scroll-x::-webkit-scrollbar-thumb,
+.table-scroll-y::-webkit-scrollbar-thumb,
+.table-scroll-xy::-webkit-scrollbar-thumb { background: var(--colorGray300); border-radius: 0.094rem; }
+.table-scroll-x::-webkit-scrollbar-track,
+.table-scroll-y::-webkit-scrollbar-track,
+.table-scroll-xy::-webkit-scrollbar-track { display: none; }
+
+.table-scroll-handlers { position: relative; z-index: 3; transform: translateY(9.375em); }
+.table-scroll-handlers .left-handler { position: absolute; left: 0; top: 50%; transition: .3s; }
+.table-scroll-handlers .right-handler { position: absolute; right: 0; top: 50%; transition: .3s; }
+.table-scroll-handlers .btn-icon { padding: .375em; background-color: rgba(var(--rgbBlack), .1); }
+
+/* 예외 */
+.table-container > table th > .form-check-ctrl,
+.table-container > table td > .form-check-ctrl { vertical-align: middle; }
+
+

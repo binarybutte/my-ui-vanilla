@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Combobox</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">.combobox--select</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<!-- 1 -->
+						<div class="combobox combobox--select combobox-md" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler"
+									data-combobox-placeholder="Select an option" aria-expanded="false">
+								<span class="combobox-value text-ellipsis">Select an option</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list">
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt text-ellipsis">Item 1: Lorem ipsum dolor sit amet consectetur.</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt">Item 2: Lorem ipsum dolor sit amet.</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt text-ellipsis">Item 3</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option ui-inactive" disabled>
+											<span class="combobox-option-txt">Item 4</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+						<!-- 2 -->
+						<div class="combobox combobox--select combobox-md" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler" aria-expanded="false">
+								<span class="combobox-value text-ellipsis combobox-value-selected">Item 2: Lorem ipsum dolor sit amet consectetur.</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list">
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt">Item 1</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option ui-active">
+											<span class="combobox-option-txt text-ellipsis">Item 2: Lorem ipsum dolor sit amet consectetur.</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt">Item 3</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option ui-inactive" disabled>
+											<span class="combobox-option-txt text-ellipsis">Item 4: Lorem, ipsum dolor.</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt">Item 5</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt text-ellipsis">Item 6: Lorem ipsum dolor sit amet consectetur.</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt">Item 7</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option ui-inactive" disabled>
+											<span class="combobox-option-txt text-ellipsis">Item 8: Lorem, ipsum dolor.</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+						<!-- 3 -->
+						<div class="combobox combobox--select combobox-md combobox-disabled" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler" aria-expanded="false">
+								<span class="combobox-value text-ellipsis">disabled</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list">
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option ui-active">
+											<span class="combobox-option-txt text-ellipsis">Item 1</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt text-ellipsis">Item 2</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option">
+											<span class="combobox-option-txt text-ellipsis">Item 3</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option ui-inactive" disabled>
+											<span class="combobox-option-txt text-ellipsis">Item 4</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="combobox combobox--select combobox-md col-6" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler"
+									data-combobox-placeholder="Select an option" aria-expanded="false">
+								<span class="combobox-value text-ellipsis">Select an option</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list" data-js-behavior="multipleTab">
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option example-combobox-tab">
+											<span class="combobox-option-txt text-ellipsis">Item 1</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option example-combobox-tab">
+											<span class="combobox-option-txt text-ellipsis">Item 2</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option example-combobox-tab ui-inactive" disabled>
+											<span class="combobox-option-txt text-ellipsis">Item 3</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="combobox-list-item combobox--select-option example-combobox-tab">
+											<span class="combobox-option-txt text-ellipsis">Item 4</span>
+											<i class="icon-sm icon-check"></i>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+						<div class="form-tab-contents" data-form-tab="combobox-list-item">
+							<div class="form-tab-panel formTab-ui-active"><div class="_pb-temp-box1">Content 1 (myFormUI.multipleTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 2 (myFormUI.multipleTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 3 (myFormUI.multipleTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 4 (myFormUI.multipleTab)</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const tabNav = document.querySelector('[data-js-behavior="multipleTab"]');
+						tabNav.querySelectorAll('.combobox-list-item').forEach((btn, index) => {
+							btn.addEventListener('click', () => myFormUI.multipleTab(btn, index, tabNav, 'combobox-list-item'));
+						})
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">.combobox--check</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--flex">
+						<!-- ========== Component ========== -->
+						<div class="combobox combobox--check combobox-md col-3" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler" aria-expanded="false"
+									data-check-counter="combox-check" data-check-placehoder="모두 선택 가능">
+								<span class="combobox-value text-ellipsis">모두 선택 가능</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list">
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-100-all" class="form-check-ctrl combobox--check-option" name="combox-check-all" data-check-target="combox-check">
+											<label for="check-100-all" class="form-check-label combobox-option-txt text-ellipsis" data-check-counter="combox-check">Select All</label>
+										</div>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-101" class="form-check-ctrl combobox--check-option" name="combox-check">
+											<label for="check-101" class="form-check-label combobox-option-txt">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-102" class="form-check-ctrl combobox--check-option" name="combox-check">
+											<label for="check-102" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-103" class="form-check-ctrl combobox--check-option" name="combox-check">
+											<label for="check-103" class="form-check-label combobox-option-txt">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-104" class="form-check-ctrl combobox--check-option" name="combox-check">
+											<label for="check-104" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item ui-inactive">
+											<input type="checkbox" id="check-105" class="form-check-ctrl combobox--check-option" disabled name="combox-check">
+											<label for="check-105" class="form-check-label combobox-option-txt">Combobox--check-option</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+
+						<div class="combobox combobox--check combobox-md col-3" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler" aria-expanded="false"
+									data-check-counter="combox-check-02" data-check-placehoder="개별 선택">
+								<span class="combobox-value text-ellipsis">개별 선택</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list">
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-201" class="form-check-ctrl combobox--check-option" name="combox-check-02">
+											<label for="check-201" class="form-check-label combobox-option-txt">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-202" class="form-check-ctrl combobox--check-option" name="combox-check-02">
+											<label for="check-202" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-203" class="form-check-ctrl combobox--check-option" name="combox-check-02">
+											<label for="check-203" class="form-check-label combobox-option-txt">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-204" class="form-check-ctrl combobox--check-option" name="combox-check-02">
+											<label for="check-204" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item ui-inactive">
+											<input type="checkbox" id="check-205" class="form-check-ctrl combobox--check-option" disabled name="combox-check-02">
+											<label for="check-205" class="form-check-label combobox-option-txt">Combobox--check-option</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+
+						<div class="combobox combobox--check combobox-md col-3" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler" aria-expanded="false"
+									data-check-counter="combox-check-03" data-check-placehoder="최대 3개 선택">
+								<span class="combobox-value text-ellipsis">최대 3개 선택</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list">
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-301" class="form-check-ctrl combobox--check-option" name="combox-check-03">
+											<label for="check-301" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-302" class="form-check-ctrl combobox--check-option" name="combox-check-03">
+											<label for="check-302" class="form-check-label combobox-option-txt">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-303" class="form-check-ctrl combobox--check-option" name="combox-check-03">
+											<label for="check-303" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-304" class="form-check-ctrl form-check-readonly combobox--check-option" checked name="combox-check-03">
+											<label for="check-304" class="form-check-label combobox-option-txt">Combobox--check-option</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-305" class="form-check-ctrl combobox--check-option" name="combox-check-03">
+											<label for="check-305" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<script>
+						myFormUI.checkAll('combox-check');
+
+						const combox_check02 = document.querySelectorAll(`input[name='combox-check-02']:not(:disabled)`);
+						const combox_check02_counter = document.querySelector('[data-check-counter="combox-check-02"]');
+
+						combox_check02.forEach(item => {
+							item.addEventListener('change', function () {
+								myFormUI.checkCounter(combox_check02, combox_check02_counter);
+							});
+						});
+
+						const combox_check03 = document.querySelectorAll(`input[name='combox-check-03']:not(:disabled)`);
+						const combox_check03_counter = document.querySelector('[data-check-counter="combox-check-03"]');
+
+						combox_check03.forEach(item => {
+							item.addEventListener('change', function () {
+								myFormUI.checkCounter(combox_check03, combox_check03_counter, 3);
+							});
+						});
+					</script>
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="combobox combobox--check combobox-md col-6" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler" aria-expanded="false"
+									data-check-counter="display-checked-item-100" data-check-placehoder="하단 결과 출력">
+								<span class="combobox-value text-ellipsis">하단 결과 출력</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list">
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-601" class="form-check-ctrl combobox--check-option" name="display-checked-item-100">
+											<label for="check-601" class="form-check-label combobox-option-txt">Combobox--check-option 1</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-602" class="form-check-ctrl combobox--check-option" name="display-checked-item-100">
+											<label for="check-602" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option 2</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-603" class="form-check-ctrl combobox--check-option" name="display-checked-item-100">
+											<label for="check-603" class="form-check-label combobox-option-txt">Combobox--check-option 3</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item">
+											<input type="checkbox" id="check-604" class="form-check-ctrl combobox--check-option" name="display-checked-item-100">
+											<label for="check-604" class="form-check-label combobox-option-txt text-ellipsis">Combobox--check-option 4</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check combobox-list-item ui-inactive">
+											<input type="checkbox" id="check-605" class="form-check-ctrl combobox--check-option" disabled name="display-checked-item-100">
+											<label for="check-605" class="form-check-label combobox-option-txt">Combobox--check-option 5</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+						<div class="flexbox-wrap gap-10 mt-10" data-check-display="display-checked-item-100"></div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const checkedItem100 = document.querySelectorAll(`input[name='display-checked-item-100']:not(:disabled)`);
+						const checkedItem100_counter = document.querySelector('[data-check-counter="display-checked-item-100"]');
+
+						checkedItem100.forEach(item => {
+							item.addEventListener('change', function () {
+								myFormUI.checkCounter(checkedItem100, checkedItem100_counter, 3);
+								myFormUI.displayChecked(item, checkedItem100, checkedItem100_counter)
+							});
+						});
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">.combobox--radio</h3>
+					<p class="_pb-section-desc">라디오 버튼을 숨김처리하고, 텍스트값만 보여져 Defult 콤보박스와 육안상 같아 보이도록 처리</p>
+					<!-- <h4 class="_pb-component-tit">Component sub title</h4> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="combobox combobox--check combobox-md col-3" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler" aria-expanded="false">
+								<span class="combobox-value text-ellipsis" data-check-placehoder="개별 선택">
+									개별 선택
+								</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list">
+									<li>
+										<div class="form-check form-check--text reverse combobox-list-item">
+											<input type="radio" id="radio-201" class="form-check-ctrl combobox--radio-option" name="combox-radio-01">
+											<label for="radio-201" class="form-check-label combobox-option-txt">Combobox--radio-option 1</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check form-check--text reverse combobox-list-item">
+											<input type="radio" id="radio-202" class="form-check-ctrl combobox--radio-option" name="combox-radio-01">
+											<label for="radio-202" class="form-check-label combobox-option-txt">Combobox--radio-option 2</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check form-check--text reverse combobox-list-item">
+											<input type="radio" id="radio-203" class="form-check-ctrl combobox--radio-option" name="combox-radio-01">
+											<label for="radio-203" class="form-check-label combobox-option-txt">Combobox--radio-option 3</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check form-check--text reverse combobox-list-item">
+											<input type="radio" id="radio-204" class="form-check-ctrl combobox--radio-option" name="combox-radio-01">
+											<label for="radio-204" class="form-check-label combobox-option-txt">Combobox--radio-option 4</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					
+					<h4 class="_pb-component-tit">Tab</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="combobox combobox--check combobox-md col-6" data-js-behavior="combobox">
+							<button type="button" class="combobox-handler" aria-expanded="false">
+								<span class="combobox-value text-ellipsis combobox-value-selected" data-check-placehoder="개별 선택">
+									Combobox--radio-option 1
+								</span>
+								<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+							</button>
+							<div class="combobox-menu">
+								<ul class="combobox-list" data-js-behavior="radioTab">
+									<li>
+										<div class="form-check form-check--text reverse combobox-list-item">
+											<input type="radio" id="radio-301" class="form-check-ctrl combobox--radio-option" name="combox-radio-02" checked>
+											<label for="radio-301" class="form-check-label combobox-option-txt">Combobox--radio-option 1</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check form-check--text reverse combobox-list-item">
+											<input type="radio" id="radio-302" class="form-check-ctrl combobox--radio-option" name="combox-radio-02">
+											<label for="radio-302" class="form-check-label combobox-option-txt">Combobox--radio-option 2</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check form-check--text reverse combobox-list-item">
+											<input type="radio" id="radio-303" class="form-check-ctrl combobox--radio-option" name="combox-radio-02" disabled>
+											<label for="radio-303" class="form-check-label combobox-option-txt">Combobox--radio-option 3</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check form-check--text reverse combobox-list-item">
+											<input type="radio" id="radio-304" class="form-check-ctrl combobox--radio-option" name="combox-radio-02">
+											<label for="radio-304" class="form-check-label combobox-option-txt">Combobox--radio-option 4</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div><!--// combobox -->
+						<div class="form-tab-contents" data-form-tab="combox-radio-02">
+							<div class="form-tab-panel formTab-ui-active"><div class="_pb-temp-box1">Content 1 (myFormUI.radioTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 2 (myFormUI.radioTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 3 (myFormUI.radioTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 4 (myFormUI.radioTab)</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						document.querySelectorAll('[name="combox-radio-02"]').forEach((btn, index) => {
+							btn.addEventListener('change', () => myFormUI.radioTab(btn, index));
+						})
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">.combobox--autocomplete</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본 Selects</h3>
+					<p class="_pb-section-desc">select 안에서는 hr 태그의 css가 적용되지 않는다.</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<select class="select col-4">
+							<option value="">Choose a food</option>
+							<optgroup label="Fruit">
+								<option value="apple">Apples</option>
+								<option value="banana">Bananas</option>
+								<option value="cherry">Cherries</option>
+								<option value="damson">Damsons</option>
+							</optgroup>
+							<optgroup label="Vegetables">
+								<option value="artichoke">Artichokes</option>
+								<option value="broccoli">Broccoli</option>
+								<option value="cabbage">Cabbages</option>
+							</optgroup>
+						</select>
+						<select class="select col-4" disabled>
+							<option value="">disabled</option>
+							<option value="">item 2</option>
+						</select>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">Multiple</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox gap-10">
+							<div class="col col-6">
+								<select class="select col-12" multiple 
+										data-js-behavior="selectedOutput" onchange="myFormUI.selectedOutput(this)">
+									<option value="apple">Apples</option>
+									<option value="banana">Bananas</option>
+									<option value="cherry">Cherries</option>
+									<option value="damson">Damsons</option>
+								</select>
+								<div class="mt-5">
+									선택한 항목: <span class="selected-output"></span>
+								</div>
+							</div>
+							<div class="col col-6">
+								<select class="select col-12" multiple
+										data-js-behavior="selectedOutput" onchange="myFormUI.selectedOutput(this)">
+									<optgroup label="Meat">
+										<option value="beef">Beef</option>
+										<option value="chicken">Chicken</option>
+										<option value="pork">Pork</option>
+									  </optgroup>
+									<optgroup label="Fish">
+										<option value="cod">Cod</option>
+										<option value="haddock">Haddock</option>
+										<option value="salmon">Salmon</option>
+									</optgroup>
+								</select>
+								<div class="mt-5">
+									선택한 항목: <span class="selected-output"></span>
+								</div>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+
+					</script>
+
+					<h4 class="_pb-component-tit">Tab</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<select id="example-select-01" class="select col-6">
+							<optgroup label="Meat">
+								<option value="beef">Beef</option>
+								<option value="chicken">Chicken</option>
+							</optgroup>
+							<optgroup label="Fish">
+								<option value="cod">Cod</option>
+								<option value="haddock">Haddock</option>
+							</optgroup>
+						</select>
+						<div class="form-tab-contents" data-form-tab="example-select-01">
+							<div class="form-tab-panel formTab-ui-active"><div class="_pb-temp-box1">Content 1 (myFormUI.selectTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 2 (myFormUI.selectTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 3 (myFormUI.selectTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 4 (myFormUI.selectTab)</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const select = document.querySelector('#example-select-01');
+						select.addEventListener('change', () => 
+							myFormUI.selectTab(select)
+						);
+					</script>
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<select id="example-select-03" class="select col-6">
+							<optgroup label="Fruit">
+								<option value="apple">Apples</option>
+								<option value="banana" selected>Bananas</option>
+							</optgroup>
+							<optgroup label="Vegetables">
+								<option value="artichoke">Artichokes</option>
+								<option value="broccoli">Broccoli</option>
+								<option value="cabbage">Cabbages</option>
+							</optgroup>
+						</select>
+						<div class="form-tab-contents" data-form-tab="example-select-03">
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 1 (myFormUI.formTab)</div></div>
+							<div class="form-tab-panel formTab-ui-active"><div class="_pb-temp-box2">Content 2 (myFormUI.formTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box1">Content 3 (myFormUI.formTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 4 (myFormUI.formTab)</div></div>
+							<div class="form-tab-panel"><div class="_pb-temp-box2">Content 5 (myFormUI.formTab)</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const select3 = document.querySelector('#example-select-03');
+						select3.addEventListener('change', (index) => 
+							myFormUI.formTab(select3, index)
+						);
+					</script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+<script>
+	document.addEventListener('click', function (e) {
+		myFormUI.combobox(e);
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Tips');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Function</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">고차함수와 클로저</h3>
+					<!-- <div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item"></li>
+						</ul>
+					</div> -->
+					<h4 class="_pb-component-tit">고차함수(Higher-Order Function)</h4>
+					<p class="_pb-component-desc">
+						함수를 인자로 받거나, 함수를 반환하는 함수. 즉, 함수를 다루는 함수. (ex: forEach, map, filter, setTimeout...) <br>
+
+					</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+ex1) 인자를 함수로 받는 경우
+function repeat(n, callback) { // repeat는 고차 함수
+	for (let i = 0; i < n; i++) {
+		callback(i);
+	}
+}
+
+repeat(3, console.log); // console.log는 콜백 함수로 전달된 일반 함수
+// 0  → // 1  → // 2
+</pre>
+<pre>
+ex2) 함수를 반환하는 경우
+function multiplier(factor) { // multiplier()는 고차 함수
+	return function(num) { // 호출하면 factor가 캡처된 내부 함수가 리턴됨
+		return num * factor;
+	}
+}
+
+const double = multiplier(2);
+console.log(double(5)); // 10 
+</pre>
+						<div class="_pb-pre-guide">
+							ex2) 이 내부 함수는 자기만의 설정을 기억함 → 이걸 클로저(closure) 라고 한다.
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">클로저(Closure)</h4>
+					<p class="_pb-component-desc">
+						함수가 선언될 때의 주변 환경(변수들) 을 기억하는 것을 클로져 현상이라고 하며,
+						그것을 '변수를 캡쳐했다(captured)' 라고 표현한다.
+					</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+function outer() {
+	const message = "안녕 Closure!";
+
+	return function inner() {
+		console.log(message);
+	}
+}
+const fn = outer(); // outer() 실행 → inner 함수 리턴됨
+fn();
+</pre>
+						<div class="_pb-pre-guide">
+							outer() 실행되면 message는 일반적으로 스코프 밖에서 사라져야 하지만, inner() 함수가 그 message를 "기억" 하고 있음. <br>
+							이렇게 기억하고 있는 함수 자체를 클로져라고 한다. inner가 outer의 지역변수를 캡처(capture) 해서 참조 유지하고 있는 것.<br>
+							함수가 실행되는 시점 이후에도 외부 변수에 접근 가능하다.
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					
+					<h4 class="_pb-component-tit">Related</h4>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">Carousel</th>
+									<td>carouselSlide함수(동작 관련)를 외부로 분리하면서, 내부 상태 접근을 위해 사용</td>
+                                    <td>
+										<a href="../components/carousel.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

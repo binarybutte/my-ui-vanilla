@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<section class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Playground');</script>
+			</div>
+
+			<main class="_pb-article-wrap">
+				<div class="_pb-page-tit">
+					<h2>Practice</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				
+
+				<article class="_pb-article">
+					<h3 class="_pb-article-tit">Component 1</h3>
+					<!-- <p class="_pb-comp-guide">설명</p> -->
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item _pb-comp-item-inline">
+							
+							<!--// ========== Component ========== -->	
+						</div><!--// _pb-comp-item -->
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+                            <div class="boxwrap">
+                                <div class="_test-inputbox">
+                                    <input type="text" class="_test-input-text">
+                                    <input type="text" class="_test-input-text">
+                                </div>
+                                <button class="btn">버튼</button>
+                            </div>
+                            <div class="boxwrap">
+                                <div class="_test-inputbox">
+                                    <input type="text" class="_test-input-text">
+                                    <input type="text" class="_test-input-text">
+                                </div>
+                                <button class="btn">버튼</button>
+                            </div>
+                            <div class="boxwrap">
+                                <div class="_test-inputbox">
+                                    <input type="text" class="_test-input-text">
+                                    <input type="text" class="_test-input-text">
+                                </div>
+                                <button class="btn">버튼</button>
+                            </div>
+							<!--// ========== Component ========== -->	
+						</div><!--// _pb-comp-item -->
+						<style>
+							.btn{visibility: hidden;}
+							.btn.on{visibility: visible;}
+						</style>
+						<script>
+							const boxwrap = document.querySelectorAll('.boxwrap');
+                            const inputs = document.querySelectorAll('._test-input-text');
+
+                            inputs.forEach(function(item){
+                                const myinputs = item.querySelectorAll('._test-input-text');
+                                item.addEventListener('keyup', () => {
+
+                                    console.log('n')
+
+
+                                    
+                                    // const inputbox = item.parentNode;
+                                    
+                                    // const btn = inputbox.nextelementsibling;
+                                    // console.log(myinputs)
+                                    // let hasValue = false; 
+
+                                    // for(let i = 0; i < myinputs.length; i++){
+                                    //     if(myinputs[0].value !== null || myinputs[1].value !== null){
+                                    //         hasValue = true;
+                                    //         console.log(myinputs.length)
+                                    //     } else if ( myinputs[0].value === null || myinputs[1].value === null) {
+                                    //         console.log('n')
+                                    //     }
+                                    // }
+
+                                    // if(hasValue){
+                                    //  console.log('yy')
+                                    // }else{
+                                    //   console.log('nn')
+                                    // }
+
+                                });
+                            })
+
+						</script>
+					</div><!--// _pb-comp-view -->
+				</article><!--// _pb-article  -->
+			</main>
+		</div>
+	</section>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

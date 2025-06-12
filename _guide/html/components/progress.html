@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Progress</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">input[type=range]</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range</li>
+							<li class="_pb-info-item">https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/</li>
+						</ul>
+					</div>
+					<p class="_pb-component-desc">
+						최신 브라우저는 거의 지원되지만, 버전 확인 필요.
+					</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						//
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Bar</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<h4 class="_pb-component-tit">.progress-bar</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="progress-bar">
+							<div class="progress-track">
+								<div class="progress-status grd-point-dark" data-js-behavior="progressbar" 
+									aria-valuenow="22" aria-valuemin="0" aria-valuemax="100" aria-labelledby="progress">
+									<button type="button" class="progress-tooltip-marker"
+										data-js-behavior="tooltip" data-tooltip-direction="top"
+										data-tooltip-open="auto" data-tooltip-close="click" data-tooltip-outside="no"
+										data-tooltip-target="MYDIALGUI_TOOLTIP01" data-tooltip-content="22%"
+										onclick="myDialgUI.tooltip(this)"></button>
+								</div>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="progress-bar">
+							<div class="progress-track">
+								<div class="progress-status grd-primary-dark" data-js-behavior="progressbar" 
+									aria-valuenow="10.6" aria-valuemin="0" aria-valuemax="100" aria-labelledby="progress">
+									<!-- speech-bubble -->
+									<div class="speech-bubble speech-bubble-lt opacity-0">
+										<div class="speech-bubble-content"><p>Lorem ipsum dolor sit.</p></div>
+										<i class="chip-isotriangle"></i>
+									</div>
+									<!--// speech-bubble -->
+								</div>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="progress-bar">
+							<div class="progress-track">
+								<div class="progress-status grd-warning-dark" data-js-behavior="progressbar" 
+									aria-valuenow="24" aria-valuemin="0" aria-valuemax="100" aria-labelledby="progress">
+									<!-- speech-bubble -->
+									<div class="speech-bubble speech-bubble-lb opacity-0">
+										<div class="speech-bubble-content"><p>Lorem, ipsum.</p></div>
+										<i class="chip-isotriangle"></i>
+									</div>
+									<!--// speech-bubble -->
+								</div>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+						<script>
+							const progressbar = document.querySelectorAll('[data-js-behavior="progressbar"]');
+	
+							// type-1) IntersectionObserver랑 연계해서 화면에 보일 때만 실행. 
+							// type-2와 동시 실행 불가, 공통 유틸 함수
+							myUI.observeElements({
+								selector: '[data-js-behavior="progressbar"]',
+								threshold: 0.4,
+								delay: 300, // 각 바 사이 150ms 간격. 즉시 실행시 0으로 지정하거나 항목을 빼도 된다.
+								onIntersect: myFormUI.progressbar,
+								// once: false,
+								// onExit: target => { target.style.width = '0'; } 
+							});
+							
+							// type-2) rAF 사용하여 강제 리플로우 없이도 작동. type-1과 동시 실행 불가
+							// progressbar.forEach((bar) => { myFormUI.progressbar(bar); })
+
+							// type-3) IntersectionObserver랑 연계해서 화면에 보일 때만 실행. type-2와 동시 실행 불가
+							// myFormUI.progressbar만 적용한 함수
+							// myFormUI._progressBarObserver();
+	
+							// type-4) void를 활용한 트랜지션 강제 적용
+							// progressbar.forEach((bar) => { myFormUI._progressbar(item); })
+						</script>
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						// .progress-bar (svg) 추후 제작
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Circle</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component-tit-box">
+						<h4 class="_pb-component-tit">progress-circle</h4>
+						<div class="_pb-section-tips">
+							<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+							<ul class="_pb-info-list">
+								<li class="_pb-info-item">https://kimmobrunfeldt.github.io/progressbar.js/</li>
+							</ul>
+						</div>
+					</div>
+					<div class="_pb-component _pb-component--flex" style="gap: 36px;">
+						<!-- ========== Component ========== -->
+						<div class="progress-circle-container"
+							data-js-behavior="progressCircle"
+							aria-valuenow="23.34564" aria-valuemin="0" aria-valuemax="100" aria-labelledby="progress">
+							<svg class="progress-circle color-primary" viewBox="0 0 100 100">
+								<path class="circle circle-trail" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"></path>
+								<path class="circle circle-current" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"></path>
+							</svg>
+							<div class="progress-circle-info"></div>
+						</div>
+
+						<div class="progress-circle-container" aria-labelledby="progress"
+							data-js-behavior="progressCircle" data-progress-prev="12.23"  data-progress-now="46.777">
+							<svg class="progress-circle color-point" viewBox="0 0 100 100">
+								<path class="circle circle-trail" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"></path>
+								<path class="circle circle-current" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"></path>
+								<path class="circle circle-prev" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"></path>
+							</svg>
+							<div class="progress-circle-info"></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">progress-double-circle</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						// 나중에..
+						<!--// ========== Component ========== -->	
+					</div>
+
+					<h4 class="_pb-component-tit">progress-semicircle</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="progress-circle-container"
+							data-js-behavior="progressCircle"
+							aria-valuenow="57.2" aria-valuemin="0" aria-valuemax="100" aria-labelledby="progress">
+							<svg class="progress-semicircle color-primary" viewBox="0 0 100 50">
+								<path class="circle circle-trail" d="M 50,50 m -47,0 a 47,47 0 1 1 94,0"></path>
+								<path class="circle circle-current" d="M 50,50 m -47,0 a 47,47 0 1 1 94,0"></path>
+							</svg>
+							<div class="progress-circle-info"></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<script>
+						const progressCircle = document.querySelectorAll('[data-js-behavior="progressCircle"]');
+
+						// type-1) IntersectionObserver랑 연계해서 화면에 보일 때만 실행. 
+						// type-2와 동시 실행 불가, 공통 유틸 함수
+						myUI.observeElements({
+							selector: '[data-js-behavior="progressCircle"]',
+							threshold: 0.4,
+							delay: 0, // 각 바 사이 150ms 간격. 즉시 실행시 0으로 지정하거나 항목을 빼도 된다.
+							onIntersect: myFormUI.progressCircle
+						});
+						
+						// type-2) rAF 사용하여 강제 리플로우 없이도 작동. type-1과 동시 실행 불가
+						// progressCircle.forEach((circle) => { myFormUI.progressCircle(circle); })
+					</script>
+				</section><!--// _pb-section  -->
+					
+				<section class="_pb-section">
+					<h3 class="_pb-component-tit">Related</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <tbody>
+								<tr>
+                                    <th scope="row">requestAnimationFrame() method</th>
+									<td>프로그레스바의 width 변화 감지 최적화</td>
+                                    <td>
+										<a href="../tips/requestAnimationFrame.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">IntersectionObserver API</th>
+									<td>프로그레스바가 화면에 보이면 실행됨</td>
+                                    <td>
+										<a href="../tips/observer.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+
+
+				
+
+				
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

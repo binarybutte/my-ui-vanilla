@@ -1,0 +1,84 @@
+/* Frame
+========================================================*/
+.frame-full { position: relative; margin: 0 auto; width: 100%; }
+.frame-max { position: relative; margin: 0 auto; max-width: 1920px; }
+.frame-mid { position: relative; margin: 0 auto; max-width: 1440px; }
+.frame-min { position: relative; margin: 0 auto; max-width: 1280px; }
+.frame-sm { position: relative; margin: 0 auto; max-width: 680px; }
+.frame-mid-overlap { position: relative; max-width: 1140px; }
+.frame-min-out { position: relative; max-width: 1180px; }
+
+
+/* Flexbox
+========================================================*/
+.flexbox { display: flex; font-size: 1rem; flex-direction: row; }
+.flexbox-row { flex-direction: row; }
+.flexbox-col { flex-direction: column; }
+.flexbox > .col { flex: 1; }
+.flexbox > .col-fix { flex: none; flex-shrink: 0; }
+
+.flexbox-wrap { display: flex; font-size: 1rem; flex-direction: row; flex-wrap: wrap; }
+.flexbox-wrap > .col { flex: none; }
+.flexbox-wrap > .col > [class*='border-'] { border-width: 1px; border-style: solid; }
+
+.flexbox-wrap-span2 > .col { width: calc(100% / 2); }
+.flexbox-wrap-span3 > .col { width: calc(100% / 3); }
+.flexbox-wrap-span4 > .col { width: calc(100% / 4); }
+.flexbox-wrap-span5 > .col { width: calc(100% / 5); }
+
+.flexbox-wrap.gutter-10 { row-gap: .625rem; column-gap: 0; margin: 0 -.313rem }
+.flexbox-wrap.gutter-10 > .col { padding: 0 .313rem }
+.flexbox-wrap.gutter-20 { row-gap: 1.25rem; column-gap: 0; margin: 0 -.625rem }
+.flexbox-wrap.gutter-20 > .col { padding: 0 .625rem }
+
+
+
+
+
+
+/* block-area
+========================================================*/
+[class*='block-area-'] { position: relative; font-size: 0; text-align: left; }
+[class*='block-area-']:after { display: block; content: ''; clear: both; }
+[class*='block-area-'] > .colum { display: inline-block; vertical-align: top; font-size: 14px; }
+/* span */
+.block-area--span2 > .colum { width: 50%; }
+.block-area--span3 > .colum { width: 33.33333333%; }
+.block-area--span4 > .colum { width: 25%; }
+.block-area--span5 > .colum { width: 20%; }
+.block-area--span6 > .colum { width: 16.66666667%; }
+/* gap */
+[class*='block-area-'].gap10 { margin: 0 -5px }
+[class*='block-area-'].gap10 > .colum { padding-left: 5px; padding-right: 5px }
+[class*='block-area-'].gap15 { margin: 0 -8px 0 -7px }
+[class*='block-area-'].gap15 > .colum { padding-left: 7px; padding-right: 8px }
+[class*='block-area-'].gap20 { margin: 0 -10px }
+[class*='block-area-'].gap20 > .colum { padding-left: 10px; padding-right: 10px }
+[class*='block-area-'].gap25 { margin: 0 -13px 0 -12px }
+[class*='block-area-'].gap25 > .colum { padding-left: 12px; padding-right: 13px }
+[class*='block-area-'].gap30 { margin: 0 -15px }
+[class*='block-area-'].gap30 > .colum { padding-left: 15px; padding-right: 15px }
+/* 상하간격 */
+[class*='block-area-'].gap10 > .colum { margin-top: 10px; }
+[class*='block-area-'].gap20 > .colum { margin-top: 20px; }
+[class*='block-area-'].gap25 > .colum { margin-top: 25px; }
+[class*='block-area-'].gap30 > .colum { margin-top: 30px; }
+/* 최상단 간격 초기화 */
+.block-area--span2 > .colum:nth-child(-n+2),
+.block-area--span3 > .colum:nth-child(-n+3),
+.block-area--span4 > .colum:nth-child(-n+4),
+.block-area--span5 > .colum:nth-child(-n+5),
+.block-area--span6 > .colum:nth-child(-n+6) { margin-top: 0 !important}  
+/* Colum width */
+[class*='block-area-'] .colum.col12 { width: 100%; }
+[class*='block-area-'] .colum.col11 { width: 91.66666667%; }
+[class*='block-area-'] .colum.col10 { width: 83.33333333%; }
+[class*='block-area-'] .colum.col9 { width: 75%; }
+[class*='block-area-'] .colum.col8 { width: 66.66666667%; }
+[class*='block-area-'] .colum.col7 { width: 58.33333333%; }
+[class*='block-area-'] .colum.col6 { width: 50%; }
+[class*='block-area-'] .colum.col5 { width: 41.66666667%; }
+[class*='block-area-'] .colum.col4 { width: 33.33333333%; }
+[class*='block-area-'] .colum.col3 { width: 25%; }
+[class*='block-area-'] .colum.col2 { width: 16.66666667%; }
+[class*='block-area-'] .colum.col1 { width: 8.33333333%; }

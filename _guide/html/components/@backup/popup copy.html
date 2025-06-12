@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<section class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<main class="_pb-article-wrap">
+				<div class="_pb-page-tit">
+					<h2>Popup</h2>
+					<p class="_pb-page-desc">ajax 호출 알아보기 20241127</p>
+				</div>
+
+				<article class="_pb-article">
+					<h3 class="_pb-article-tit">기본</h3>
+					<p class="_pb-comp-guide">a 태그 사용시 href, button 사용시 data-layer 필수</p>
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item _pb-comp-item-inline">
+							<!-- ========== Component ========== -->
+							<a href="#popup-sample-01" class="btn-basic btn-basic-md btn-primary ui-open-pop"><span>기본 (sm)</span></a>
+							<a href="#popup-sample-02" class="btn-basic btn-basic-md btn-default ui-open-pop"><span>기본 (md)</span></a>
+							<a href="#popup-sample-03" class="btn-basic btn-basic-md btn-primary ui-open-pop"><span>기본 (lg) 팝업 안에 팝업 생성</span></a>
+							<!--// ========== Component ========== -->	
+						</div><!--// _pb-comp-item -->
+                        <script>
+							$(function () {
+								uiLayerPop ();
+							});
+						</script>
+					</div><!--// _pb-comp-view -->
+				</article><!--// _pb-article  -->
+
+				<article class="_pb-article">
+					<h3 class="_pb-article-tit">스크롤</h3>
+					<!-- <p class="_pb-comp-guide">a 태그 사용시 href, button 사용시 data-layer 필수</p> -->
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item _pb-comp-item-inline">
+							<!-- ========== Component ========== -->
+							<button type="button" data-layer="#popup-sample-04" class="btn-basic btn-basic-md btn-default ui-open-pop"><span>내부 스크롤</span></button>
+							<button type="button" data-layer="#popup-sample-05" class="btn-basic btn-basic-md btn-primary ui-open-pop"><span>외부 스크롤 (작업 중)</span></button>
+							<!--// ========== Component ========== -->	
+						</div><!--// _pb-comp-item -->
+					</div><!--// _pb-comp-view -->
+				</article><!--// _pb-article  -->
+
+				<article class="_pb-article">
+					<h3 class="_pb-article-tit">모바일을 위한 Full 팝업</h3>
+					<p class="_pb-comp-guide">Flexible, Grid 사용</p>
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+							//
+							<!--// ========== Component ========== -->	
+						</div><!--// _pb-comp-item -->
+                        <script></script>
+					</div><!--// _pb-comp-view -->
+				</article><!--// _pb-article  -->
+
+                <article class="_pb-article">
+					<h3 class="_pb-article-tit">onLoad</h3>
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+							<a href="popup_onload.html" target="_blank" class="btn-basic btn-basic-md btn-primary"><span>onload 적용 페이지 보기</span></a>
+							<!--// ========== Component ========== -->	
+						</div><!--// _pb-comp-item -->
+                        <script></script>
+					</div><!--// _pb-comp-view -->
+				</article><!--// _pb-article  -->
+
+                <article class="_pb-article">
+					<h3 class="_pb-article-tit">반응형</h3>
+					<p class="_pb-comp-guide">a 태그 사용시 href, button 사용시 data-layer 필수</p>
+					<div class="_pb-comp-view">
+						<div class="_pb-comp-item">
+							<!-- ========== Component ========== -->
+							//
+							<!--// ========== Component ========== -->	
+						</div><!--// _pb-comp-item -->
+                        <script></script>
+					</div><!--// _pb-comp-view -->
+				</article><!--// _pb-article  -->
+			</main>
+		</div>
+	</section>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap" id="popup-sample-01">
+	<div class="layer-pop layer--sm">
+		<div class="layer-inner">
+			<div class="layer-head">
+				<h4 class="layer-title">.layer--sm</h4>
+			</div><!--// layer-head  -->
+			<div class="layer-body">
+				<div class="layer-content">
+					<div class="inner">
+						// 팝업 내용 
+						
+					</div>
+				</div><!--// layer-content -->
+				<div class="layer-bottom">
+					<button type="button" class="btn-basic btn-basic-md btn-primary ui-close-pop"><span>확인</span></bottom>
+				</div><!--// layer-bottom  -->
+			</div><!--// layer-body  -->
+			<button type="button" class="btn-icon ico-x-bold-normal--md ui-close-pop" title="닫기"><span class="blind">닫기</span></button>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popup-sample-01 -->
+
+<div class="layer-wrap" id="popup-sample-02">
+	<div class="layer-pop layer--md">
+		<div class="layer-inner">
+			<div class="layer-head">
+				<h4 class="layer-title">.layer--md</h4>
+			</div><!--// layer-head  -->
+			<div class="layer-body">
+				<div class="layer-content">
+					<div class="inner">
+						// 팝업 내용
+					</div>
+				</div><!--// layer-content -->
+				<div class="layer-bottom">
+					<button type="button" class="btn-basic btn-basic-md btn-primary ui-close-pop"><span>확인</span></bottom>
+				</div><!--// layer-bottom  -->
+			</div><!--// layer-body  -->
+			<button type="button" class="btn-icon ico-x-bold-normal--md ui-close-pop" title="닫기"><i class="ico-x-white"></i><span class="blind">닫기</span></button>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popup-sample-02 -->
+
+<div class="layer-wrap" id="popup-sample-03">
+	<div class="layer-pop layer--lg">
+		<div class="layer-inner">
+			<div class="layer-head">
+				<h4 class="layer-title">.layer--lg</h4>
+			</div><!--// layer-head  -->
+			<div class="layer-body">
+				<div class="layer-content">
+					<div class="inner">
+						// 팝업 내용 Nesting: 중첩
+						<a href="#popup-sample-01" class="ui-open-pop"><u>팝업 한번 더 띄우기</u></a>
+					</div>
+				</div><!--// layer-content -->
+				<div class="layer-bottom">
+					<button type="button" class="btn-basic btn-basic-md btn-primary ui-close-pop"><span>확인</span></bottom>
+				</div><!--// layer-bottom  -->
+			</div><!--// layer-body  -->
+			<button type="button" class="btn-icon ico-x-bold-normal--md ui-close-pop" title="닫기"><i class="ico-x-white"></i><span class="blind">닫기</span></button>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popup-sample-03 -->
+
+<div class="layer-wrap" id="popup-sample-04">
+	<div class="layer-pop layer--lg">
+		<div class="layer-inner">
+			<div class="layer-head">
+				<h4 class="layer-title">.layer--lg</h4>
+			</div><!--// layer-head  -->
+			<div class="layer-body">
+				<div class="layer-content">
+					<div class="inner">
+						<a href="#popup-sample-01" class="ui-open-pop"><u>팝업 한번 더 띄우기</u></a>
+						<div style="height:560px"></div>
+					</div>
+				</div><!--// layer-content -->
+				<div class="layer-bottom">
+					<button type="button" class="btn-basic btn-basic-md btn-primary ui-close-pop"><span>확인</span></bottom>
+				</div><!--// layer-bottom  -->
+			</div><!--// layer-body  -->
+			<button type="button" class="btn-icon ico-x-bold-normal--md ui-close-pop" title="닫기"><i class="ico-x-white"></i><span class="blind">닫기</span></button>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popup-sample-04 -->
+
+<div class="layer-wrap out-scroll" id="popup-sample-05">
+	<div class="layer-pop layer--lg">
+		<div class="layer-inner">
+			<div class="layer-head">
+				<h4 class="layer-title">.layer--lg</h4>
+			</div><!--// layer-head  -->
+			<div class="layer-body">
+				<div class="layer-content">
+					<div class="inner">
+						<a href="#popup-sample-01" class="ui-open-pop"><u>팝업 한번 더 띄우기</u></a>
+						<div style="height:1660px"></div>
+					</div>
+				</div><!--// layer-content -->
+				<div class="layer-bottom">
+					<button type="button" class="btn-basic btn-basic-md btn-primary ui-close-pop"><span>확인</span></bottom>
+				</div><!--// layer-bottom  -->
+			</div><!--// layer-body  -->
+			<button type="button" class="btn-icon ico-x-bold-normal--md ui-close-pop" title="닫기"><i class="ico-x-white"></i><span class="blind">닫기</span></button>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popup-sample-05 -->
+<!--// ========== 팝업 영역 ========== -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<section class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<main class="_pb-article-wrap">
+				<div class="_pb-page-tit">
+					<h2>Popup</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+			</main>
+		</div>
+	</section>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>
+	$(function () {
+		uiOnloadPop ('#popup-sample-01');
+	});
+</script>
+
+<!-- ========== 팝업 영역 ========== -->
+<div class="layer-wrap" id="popup-sample-01">
+	<div class="layer-pop">
+		<div class="layer-inner layer-md">
+			<div class="layer-head">
+				<h4 class="layer-title">제목</h4>
+			</div><!--// layer-head  -->
+			<div class="layer-body">
+				<div class="layer-content">
+					<div class="in-content">
+						// 팝업 내용 .layer-inner.layer-md (width:590px)<br />
+						
+					</div>
+				</div><!--// layer-content -->
+				<div class="layer-bottom">
+					<div class="btn-area">
+						<button type="button" class="btn-basic btn-basic-md btn-primary ui-close-pop"><span>확인</span></bottom>
+						<button type="button" class="btn-basic btn-basic-md btn-default ui-close-pop"><span>취소</span></bottom>
+					</div>
+				</div><!--// layer-bottom  -->
+			</div><!--// layer-body  -->
+			<button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-white"></i><span class="blind">닫기</span></button>
+		</div>
+	</div><!--// layer-pop  -->
+</div><!--// layer-pop-wrap #popup-sample-01 -->
+<!--// ========== 팝업 영역 ========== -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

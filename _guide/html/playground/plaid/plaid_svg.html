@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="../../pb_inc.js"></script>
+<script>
+    var baseURL = '../../../basis';
+    var assetURL = '../../../assets';
+    var commonURL = '../../../../common';
+</script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script src="../../../assets/js/common_ui.js"></script>
+<!--// ======================== CSS / JS ======================== -->
+<title>--</title>
+<style>
+    .svg-container {
+        width: 100vw;
+        height: 100vh;
+        perspective: 1200px; /* <- 얘는 부모에 줘야 먹혀 */
+        transform-style: preserve-3d;
+        border: 1px solid #ddd
+    }
+
+    .svg-container svg {
+        transform: rotateX(73deg) rotateZ(60deg) scale(1);
+        transform-origin: center center;
+    }
+
+    .grid-wrap {
+        position: relative;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .grid-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    /* 블렌드 오버레이 */
+    .blend-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255,255,255,0) 40%, rgba(255,255,255,0.8) 100%);
+        mix-blend-mode: lighten;
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: 1;
+    }
+</style>
+</head>
+
+<body>
+<div class="_pb-blank">
+    <div class="svg-container grid-wrap">
+        <svg class="grid-bg" viewBox="0 0 200 200" width="100%" height="100%">
+            <defs>
+                <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M20 0 H0 V20" fill="none" stroke="#aaa" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#gridPattern)" />
+        </svg>
+        <div class="blend-overlay"></div>
+    </div>
+</div>
+</body>
+</html>

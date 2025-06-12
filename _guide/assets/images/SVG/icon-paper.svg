@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g>
+      <g>
+        <path d="M22.4,26c-.8.8-2.3,1.4-3.4,1.4h-5.7c-1.1,0-2-.9-2-2v-14.8c0-1.1.9-2,2-2h11c1.1,0,2,.9,2,2v9.7c0,1.1-.7,2.6-1.4,3.4l-2.4,2.3Z" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="3"/>
+        <path d="M18.5,26.8v-4.7c0-1.1.9-2,2-2h5.1" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <rect width="36" height="36" fill="none"/>
+    </g>
+  </g>
+</svg>

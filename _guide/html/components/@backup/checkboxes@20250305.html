@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Checkboxes &amp; Radios</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<h4 class="_pb-section-desc">background-image 사용</h4>
+					<div class="_pb-component ">
+						<!-- ========== Component ========== -->
+						<div class="form-check">
+							<input type="checkbox" id="check-101" class="form-input" name="check-item-100">
+							<label for="check-101">.form-check</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-102" class="form-input" name="check-item-100" checked="">
+							<label for="check-102">:checked</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-103" class="form-input" name="check-item-100" checked="" disabled="disabled">
+							<label for="check-103">:checked:disabled</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" id="check-104" class="form-input" name="check-item-100" disabled="disabled">
+							<label for="check-104">:disabled</label>
+						</div>
+						<br />
+						<div class="form-radio">
+							<input type="radio" id="radio-101" class="form-input" name="radio-item-100">
+							<label for="radio-101">.form-check</label>
+						</div>
+						<div class="form-radio">
+							<input type="radio" id="radio-102" class="form-input" name="radio-item-100" checked="">
+							<label for="radio-102">:checked</label>
+						</div>
+						<div class="form-radio">
+							<input type="radio" id="radio-103" class="form-input" name="radio-item-100-1" checked="" disabled="disabled" onclick="return(false)">
+							<label for="radio-103">:checked, readonly</label>
+						</div>
+						<div class="form-radio">
+							<input type="radio" id="radio-104" class="form-input" name="radio-item-100" disabled="disabled">
+							<label for="radio-104">:disabled</label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-section-desc">라벨 없음: &lt;div class='form-check' /&gt;와 label을 제거하고 aria-label로 대체 텍스트를 제공.</h4>
+					<div class="_pb-component ">
+						<!-- ========== Component ========== -->
+						<input type="checkbox" id="check-105" class="form-input" name="check-item-100-2" aria-label="선택하기">
+						<br />
+						<input type="radio" id="radio-105" class="form-input" name="radio-item-100-2" aria-label="선택하기">
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">블록</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component ">
+						<!-- ========== Component ========== -->
+						<div class="form-check form-block">
+							<input type="checkbox" id="check-201" class="form-input" name="check-item-200">
+							<label for="check-201">.form-check</label>
+						</div>
+						<div class="form-check form-block">
+							<input type="checkbox" id="check-202" class="form-input" name="check-item-200" checked="">
+							<label for="check-202">:checked</label>
+						</div>
+						<div class="form-check form-block">
+							<input type="checkbox" id="check-203" class="form-input" name="check-item-200" checked="" disabled="disabled">
+							<label for="check-203">:checked:disabled</label>
+						</div>
+						<div class="form-check form-block">
+							<input type="checkbox" id="check-204" class="form-input" name="check-item-200" disabled="disabled">
+							<label for="check-204">:disabled</label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component ">
+						<!-- ========== Component ========== -->
+						<div class="form-radio form-block">
+							<input type="radio" id="radio-201" class="form-input" name="radio-item-200">
+							<label for="radio-201">.form-check</label>
+						</div>
+						<div class="form-radio form-block">
+							<input type="radio" id="radio-202" class="form-input" name="radio-item-200" checked="">
+							<label for="radio-202">:checked</label>
+						</div>
+						<div class="form-radio form-block">
+							<input type="radio" id="radio-203" class="form-input" name="radio-item-200-1" checked="" disabled="disabled" onclick="return(false)">
+							<label for="radio-203">:checked:disabled</label>
+						</div>
+						<div class="form-radio form-block">
+							<input type="radio" id="radio-204" class="form-input" name="radio-item-200" disabled="disabled">
+							<label for="radio-204">:disabled</label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">css 사용</h3>
+					<p class="_pb-section-desc">이미지 사용이 불가할 경우에 적용</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="css-check">
+							<input type="checkbox" id="check-css-111" name="check-css-item-110">
+							<label for="check-css-111"><span>.css-check</span></label>
+						</div>
+						<div class="css-check">
+							<input type="checkbox" id="check-css-112" name="check-css-item-110" checked="">
+							<label for="check-css-112"><span>:checked</span></label>
+						</div>
+						<div class="css-check">
+							<input type="checkbox" id="check-css-114" name="check-css-item-110" checked="" disabled="disabled">
+							<label for="check-css-114"><span>:checked:disabled</span></label>
+						</div>
+						<div class="css-check">
+							<input type="checkbox" id="check-css-115" name="check-css-item-110" disabled="">
+							<label for="check-css-115"><span>:disabled</span></label>
+						</div>
+						<br />
+						<div class="css-radio"><input type="radio" id="radio-css-111" name="radio-css-item-110" checked="">
+							<label for="radio-css-111"><span>.radio</span></label>
+						</div>
+						<div class="css-radio"><input type="radio" id="radio-css-112" name="radio-css-item-110">
+							<label for="radio-css-112"><span>.radio</span></label>
+						</div>
+						<div class="css-radio"><input type="radio" id="radio-css-113" name="radio-css-item-110" disabled="disabled">
+							<label for="radio-css-113"><span>:disabled</span></label>
+						</div>
+						<div class="css-radio"><input type="radio" id="radio-css-114" class="radio disabled" name="radio-css-item-111" disabled="disabled" checked="" onclick="return(false)">
+							<label for="radio-css-124"><span>checked,readonly</span></label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Switch</h3>
+					<!-- <h4 class="_pb-section-desc"></h4> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="custom-check">
+							<input type="checkbox" id="switch-101" name="switch-101" class="checkbox-switch">
+							<label for="switch-101" class="switch-label"><span class="on">ON</span><span class="off">OFF</span></label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">버튼 타입으로 만들기</h3>
+					<p class="_pb-section-desc">button의 클래스들을 label에 적용한다.</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="custom-check">
+							<input type="checkbox" id="check-301-1" class="custom-input" name="check-item-301" checked>
+							<label for="check-301-1" class="btn-basic btn-basic-md btn-primary--line"><span>.custom-check .btn-primary--line</span></label>
+						</div>
+						<div class="custom-check">
+							<input type="checkbox" id="check-301-2" class="custom-input" name="check-item-301">
+							<label for="check-301-2" class="btn-basic btn-basic-md btn-primary--line"><span>.custom-check .btn-primary--line</span></label>
+						</div>
+						<div class="custom-check">
+							<input type="checkbox" id="check-301-3" class="custom-input" name="check-item-301">
+							<label for="check-301-3" class="btn-basic btn-basic-md btn-primary--line"><span>.custom-check .btn-primary--line</span></label>
+						</div>
+						<br />
+						<div class="custom-check">
+							<input type="checkbox" id="check-301-4" class="custom-input" name="check-item-301" disabled>
+							<label for="check-301-4" class="btn-basic btn-basic-md btn-primary--line"><span>.custom-check .btn-primary--line</span></label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<div class="_pb-component ">
+						<!-- ========== Component ========== -->
+						<div class="custom-radio">
+							<input type="radio" id="radio-301-1" class="custom-input" name="radio-item-301" checked>
+							<label for="radio-301-1" class="btn-rud--md btn-point"><span>.custom-radio</span></label>
+						</div>
+						<div class="custom-radio">
+							<input type="radio" id="radio-301-2" class="custom-input" name="radio-item-301">
+							<label for="radio-301-2" class="btn-rud--md btn-point"><span>.btn-point</span></label>
+						</div>
+						<div class="custom-radio">
+							<input type="radio" id="radio-301-3" class="custom-input" name="radio-item-301">
+							<label for="radio-301-3" class="btn-rud--md btn-point"><span>.btn-point</span></label>
+						</div>
+						<div class="custom-radio">
+							<input type="radio" id="radio-301-4" class="custom-input" name="radio-item-301" disabled>
+							<label for="radio-301-4" class="btn-rud--md btn-point"><span>disabled</span></label>
+						</div>
+						<br />
+						<div class="custom-radio">
+							<input type="radio" id="radio-403-1" class="custom-input" name="radio-item-403" checked>
+							<label for="radio-403-1" class="btn-rud--md btn-default--line"><span>.custom-radio</span></label>
+						</div>
+						<div class="custom-radio">
+							<input type="radio" id="radio-403-2" class="custom-input" name="radio-item-403">
+							<label for="radio-403-2" class="btn-rud--md btn-default--line"><span>.btn-default--line</span></label>
+						</div>
+						<div class="custom-radio">
+							<input type="radio" id="radio-403-3" class="custom-input" name="radio-item-403">
+							<label for="radio-403-3" class="btn-rud--md btn-default--line"><span>.btn-default--line</span></label>
+						</div>
+						<div class="custom-radio">
+							<input type="radio" id="radio-403-4" class="custom-input" name="radio-item-403" disabled>
+							<label for="radio-403-4" class="btn-rud--md btn-default--line"><span>disabled</span></label>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-comp-item -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">블록</h3>
+					<p class="_pb-section-desc">width:100%의 block 상태로 만들려면 .form-block 클래스를 추가한다.</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						//
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">그룹으로 묶기</h3>
+					<p class="_pb-section-desc">체크,라디오 버튼을 그룹으로 묶는다.</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						//
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">컨텐츠 박스 타입</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						//
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Misc</h3>
+					<p class="_pb-section-desc">전체 선택/해제 (:indeterminate 포함)</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="form-check">
+							<input type="checkbox" id="check-500" class="form-input ui-check-all" name="check-item-500">
+							<label for="check-500">모두 체크하기 (Jquery)</label>
+						</div>
+						<br />
+						<div>
+							<div class="form-check">
+								<input type="checkbox" id="check-501" class="form-input" name="check-item-500">
+								<label for="check-501">체크 항목 1</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="check-502" class="form-input" name="check-item-500">
+								<label for="check-502">체크 항목 2</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="check-503" class="form-input" name="check-item-500">
+								<label for="check-503">체크 항목 3</label>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						$(function () { 
+							uiCheckAll ();
+						});
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">보이기/가리기</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="ui-radio-tab">
+							<div class="form-radio">
+								<input type="radio" id="radio-501" class="form-input ui-radio" name="radio-item-500" checked="">
+								<label for="radio-501"><span>선택 1</span></la
+									bel></div>
+							<div class="form-radio">
+								<input type="radio" id="radio-502" class="form-input ui-radio" name="radio-item-500">
+								<label for="radio-502"><span>선택 2</span></label>
+							</div>
+							<div class="form-radio">
+								<input type="radio" id="radio-503" class="form-input ui-radio ui-radio-except" name="radio-item-500">
+								<label for="radio-503"><span>선택없음</s
+									pan></label>
+								</div>
+						</div>
+						<div class="ui-radio-container">
+							<div class="ui-radio-content active _pb-inner-ex _pb-temp-box1">선택 1 컨텐츠</div>
+							<div class="ui-radio-content _pb-inner-ex _pb-temp-box2">선택 2 컨텐츠</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						$(function () { 
+							uiorderTab ();
+						});
+						function uiorderTab () {
+							$('.ui-radio-tab').each(function () {
+								var uiRadioBtn = $(this).find('.ui-radio'),
+									uiRadioExcept = uiRadioBtn.not('.ui-radio-except'),
+									uiCont = $(this).next('.ui-radio-container').children('.ui-radio-content');
+
+								uiRadioBtn.on('click', function () {
+									if ( !$(this).hasClass('ui-radio-except') ) {
+										uiCont.eq( uiRadioExcept.index(this) ).addClass('active').siblings().removeClass('active');
+									} else {
+										uiCont.removeClass('active')
+									}
+								})
+							})
+						}
+					</script>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">선택 항목 출력하기</h3>
+					<p class="_pb-section-desc">라디오버튼 기능 추가</p>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						//
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script></script>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../_guide/basis/pb_style.css">
+<script src="../common/lib/jquery-3.6.0.min.js"></script>
+<script src="../_guide/basis/pb_list.js"></script>
+<title>퍼블리싱 작업 현황 | Title</title>
+<style type="text/css">
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:"MalGun Gothic"; color:#000; font-size:13px;}
+li{list-style: none;}
+a{color:inherit;}
+em{font-style: normal;}
+</style>
+<script>
+	var include = {
+	thead : function(){
+			document.write('<colgroup>');
+			document.write('<col span="3" class="_pb-col-1" /><col class="_pb-col-2" /><col /><col class="_pb-col-3" />');
+			document.write('</colgroup>');
+			document.write('<thead>');
+			document.write('<tr>');
+			document.write('<th scope="col">2Depth</th>');
+			document.write('<th scope="col">3Depth</th>');
+			document.write('<th scope="col">4Depth</th>');
+			document.write('<th scope="col">File</th>');
+			document.write('<th scope="col">Comment</th>');
+			document.write('<th scope="col">완료일</th>');
+			document.write('</tr>');
+			document.write('</thead>');
+		},
+	}
+</script>
+</head>
+<body>
+<div class="_pb-list-wrap">
+	<div class="_pb-list-header">
+		<h1>퍼블리싱 작업 현황(PC)</h1>
+		<ul class="_pb-guide-tab">
+			<li class="on"><a href="../pc/list_pc.html">PC ver.</a></li>
+			<li><a href="../pc/list_mo.html">Mobile ver.</a></li>
+			<li><a href="../_guide/html/intro/intro.html" target="_blank">퍼블리싱가이드(PC)</a></li>
+		</ul>
+	</div>
+
+	<div class="_pb-status-box">
+		<div class="_pb-status">
+			<ul>
+				<li>total <span class="page">0</span>/ <span class="total">00</span>P</li>
+				<li><em class="percent-txt"><span class="percent">0</span>%</em></li>
+			</ul>
+			<div class="right">
+				<span class="dot-done">완료 (tr.done)</span>
+				<span class="dot-issue">이슈있음 (tr.issue)</span>
+				<span class="dot-ing">진행중 (tr.ing)</span>
+				<span class="dot-del">삭제 (tr.del)</span>
+			</div>
+		</div><!-- // _pb-status -->
+
+	    <ul class="_pb-status-list">
+	    	<li>
+	    		<a href="#menu0"><span class="menu-txt">공통</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+	           	<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // 공통 -->
+	      	<li>
+	    		<a href="#menu1"><span class="menu-txt">Menu 1</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // Menu 1 -->
+			<li>
+	    		<a href="#menu2"><span class="menu-txt">Menu 2</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // Menu 2 -->
+			<li>
+	    		<a href="#menu3"><span class="menu-txt">Menu 3</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // Menu 3 -->
+			<li>
+	    		<a href="#menu4"><span class="menu-txt">Menu 4</span> <span class="page-num">0</span> / <span class="page-total">00</span></a>
+           		<div class="percent-txt"><span class="page-percent">0</span>%</div>
+	        </li><!-- // Menu 14 -->
+	    </ul>
+    </div>
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">공통</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<script>include.thead();</script>
+			<tbody>
+				<tr class="done">
+					<td>완료 tr.done</td>
+					<td></td>
+					<td></td>
+					<td class="file">folder/fileName.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="issue">
+					<td>이슈있음 tr.issue</td>
+					<td></td>
+					<td></td>
+					<td class="file">folder/fileName.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="ing">
+					<td>진행중 tr.ing</td>
+					<td></td>
+					<td></td>
+					<td class="file">folder/fileName.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="del">
+					<td>삭제 tr.del</td>
+					<td></td>
+					<td></td>
+					<td class="file">folder/fileName.html</td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr class="menu">
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: 메인, 공통 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">Menu 1</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<script>include.thead();</script>
+			<tbody>
+				<tr class="">
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: Menu 1 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">Menu 2</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<script>include.thead();</script>
+			<tbody>
+				<tr class="">
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: Menu 2 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">Menu 3</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<script>include.thead();</script>
+			<tbody>
+				<tr class="">
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: Menu 3 -->
+
+	<div class="_pb-list-table">
+		<h3 class="_pb-dep1-title">Menu 4</h3>
+		<button type="button" class="_pb-toggle" title="접기"><span>접기</span></button>
+		<table>
+			<script>include.thead();</script>
+			<tbody>
+				<tr class="">
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td class="file"></td>
+					<td class="comment"></td>
+					<td class="date confirm">00-00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- // _pb-list-table :: Menu 4 -->
+</div><!-- // _pb-list-wrap -->
+
+<button type="button" class="btn-gotop"><span>TOP</span></button>
+
+</body>
+</html>

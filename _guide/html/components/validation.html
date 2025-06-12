@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Form Validation</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<!-- <h3 class="_pb-section-tit">유효성 검사</h3> -->
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<fieldset>
+							<legend>유효성 검사</legend>
+							<div class="list-group list-group--table">
+								<!-- 1 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<label for="example-name">이름</label>
+									</div><!--// list-group-cell -->
+									<div class="list-group-cell">
+										<input type="text" id="example-name" class="input-text input-text-md" placeholder="#example-name">
+										<p class="form-valid-message"></p>
+									</div><!--// list-group-cell -->
+								</div><!--// list-group-item -->
+
+								<!-- 2 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<label for="example-id">ID</label>
+									</div><!--// list-group-cell -->
+									<div class="list-group-cell">
+										<input type="text" id="example-id" class="input-text input-text-md" placeholder="#example-id">
+										<p class="form-valid-message"></p>
+									</div><!--// list-group-cell -->
+								</div><!--// list-group-item -->
+
+								<!-- 3 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<label for="example-email-01">이메일 (형식 1)</label>
+									</div><!--// list-group-cell -->
+									<div class="list-group-cell">
+										<input type="email" id="example-email-01" class="input-text input-text-md" placeholder="#example-email-01">
+										<p class="form-valid-message"></p>
+									</div><!--// list-group-cell -->
+								</div><!--// list-group-item -->
+
+								<!-- 4 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<label for="example-email-02">이메일 (형식 2)</label>
+									</div><!--// list-group-cell -->
+									<div class="list-group-cell">
+										<div class="input-group">
+											<input type="text" id="example-email-02" class="input-text input-text-md" placeholder="#example-email-02">
+											<span class="input-group-span">@</span>
+											<div class="combobox combobox--select combobox-md col-6" data-js-behavior="combobox">
+												<button type="button" class="combobox-handler" aria-expanded="false">
+													<span class="combobox-value text-ellipsis combobox-value-selected">Item 1</span>
+													<i class="icon-sm icon-caret-down bg-gray-500 ui-arrow" aria-label="열기"></i>
+												</button>
+												<div class="combobox-menu">
+													<ul class="combobox-list">
+														<li>
+															<button type="button" class="combobox--select-option ui-active">
+																<span class="combobox-option-txt text-ellipsis">Item 1</span>
+																<i class="icon-sm icon-check"></i>
+															</button>
+														</li>
+														<li>
+															<button type="button" class="combobox--select-option">
+																<span class="combobox-option-txt text-ellipsis">Item 2</span>
+																<i class="icon-sm icon-check"></i>
+															</button>
+														</li>
+													</ul>
+												</div>
+											</div><!--// combobox -->
+										</div><!--// input-group -->
+										<p class="form-valid-message"></p>
+									</div><!--// list-group-cell -->
+								</div><!--// list-group-item -->
+
+								<!-- 5 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<label for="example-phone">전화번호 (형식 1)</label>
+									</div>
+									<div class="list-group-cell">
+										<input type="number" id="example-phone" class="input-text input-text-md" placeholder="#example-phone">
+										<p class="form-valid-message"></p>
+									</div>
+								</div><!--// list-group-item -->
+
+								<!-- 6 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<label for="example-phone-01">전화번호 (형식 2)</label>
+									</div><!--// list-group-cell -->
+									<div class="list-group-cell">
+										<div class="input-group">
+											<input type="number" id="example-phone-01" class="input-text input-text-md" placeholder="#example-phone-01">
+											<span class="input-group-span">-</span>
+											<input type="number" id="example-phone-02" class="input-text input-text-md" aria-label="전화번호 중간자리" placeholder="#example-phone-02">
+											<span class="input-group-span">-</span>
+											<input type="number" id="example-phone-03" class="input-text input-text-md" aria-label="전화번호 마지막자리" placeholder="#example-phone-03">
+										</div><!--// input-group -->
+										<p class="form-valid-message"></p>
+									</div><!--// list-group-cell -->
+								</div><!--// list-group-item -->
+
+								<!-- 7 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<label for="example-password">비밀번호</label>
+									</div>
+									<div class="list-group-cell">
+										<input type="password" id="example-password" class="input-text input-text-md" placeholder="#example-password">
+										<p class="form-valid-message"></p>
+									</div>
+								</div><!--// list-group-item -->
+
+								<!-- 8 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<label for="example-password-re">비밀번호 재확인</label>
+									</div>
+									<div class="list-group-cell">
+										<input type="password" id="example-password-re" class="input-text input-text-md" placeholder="#example-password-re">
+										<p class="form-valid-message"></p>
+									</div>
+								</div><!--// list-group-item -->
+
+								<!-- 9 -->
+								<div class="list-group-item">
+									<div class="list-group-cell col-title">
+										<span>체크항목</span>
+									</div><!--// list-group-cell -->
+									<div class="list-group-cell">
+										<div class="flexbox flexbox-row gap-15">
+											<div class="form-check">
+												<input type="checkbox" id="example-check-01" class="form-check-ctrl" name="example-check">
+												<label for="example-check-01" class="form-check-label">example-check-01</label>
+											</div>
+										</div>
+										<p class="form-valid-message"></p>
+									</div><!--// list-group-cell -->
+								</div><!--// list-group-item -->
+							</div><!--// list-group -->
+							<div class="btn-group justify-center">
+								<button type="button" class="btn-basic btn-basic-lg btn-primary" data-js-behavior="validation"><span>확인</span></button>
+							</div>
+						</fieldset>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<script>
+						const inputs = [
+							{ selector: '#example-name', type: 'string', minLength: 2, errorMessage: '최소 2글자 이상', containsKor: true },
+							{ selector: '#example-id', type: 'string', minLength: 3, errorMessage: '최소 영문 2글자 이상', containsKor: false },
+							{ selector: '#example-email-01', type: 'email', errorMessage: '영문 user@example.com', containsKor: false },
+							{ selector: '#example-email-02', type: 'string', minLength: 3, errorMessage: '영문 3글자 이상', containsKor: false },
+							{ selector: '#example-phone', type: 'string', minLength: 3, maxLength: 11, errorMessage: '숫자 입력' },
+							{ selector: '#example-phone-01', type: 'number', min: 0, max: 10000, errorMessage: '숫자 입력' },
+							{ selector: '#example-phone-02', type: 'number', min: 0, max: 10000, errorMessage: '숫자 입력' },
+							{ selector: '#example-phone-03', type: 'number', min: 0, max: 10000, errorMessage: '숫자 입력' },
+							{ selector: '#example-password', type: 'password', minLength: 4, errorMessage: '최소 4자 이상 입력' },
+							{ selector: '#example-password-re', type: 'password', minLength: 4, errorMessage: '최소 4자 이상 입력' },
+							{ selector: '#example-check-01', type: 'checkbox', errorMessage: '체크 필요' }
+						];
+
+						inputs.forEach(input => {
+							myFormUI.validateMessage_reset(input.selector);
+						});
+
+						const btn = document.querySelector('[data-js-behavior="validation"]')
+
+						btn.addEventListener('click', function () {
+							// for...of: 배열 inputs의 요소를 하나씩 꺼내서 input 변수에 담아 반복 실행
+							// for...in: 객체의 키(속성 이름)를 순회, 배열에는 적절하지 않음
+							for ( let input of inputs ) { 
+								const value = document.querySelector(input.selector)?.value || ''; // selector가 null이 아닐 때만 value를 가져옴
+								const password = document.querySelector('#example-password');
+								const password_re = document.querySelector('#example-password-re')
+
+								if ( input.type === 'string' && ( !myFormUI.validation(value, 'string') || !myFormUI.validateString(value, input.minLength) || input.containsKor === false && myFormUI.validateKorean(value) ) ) {
+									myFormUI.validateMessage(input.selector, input.errorMessage)
+									return;
+								}
+
+								if ( input.type === 'email' && ( !myFormUI.validation(value, 'email') || !myFormUI.validateEmail(value) ) ) {
+									myFormUI.validateMessage(input.selector, input.errorMessage)
+									return;
+								}
+
+								if ( input.type === 'number' && ( !myFormUI.validation(value, 'number') || !myFormUI.validateNumber(value, input.min, input.max) ) ) {
+									myFormUI.validateMessage(input.selector, input.errorMessage)
+									return;
+								}
+
+								if ( input.type === 'password' && ( !myFormUI.validation(value, 'password') || !myFormUI.validatePassword(value, input.minLength) ) ) {
+									myFormUI.validateMessage(input.selector, input.errorMessage)
+									return;
+								}
+
+								if ( input.type === 'password' && ( password.value !== password_re.value ) ) {
+									myFormUI.validateMessage('#example-password-re', '비밀번호 불일치')
+									return;
+								}
+
+								if ( !myFormUI.validation(value, input.type, input) ) {
+									myFormUI.validateMessage(input.selector, input.errorMessage);
+									return;
+								}
+    						}
+
+							console.log("모든 입력값이 올바르게 입력되었습니다.");
+						})
+					</script>
+				</section><!--// _pb-section  -->
+
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+<script>
+	document.addEventListener('click', function (e) {
+		myFormUI.combobox(e);
+	});
+</script>
+
+</body>
+</html>

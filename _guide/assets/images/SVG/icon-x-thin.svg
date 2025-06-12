@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g>
+      <g>
+        <path d="M8,8l20,20L8,8Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M28,8L8,28,28,8Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <rect width="36" height="36" fill="none"/>
+    </g>
+  </g>
+</svg>

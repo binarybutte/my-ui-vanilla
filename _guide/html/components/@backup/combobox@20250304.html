@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Combobox</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본 Selects</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<select class="select" style="width:100%">
+							<option value="">item 1</option>
+							<option value="">item 2</option>
+						</select>
+						<select class="select" disabled style="width:100%">
+							<option value="">disabled</option>
+							<option value="">item 2</option>
+						</select>
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">선택 시 내용 보이기</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<select id="selectItem" class="select ui-select placeholder" style="width:100%">
+							<option value="" selected>선택</option>
+							<option value="select-01">item 1</option>
+							<option value="select-02">item 2</option>
+							<option value="select-03">item 3</option>
+						</select>
+						<div class="ui-select-container">
+							<div id="select-01" class="ui-select-content _pb-inner-ex _pb-temp-box1">select-01 Content (Jquery)</div>
+							<div id="select-02" class="ui-select-content _pb-inner-ex _pb-temp-box2">select-02 Content (Jquery)</div>
+							<div id="select-03" class="ui-select-content _pb-inner-ex _pb-temp-box1">select-03 Content (Jquery)</div>
+						</div>
+						<!--// ========== Component ========== -->	
+						<script>
+							$(function() {  
+							   var select =  $('.ui-select');
+							   select.each(function () {
+								   if ( $(this).hasClass('placeholder') ) {
+								   var selected = $(this).children('option:selected').val();
+									   if ( selected != '') {
+										   $(this).addClass('on');
+									   } else {
+										   $(this).removeClass('on');
+									   }
+								   }
+							   })
+							   select.change(function() {
+								   // var result = this.selectedOptions[0].value;
+								   var result = $(this).val();
+								   if ( result != '' ) {
+									   var contentID = $('#'+ result);
+									   $(this).addClass("on");
+									   contentID.addClass('active').siblings('.ui-select-content').removeClass('active');
+								   } else {
+									   $(this).removeClass("on");
+									   $('.ui-select-content').removeClass('active');
+								   }
+							   }); 
+						   }); 
+					   </script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본, Multiple combobox</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<div class="custom-select ui-custom-select" data-value="" style="width:100%">
+							<a href="#none" title="선택" class="select-value placeholder"><span>list 1</span></a><!-- '선택' 등 안내 텍스트 있을 경우 addClass placeholder -->
+							<div class="select-list">
+								<ul>
+									<li data-name="1"><a href="#none"><span>list 1</span></a></li>
+									<li data-name="2"><a href="#none"><span>list 2</span></a></li>
+									<li data-name="3"><a href="#none"><span>list 3</span></a></li>
+								</ul>
+							</div>
+						</div><!--// custom-select -->
+						<div class="custom-select ui-custom-select" data-value="" style="width:100%">
+							<a href="#none" title="선택" class="select-value disabled"><span>.select-value.disabled</span></a>
+							<div class="select-list">
+								<ul>
+									<li data-name="1"><a href="#none"><span>list 1</span></a></li>
+									<li data-name="2"><a href="#none"><span>list 2</span></a></li>
+									<li data-name="3"><a href="#none"><span>list 3</span></a></li>
+								</ul>
+							</div>
+						</div><!--// custom-select -->
+						<!--// ========== Component ========== -->	
+						<script>
+							/****** SelectBox ******/
+							$(function () { 
+								$(document).on('click','.select-value',function(e){
+									if ( !$(this).hasClass('disabled') ) {
+										if ( $(this).parent('.ui-custom-select').hasClass('on')) {    
+											selectBoxClose ();
+										} else {
+											selectBoxClose ();
+											$(this).parent('.ui-custom-select').addClass('on');
+										}
+									
+										$('body').on('click',function(e){
+											if($(e.target).closest('.ui-custom-select').length === 0 && $('.ui-custom-select').hasClass('on')){
+												selectBoxClose ()
+											}
+										}) 
+									} 
+								});
+								$(document).on('click','.select-list a',function(){
+									selectListAction(this);
+								})
+	
+								function selectListAction (el) {
+									var listValue = $(el).children('span').text();
+									
+									$(el).parents('.select-list').find('ul li a').removeClass('selected');
+									$(el).addClass('selected');
+									$(el).parents('.ui-custom-select').find('.select-value span').text(listValue);
+
+									var selectedValue = $(el).parent('li').data('name');
+									$(el).parents('.ui-custom-select').data('value',selectedValue);
+
+									if ( $(el).hasClass('selected') ) {
+										if ( !$(el).parent('li').hasClass('first') ) {
+											$(el).parents('.select-list').prev('.select-value').removeClass('placeholder');
+										} else if ( $(el).parent('li').hasClass('first') ) {
+											$(el).parents('.select-list').prev('.select-value').addClass('placeholder');
+											$(el).parents('.ui-custom-select').attr('data-value','');
+										}
+									}
+									selectBoxClose ();
+								}
+
+								function selectBoxClose () {
+									$('.ui-custom-select').removeClass('on');
+								}
+							});
+						</script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+	<script>include.bottom();</script>
+
+</body>
+</html>

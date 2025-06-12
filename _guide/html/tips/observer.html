@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Tips');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Observer</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">IntersectionObserver vs MutationObserver</h3>
+					<p class="_pb-section-desc">
+						둘 다 "변화를 감지하는 API" 지만 감지 대상과 용도는 서로 다르다.
+					</p>
+
+					<div class="_pb-board inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+								<col>
+                                <col style="width: 45%">
+								<col style="width: 45%">
+                            </colgroup>
+							<thead>
+								<tr>
+									<th scope="col"></th>
+									<th scope="col">IntersectionObserver</th>
+									<th scope="col">MutationObserver</th>
+								</tr>
+							</thead>
+                            <tbody>
+                                <tr>
+									<th scope="row">감지 대상</th>
+									<td>요소가 화면에 보이게 되는지 (뷰포트 진입)</td>
+                                    <td>DOM 구조/속성이 변경되었는지 (추가/삭제/수정)</td>
+                                </tr>
+								<tr>
+									<th scope="row">주 용도</th>
+									<td>스크롤 감지, 애니메이션 트리거, Lazy Load</td>
+                                    <td>DOM 변화 추적, 동적 콘텐츠 감시, 디버깅</td>
+                                </tr>
+								<tr>
+									<th scope="row">콜백 타이밍</th>
+									<td>요소가 보일 때</td>
+                                    <td>DOM에 변화가 발생한 직후</td>
+                                </tr>
+								<tr>
+									<th scope="row">사용 위치</th>
+									<td>뷰포트 관련된 작업에 특화</td>
+                                    <td>리액티브하거나 비동기적으로 DOM 조작되는 구조에 특화</td>
+                                </tr>
+								<tr>
+									<th scope="row">상황별</th>
+									<td class="text-primary">
+										- 요소가 화면에 들어올 때 애니메이션 <br>
+										- 무한 스크롤 → 다음 페이지 트리거 <br>
+										- Lazy 이미지 로딩
+									</td>
+                                    <td class="text-primary">
+										- Ajax로 추가된 DOM 요소 감지 <br>
+										- div 에 새로운 자식이 추가되었는지 추적
+									</td>
+                                </tr>
+								<tr>
+									<th scope="row">예제</th>
+									<td>
+										ex&#41; 스크롤 애니메이션
+<pre>
+const io = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('fade-in');
+		}
+	});
+});
+	
+io.observe(document.querySelector('.section'));
+</pre>
+									</td>
+                                    <td>
+										ex&#41; DOM 구조 변경 감지
+<pre>
+const mo = new MutationObserver((mutations) => {
+	mutations.forEach(mutation => {
+		console.log('DOM 변경 감지됨!', mutation);
+	});
+});
+	
+mo.observe(document.body, {
+	childList: true,
+	subtree: true
+});
+</pre>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+					
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">IntersectionObserver</h3>
+					<p class="_pb-section-desc">
+						브라우저에서 특정 요소가 뷰포트(viewport) 또는 부모 요소 안에서 보여지는지 관찰할 수 있는 API<br>
+						스크롤 감지, 레이지 로딩, 애니메이션 트리거 등에 유용하다.
+					</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+const observer = new IntersectionObserver((<code>entries, observer</code>) => {
+	entries.forEach(entry => {
+		if (<code>entry.isIntersecting</code>) {
+			entry.target.classList.add('visible');
+			<code>observer.unobserve(entry.target);</code> // 한 번만 실행
+		}
+	});
+}, { <code>threshold: 0.3</code> }); // 요소가 30% 이상 보여야 실행
+
+document.querySelectorAll('.fade-in').forEach(el => { <code>observer.observe(el);</code> });
+</pre>
+						<div class="_pb-pre-guide">
+							<div class="_pb-board">
+								<table>
+									<caption>목록</caption>
+									<colgroup>
+										<col style="width: 110px;">
+										<col> 
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2">콜백 파라미터</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">entries</th>
+											<td>
+												관찰 중인 요소들의 상태 정보 리스트 (IntersectionObserverEntry[])<br>
+												어떤 요소들이 감지됐는지, 얼마나 보이는지 등 정보 리스트
+<pre>
+entries.forEach(entry => {
+	entry.target           // 관찰 중인 요소(감지 중인 DOM 요소(HTMLElement))
+	entry.isIntersecting   // 요소가 화면에 들어올 때, 혹은 뷰포트와 겹치는 중인지 (Boolean)
+	entry.intersectionRatio // 몇 % 보이는지 (0~1)
+	entry.boundingClientRect // 요소의 위치
+	entry.intersectionRect // 겹치는 영역 정보
+});
+
+// options
+{
+	root: null,             // 기본은 뷰포트 (null)
+	rootMargin: '0px 0px',  // 루트와의 여유 공간
+	threshold: 0.5          // 50% 보일 때 콜백 실행
+}
+</pre>
+												이런 정보들을 이용해서, → 보이면 애니메이션 실행 → 끝나면 unobserve()로 정리 → 부분만 보여도 실행할지 결정 (threshold)
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">observer</th>
+											<td>
+												이 콜백을 실행한(현재 실행 중인) IntersectionObserver 인스턴스 그 자체<br>
+<pre>
+observer.unobserve(entry.target); // 관찰 종료
+observer.observe(otherElement);   // 다른 요소 등록
+</pre>
+												동적으로 관찰 대상을 관리할 때 사용됨
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">Related</h4>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Progress</th>
+									<td>프로그레스바가 화면에 보이면 실행됨</td>
+                                    <td>
+										<a href="../components/progress.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">MutationObserver</h3>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://inpa.tistory.com/entry/JS-%F0%9F%93%9A-MutationObserver-DOM%EC%9D%98-%EB%B3%80%ED%99%94%EB%A5%BC-%EA%B0%90%EC%8B%9C</li>
+							<li class="_pb-info-item">https://stackoverflow.com/questions/37168158/how-to-trigger-an-event-when-display-none-is-removed</li>
+							<li class="_pb-info-item">https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API</li>
+						</ul>
+					</div>
+					<p class="_pb-section-desc"> 페이지의 변경여부를 관찰해야 하는 경우. DOM의 변화를 감시</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+var blocker  = document.querySelector('#blocker');
+var previousValue = blocker.style.display;
+
+var observer = new MutationObserver( function(mutations){
+    mutations.forEach( function(mutation) {
+        if (mutation.attributeName !== 'style') return;
+        var currentValue = mutation.target.style.display;
+        if (currentValue !== previousValue) {
+           if (previousValue === "none" && currentValue !== "none") {
+             console.log("display none has just been removed!");
+           }
+
+           previousValue = mutation.target.style.display;
+        }
+    });
+});
+
+observer.observe(blocker, { attributes: true });
+</pre>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">ResizeObserver</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<!-- <h4 class="_pb-component-tit">Component sub title</h4> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						//
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					
+					<h4 class="_pb-component-tit">Related</h4>
+					<div class="_pb-board _pb-board-small">
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Popover &amp; Tooltip</th>
+									<td>스크롤시 DOM 요소(header)의 높이 변화 감지하여 위치값 재계산</td>
+                                    <td>
+										<a href="../components/popover.html" class="btn-text btn-text-sm text-primary">
+											<strong>관련 문서</strong>
+											<i class="icon icon-chevron-right"></i>
+										</a>
+									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

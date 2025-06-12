@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Layout');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Flexbox</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">기본</h3>
+					<div class="_pb-section-tips">
+						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
+						<ul class="_pb-info-list">
+							<li class="_pb-info-item">https://webclub.tistory.com/531?category=541913</li>
+							<li class="_pb-info-item">https://codepen.io/jaehee/full/zyZyWZ</li>
+						</ul>
+					</div>
+					<h4 class="_pb-component-tit">.flexbox-row</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-row">
+							<div class="col _pb-temp-box1">.col</div>
+							<div class="col _pb-temp-box2">.col</div>
+							<div class="col _pb-temp-box1">.col</div>
+							<div class="col _pb-temp-box2">.col</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-row">
+							<div class="col _pb-temp-box1">.col</div>
+							<div class="col-fix _pb-temp-box2">.col-fix</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">.flexbox-col</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox flexbox-col">
+							<div class="col _pb-temp-box1">.col</div>
+							<div class="col _pb-temp-box2">.col</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Grid type</h3>
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox-wrap">
+							<div class="col col-12"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col col-6"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col col-6"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col col-4"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col col-4"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col col-4"><div class="_pb-temp-box2">.col</div></div>
+						</div>
+
+						<br>
+
+						<div class="flexbox-wrap gap-10">
+							<div class="col col-2"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col col-2"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col col-3"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col col-2"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col col-1"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col col-3"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col col-5"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col col-3"><div class="_pb-temp-box2">.col</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">.flexbox-wrap + .gutter-[N]</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox-wrap flexbox-wrap-span3 gutter-20">
+							<div class="col"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col"><div class="_pb-temp-box2">.col</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="flexbox-wrap flexbox-wrap-span4 gutter-10">
+							<div class="col"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col"><div class="_pb-temp-box2">.col</div></div>
+							<div class="col"><div class="_pb-temp-box1">.col</div></div>
+							<div class="col"><div class="_pb-temp-box2">.col</div></div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

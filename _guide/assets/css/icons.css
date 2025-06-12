@@ -1,0 +1,147 @@
+/* Icons
+========================================================*/
+/* size */
+/* [class*='icon-'] { display:inline-flex; background-position: left center; background-size: contain; background-repeat: no-repeat; } */
+.icon, .icon-xlg, .icon-lg, .icon-md, .icon-sm, .icon-xs, .icon-xxs { display: inline-block; mask-origin: content-box; mask-repeat: no-repeat; mask-size: contain; mask-position: center; }
+.icon-xlg { width: 3em; height: 3em; }
+.icon-lg { width: 2.75em; height: 2.75em; }
+.icon-md { width: 1.5em; height: 1.5em; }
+.icon-sm { width: 1em; height: 1em; }
+.icon-xs { width: .75em; height: .75em; }
+.icon-xxs { width: .625em; height: .625em; }
+
+
+/* SVG
+========================================================*/
+/* 선택자 조합: ie11 이하 지원 불가 */
+/* [class^='icon-'][class$='--primary'] { } */
+/* chevron */
+.icon-chevron-down { -webkit-mask-image: var(--iconChevronVerti); mask-image: var(--iconChevronVerti); }
+.icon-chevron-up { -webkit-mask-image: var(--iconChevronVerti); mask-image: var(--iconChevronVerti); transform: rotate(180deg); }
+.icon-chevron-left { -webkit-mask-image: var(--iconChevronHoriz); mask-image: var(--iconChevronHoriz); transform: scale(-1) }
+.icon-chevron-right { -webkit-mask-image: var(--iconChevronHoriz); mask-image: var(--iconChevronHoriz); }
+.icon-chevron-back { -webkit-mask-image: var(--iconChevronDouble); mask-image: var(--iconChevronDouble); transform: scale(-1) }
+.icon-chevron-forward { -webkit-mask-image: var(--iconChevronDouble); mask-image: var(--iconChevronDouble); }
+/* triangle */
+.icon-caret-down { -webkit-mask-image: var(--iconTriangle); mask-image: var(--iconTriangle); }
+.icon-caret-up { -webkit-mask-image: var(--iconTriangle); mask-image: var(--iconTriangle); transform: rotate(180deg); }
+.icon-caret-left { -webkit-mask-image: var(--iconTriangle); mask-image: var(--iconTriangle); transform: rotate(90deg); }
+.icon-caret-right { -webkit-mask-image: var(--iconTriangle); mask-image: var(--iconTriangle); transform: rotate(-90deg); }
+.icon-skip-prev { -webkit-mask-image: var(--iconSkip); mask-image: var(--iconSkip); transform: scale(-1) }
+.icon-skip-next { -webkit-mask-image: var(--iconSkip); mask-image: var(--iconSkip); }
+/* X */
+.icon-x { -webkit-mask-image: var(--iconX); mask-image: var(--iconX); }
+.icon-x-bold { -webkit-mask-image: var(--iconXBold); mask-image: var(--iconXBold); }
+.icon-x-thin { -webkit-mask-image: var(--iconXThin); mask-image: var(--iconXThin); }
+/* Plus, minus */
+.icon-plus { -webkit-mask-image: var(--iconPlus); mask-image: var(--iconPlus); }
+.icon-minus { -webkit-mask-image: var(--iconMinus); mask-image: var(--iconMinus); }
+.icon-plus-thin { -webkit-mask-image: var(--iconPlusThin); mask-image: var(--iconPlusThin); }
+.icon-minus-thin { -webkit-mask-image: var(--iconMinusThin); mask-image: var(--iconMinusThin); }
+/* Form */
+.icon-check { -webkit-mask-image: var(--iconCheck); mask-image: var(--iconCheck); }
+.icon-disc { -webkit-mask-image: var(--iconDisc); mask-image: var(--iconDisc); }
+/* Image */
+.icon-home { -webkit-mask-image: var(--iconHome); mask-image: var(--iconHome); }
+.icon-clip { -webkit-mask-image: var(--iconClip); mask-image: var(--iconClip); }
+.icon-magnifier { -webkit-mask-image: var(--iconMagnifier); mask-image: var(--iconMagnifier); }
+.icon-pencil { -webkit-mask-image: var(--iconPencil); mask-image: var(--iconPencil); }
+.icon-eye { -webkit-mask-image: var(--iconEye); mask-image: var(--iconEye); }
+.icon-eye-off { -webkit-mask-image: var(--iconEyeOff); mask-image: var(--iconEyeOff); }
+.icon-paper { -webkit-mask-image: var(--iconPaper); mask-image: var(--iconPaper); }
+.icon-window { -webkit-mask-image: var(--iconWindow); mask-image: var(--iconWindow); }
+/* mark */
+.icon-excla { -webkit-mask-image: var(--iconExcla); mask-image: var(--iconExcla); }
+.icon-question { -webkit-mask-image: var(--iconQuestion); mask-image: var(--iconQuestion); }
+.icon-info { -webkit-mask-image: var(--iconInfo); mask-image: var(--iconInfo); }
+
+/* 배경 사이즈 예외 처리 */
+/* .btn-chip-disc > [class*='icon-x'],
+[class*='btn-chip-'] > .icon-arrow-fill { mask-size: .86em auto; }
+.badge-sm > .btn-chip-disc > [class*='icon-x'] { mask-size: .76em auto; } */
+
+
+
+/* CSS
+========================================================*/
+/** Plus, Minus **/
+.icon-css-plus { position: relative; width: 11px; height: 11px; display: inline-block; }
+.icon-css-plus:before { display: block; content: ''; position: absolute; top: 5px; left: 0; width: 100%; height: 1px; background: #000; }
+.icon-css-plus:after { display: block; content: ''; position: absolute; top: 0px; left: 5px; width: 1px; height: 100%; background: #000; }
+.icon-css-minus { position: relative; width: 11px; height: 11px; display: inline-block; }
+.icon-css-minus:before { display: block; content: ''; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #000; }
+/* bold */
+.icon-css-plus-bold { position: relative; width: 12px; height: 12px; display: inline-block; }
+.icon-css-plus-bold:before { display: block; content: ''; position: absolute; top: 5px; left: 0; width: 100%; height: 2px; background: #000; }
+.icon-css-plus-bold:after { display: block; content: ''; position: absolute; top: 0px; left: 5px; width: 2px; height: 100%; background: #000; }
+.icon-css-minus-bold { position: relative; width: 12px; height: 12px; display: inline-block; }
+.icon-css-minus-bold:before { display: block; content: ''; position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background: #000; }
+
+/** X Icon **/
+[class*='icon-css-x-'] { position: relative; display: inline-flex; margin: 0 }
+.icon-css-x-normal:before,
+.icon-css-x-normal:after { position: absolute; top: calc(50% - 1px); left: -3px; display: block; content: ''; width: calc(100% + 6px); height: 1px; box-shadow: inset 0 0 0 12px; }
+.icon-css-x-normal:before { transform: rotate(45deg); }
+.icon-css-x-normal:after { bottom: 0; transform:  rotate(-45deg); }
+/* bold */
+.icon-css-x-bold:before,
+.icon-css-x-bold:after { position: absolute; display: block; content: '';  box-shadow: inset 0 0 0 12px;}
+.icon-css-x-bold:before { transform: rotate(45deg); }
+.icon-css-x-bold:after { bottom: 0; transform:  rotate(-45deg); }
+.icon-css-x-bold:before,
+.icon-css-x-bold:after { top: calc(50% - 2px); left: -4px; width: calc(100% + 8px); height: 4px; border-radius: 6px; }
+/* .icon-sm.icon-css-x-bold:before,
+.icon-sm.icon-css-x-bold:after { top: calc(50% - 1px); left: -3px; width: calc(100% + 6px); height: 3px; border-radius: 3px; }
+.icon-md.icon-css-x-bold:before,
+.icon-md.icon-css-x-bold:after { top: calc(50% - 2px); left: -4px; width: calc(100% + 8px); height: 4px; border-radius: 6px; }
+.icon-lg.icon-css-x-bold:before,
+.icon-lg.icon-css-x-bold:after { top: calc(50% - 2px); left: -6px; width: calc(100% + 12px); height: 6px; border-radius: 8px; } */
+
+/** Arrow **/
+[class*='icon-css-arr'] { position: relative; display: inline-block; width: 12px; height: 12px; transition: .2s; -webkit-transition:  .2s; transform: translateX(0); -webkit-transform: translateX(0); }
+[class*='icon-css-arr']:after,
+[class*='icon-css-arr']:before { position: absolute; display: block; content: ''; box-shadow: inset 0 0 0 32px; }
+/* right */
+.icon-css-arr.right:before { top: 0; left: 50%; width: 1px; height: 59.45%; -webkit-transform: rotate(135deg); transform: rotate(135deg); }
+.icon-css-arr.right:after { bottom: 0; left: 50%; width: 1px; height: 59.45%; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+/* left */
+.icon-css-arr.left:before { top: 0; left: 50%; width: 1px; height: 59.45%; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+.icon-css-arr.left:after { bottom: 0; left: 50%;width: 1px; height: 59.45%;  -webkit-transform: rotate(135deg); transform: rotate(135deg); }
+/* down */
+.icon-css-arr.down:before { top: 50%; right: 0; width: 60%; height: 1px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.icon-css-arr.down:after { top: 50%; left: 0; width: 60%; height: 1px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+/* up */
+.icon-css-arr.up:before { top: 50%; right: 0; width: 60%; height: 1px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.icon-css-arr.up:after { top: 50%; left: 0; width: 60%; height: 1px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+/** Arrow (Fill) **/
+[class*='icon-css-fillarr']:after { display: inline-block; content: ''; border-width: 4px 0 4px 5px; border-style: solid; border-top-color: transparent; border-bottom-color: transparent;  }
+.icon-css-fillarr.up:after { transform: rotate(-90deg); -webkit-transform: rotate(-90deg); }
+.icon-css-fillarr.down:after { transform: rotate(90deg); -webkit-transform: rotate(90deg); }
+.icon-css-fillarr.left:after { transform: rotate(180deg); -webkit-transform: rotate(180deg); }
+.icon-css-fillarr.right:after { transform: rotate(360deg); -webkit-transform: rotate(360deg); }
+/** Arrow Toggle (for script) **/
+/* .icon-css-arr.toggle:before { top: 50%; right: 0; width: 60%; height: 1px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.icon-css-arr.toggle:after { top: 50%; left: 0; width: 60%; height: 1px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.toggle-on .icon-css-arr.toggle:before { top: 50%; right: 0; width: 60%; height: 1px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.toggle-on .icon-css-arr.toggle:after { top: 50%; left: 0; width: 60%; height: 1px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.icon-css-fillarr-toggle:after { transform: rotate(90deg); -webkit-transform: rotate(90deg); }
+.toggle-on .icon-css-fillarr-toggle:after { transform: rotate(-90deg); -webkit-transform: rotate(-90deg); } */
+
+/** Signs **/
+/* Info */
+.icon-css-info { position: relative; display: inline-block; border-radius: 50%; width: 16px; height: 16px; background: #fff; border: 1px solid #000 }
+.icon-css-info:before { display: block; content: ''; position: absolute; top: 3px; left: 6px; width: 2px; height: 2px; background: #000; }
+.icon-css-info:after { display: block; content: ''; position: absolute; top: 6px; left: 6px; width: 2px; height: 5px; background: #000; }
+.icon-css-info-bold { position: relative; display: inline-block; border-radius: 50%; width: 18px; height: 18px; background: #fff; border: 2px solid #000 }
+.icon-css-info-bold:before { display: block; content: ''; position: absolute; top: 3px; left: 6px; width: 2px; height: 2px; background: #000; }
+.icon-css-info-bold:after { display: block; content: ''; position: absolute; top: 6px; left: 6px; width: 2px; height: 5px; background: #000; }
+
+/* Question */
+.icon-css-quest { position: relative; display: inline-block; border-radius: 50%; width: 18px; height: 18px; background-color: #fff; border: 2px solid #000; text-align: center; }
+.icon-css-quest:before { display: inline-block; vertical-align: top; content: '?'; font-style: normal; font-weight: 700; color: #000; font-size: 14px; line-height: 1.1;  }
+/* Exclamation */
+.icon-css-excla { position: relative; display: inline-block; border-radius: 50%; width: 16px; height: 16px; background-color: #fff; border: 1px solid #000 }
+.icon-css-excla:before { display: block; content: ''; position: absolute; top: 3px; left: 6px; width: 2px; height: 5px; background-color: #000; }
+.icon-css-excla:after { display: block; content: ''; position: absolute; top: 9px; left: 6px; width: 2px; height: 2px; background-color: #000; }
+

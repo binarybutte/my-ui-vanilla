@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Tips');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Display Size &amp; Ratio</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Viewport</h3>
+					<p class="_pb-section-desc">
+						Viewport (CSS px): 웹페이지에서 window.innerWidth로 보는 값 (디자인 기준) <br>
+						Device Resolution (px): 물리적인 실제 해상도<br>
+						DPR (Device Pixel Ratio): 1 CSS px당 실제 픽셀 수 (해상도 ÷ Viewport)
+					</p>
+
+					<h4 class="_pb-component-tit">Mobile</h4>
+					<div class="_pb-board">
+                        <table>
+							<caption>목록</caption>
+							<colgroup>
+								<col style="width: 30%"><col span="2" style="width: 25%"><col span="2">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">기기</th>
+									<th scope="col">Viewport</th>
+									<th scope="col">실제 해상도</th>
+									<th scope="col">비율</th>
+									<th scope="col">DPR</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><th scope="row">iPhone SE (2/3세대)</th><td>375 x 667</td><td>750 x 1334</td><td>~16:9</td><td>2</td></tr>
+								<tr><th scope="row">iPhone 11 / XR</th><td>414 x 896</td><td>828 x 1792</td><td>~19.5:9</td><td>2</td></tr>
+								<tr><th scope="row">iPhone 12 / 13 / 14</th><td>390 x 844</td><td>1170 x 2532</td><td>~19.5:9</td><td>3</td></tr>
+								<tr><th scope="row">iPhone 12/13/14 Pro</th><td>390 x 844</td><td>1170 x 2532</td><td>~19.5:9</td><td>3</td></tr>
+								<tr><th scope="row">iPhone 12/13/14 Pro Max</th><td>430 x 932</td><td>1284 x 2778</td><td>~19.5:9</td><td>3</td></tr>
+								<tr><th scope="row">iPhone 15</th><td>393 x 852</td><td>1179 x 2556</td><td>~19.5:9</td><td>3</td></tr>
+								<tr><th scope="row">iPhone 15 Pro</th><td>393 x 852</td><td>1179 x 2556</td><td>~19.5:9</td><td>3</td></tr>
+								<tr><th scope="row">iPhone 15 Pro Max</th><td>430 x 932</td><td>1290 x 2796</td><td>~19.5:9</td><td>3</td></tr>
+								<tr><th scope="row">Galaxy S20 / S21</th><td>360 x 800</td><td>1080 x 2400</td><td>20:9</td><td>3</td></tr>
+								<tr><th scope="row">Galaxy S22 / S23</th><td>360 x 780</td><td>1080 x 2340</td><td>19.5:9</td><td>3</td></tr>
+								<tr><th scope="row">Galaxy S22+ / S23+</th><td>412 x 915</td><td>1080 x 2340</td><td>~19.5:9</td><td>2.625</td></tr>
+								<tr><th scope="row">Galaxy S22 Ultra / S23 Ultra</th><td>412 x 915</td><td>1440 x 3088</td><td>~19.3:9</td><td>3.5</td></tr>
+								<tr><th scope="row">Galaxy A52 / A72</th><td>412 x 915</td><td>1080 x 2400</td><td>20:9</td><td>2.625</td></tr>
+								<tr><th scope="row">Pixel 6 / 6a</th><td>412 x 915</td><td>1080 x 2400</td><td>20:9</td><td>2.625</td></tr>
+								<tr><th scope="row">Pixel 7</th><td>412 x 915</td><td>1080 x 2400</td><td>20:9</td><td>2.625</td></tr>
+							</tbody>
+						</table>
+                    </div>
+
+					<h4 class="_pb-component-tit">삼성 접히는 기기 (Galaxy Z Flip &amp; Fold 시리즈)</h4>
+					<div class="_pb-board">
+                        <table>
+							<caption>목록</caption>
+							<colgroup>
+								<col style="width: 30%"><col span="2" style="width: 25%"><col span="2">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">기기</th>
+									<th scope="col">Viewport</th>
+									<th scope="col">실제 해상도</th>
+									<th scope="col">비율</th>
+									<th scope="col">DPR</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><th scope="row">Galaxy Z Flip</th><td>360 x 800</td><td>1080 x 2636</td><td>9:21</td><td>3</td></tr>
+								<tr><th scope="row">Galaxy Z Flip 3</th><td>360 x 800</td><td>1080 x 2640</td><td>9:21</td><td>3</td></tr>
+								<tr><th scope="row">Galaxy Z Flip 4</th><td>360 x 800</td><td>1080 x 2640</td><td>9:21</td><td>3</td></tr>
+								<tr><th scope="row">Galaxy Z Flip 5</th><td>360 x 800</td><td>1080 x 2640</td><td>9:21</td><td>3</td></tr>
+								<tr><th scope="row">Galaxy Z Fold</th><td>412 x 915</td><td>1080 x 2640</td><td>~16:9</td><td>4</td></tr>
+								<tr><th scope="row">Galaxy Z Fold 2</th><td>412 x 915</td><td>1536 x 2152</td><td>~16:9</td><td>4</td></tr>
+								<tr><th scope="row">Galaxy Z Fold 3</th><td>412 x 915</td><td>1768 x 2208</td><td>~16:9</td><td>4</td></tr>
+								<tr><th scope="row">Galaxy Z Fold 4</th><td>412 x 915</td><td>1768 x 2208</td><td>~16:9</td><td>4</td></tr>
+								<tr><th scope="row">Galaxy Z Fold 5</th><td>1024 x 1366</td><td>1812 x 2176</td><td>4:3</td><td>2</td></tr>
+							</tbody>
+						</table>
+                    </div>
+
+					<h4 class="_pb-component-tit">태블릿 기기 (iPad, Galaxy Tab)</h4>
+					<div class="_pb-board">
+                        <table>
+							<caption>목록</caption>
+							<colgroup>
+								<col style="width: 30%"><col span="2" style="width: 25%"><col span="2">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">기기</th>
+									<th scope="col">Viewport</th>
+									<th scope="col">실제 해상도</th>
+									<th scope="col">비율</th>
+									<th scope="col">DPR</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><th scope="row">iPad (7~9세대, 10.2")</th><td>820 x 1180</td><td>1620 x 2160</td><td>4:3</td><td>2</td></tr>
+								<tr><th scope="row">iPad (10세대, 10.9")</th><td>820 x 1180</td><td>1640 x 2360</td><td>4:3</td><td>2</td></tr>
+								<tr><th scope="row">iPad Air (4~5세대)</th><td>834 x 1194</td><td>1640 x 2360</td><td>4:3</td><td>2</td></tr>
+								<tr><th scope="row">iPad Pro 11" (3~4세대)</th><td>1024 x 1366</td><td>1668 x 2388</td><td>4:3</td><td>2</td></tr>
+								<tr><th scope="row">iPad Pro 12.9"</th><td>744 x 1133</td><td>2048 x 2732</td><td>3:4</td><td>1.5</td></tr>
+								<tr><th scope="row">iPad mini 6세대</th><td>800 x 1210</td><td>1488 x 2266</td><td>16:10</td><td>1.5</td></tr>
+								<tr><th scope="row">Galaxy Tab A8</th><td>800 x 1280</td><td>1200 x 1920</td><td>15:10</td><td>2</td></tr>
+								<tr><th scope="row">Galaxy Tab S6 Lite</th><td>800 x 1280</td><td>1200 x 2000</td><td>16:10</td><td>2</td></tr>
+								<tr><th scope="row">Galaxy Tab S7 / S8</th><td>980 x 1360</td><td>1600 x 2560</td><td>16:10</td><td>1.88</td></tr>
+								<tr><th scope="row">Galaxy Tab S8 Ultra</th><td>980 x 1360</td><td>1848 x 2960</td><td>16:10</td><td>1.88</td></tr>
+							</tbody>
+						</table>
+                    </div>
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+<script>include.bottom();</script>
+
+</body>
+</html>

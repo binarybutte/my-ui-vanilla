@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script>include.scripts();</script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+</head>  
+
+<body>
+<div class="_pb-guide">
+	<!-- ========== 공통 헤더 ========== -->
+	<script>include.header();</script>
+	<!--// ========== 공통 헤더 ========== -->
+
+	<!-- ========== 컨텐츠 영역 ========== -->
+	<main class="_pb-container">
+		<div class="_pb-contents">
+			<div class="_pb-side-bar">
+				<script>include.sidebar('Components');</script>
+			</div>
+
+			<article class="_pb-article">
+				<div class="_pb-page-tit">
+					<h2>Alert &amp; Others</h2>
+					<!-- <p class="_pb-page-desc">가이드 설명</p> -->
+				</div>
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Alert</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="customAlert" onclick="myDialgUI.customAlert('알럿 메세지')"><span>customAlert</span>
+						</button>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+
+					<h4 class="_pb-component-tit">message-box</h4>
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<div class="message-box bg-warning-light border-warning">
+							<div class="flexbox">
+								<i class="icon-md icon-excla bg-warning-dark"></i>
+								<p class="message color-warning-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure provident pariatur voluptatem!</p>
+								<button type="button" class="btn-icon btn-icon-20 ui-message-close">
+									<i class="icon-md icon-x bg-warning-dark" aria-label="Close"></i>
+								</button>
+							</div>
+						</div>
+						<br>
+						<div class="message-box bg-success-light border-success">
+							<div class="flexbox">
+								<i class="icon-md icon-check bg-success-dark"></i>
+								<p class="message color-success-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure provident pariatur voluptatem!</p>
+								<button type="button" class="btn-icon btn-icon-20 ui-message-close">
+									<i class="icon-md icon-x bg-success-dark" aria-label="Close"></i>
+								</button>
+							</div>
+						</div>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Confirm</h3>
+					<!-- <p class="_pb-section-desc"></p> -->
+					<div class="_pb-component">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="customAlert" onclick="myDialgUI.customConfirm('컨펌 메세지')"><span>customConfirm</span>
+						</button>
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Toast</h3>
+					<p class="_pb-section-desc">
+						주로 화면의 상단이나 하단에 잠시 나타나는 단순한 알림 메시지. 자동으로 사라지며, 사용자가 이를 닫을 필요는 없다. <br>
+						사용자가 특정 작업을 완료했을 때 간단한 정보를 표시 (ex: 저장되었습니다, 업데이트 완료)
+					</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="toast" data-toast-direction="top" 
+								onclick="myDialgUI.toast(this, 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima a asperiores similique?')">
+								<span>toast on top</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="toast" data-toast-direction="middle" 
+								onclick="myDialgUI.toast(this, 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.')">
+								<span>toast on middle</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="toast" data-toast-direction="bottom" 
+								onclick="myDialgUI.toast(this, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ut dicta voluptates quasi laboriosam nihil.')">
+								<span>toast on bottom</span>
+						</button>
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
+					<h3 class="_pb-section-tit">Snackbar</h3>
+					<p class="_pb-section-desc">
+						Toast와 비슷하지만, 사용자와의 상호작용을 더 중요시. 닫기 버튼등이 있을 수 있다.<br>
+						사용자가 버튼을 클릭하거나 특정 액션을 취할 수 있는 경우가 많다. (ex: 실행취소 버튼)
+					</p>
+					<div class="_pb-component _pb-component--inline">
+						<!-- ========== Component ========== -->
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="snackbar" data-snackbar-direction="top" 
+								onclick="myDialgUI.snackbar(this, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime rem facere culpa recusandae ad!')">
+								<span>snackbar on top</span>
+						</button>
+						<button type="button" class="btn-basic btn-basic-md btn-primary" 
+								data-js-behavior="snackbar" data-snackbar-direction="bottom" 
+								onclick="myDialgUI.snackbar(this, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ut dicta voluptates quasi laboriosam nihil.')">
+								<span>snackbar on bottom</span>
+						</button>
+						<!--// ========== Component ========== -->	
+						<script></script>
+					</div><!--// _pb-component -->
+				</section><!--// _pb-section  -->
+			</article>
+		</div>
+	</main>
+	<!--// ========== 컨텐츠 영역 ========== -->
+</div><!--// _pb-guide -->
+
+	<script>include.bottom();</script>
+
+</body>
+</html>
