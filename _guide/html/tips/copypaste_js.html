@@ -94,17 +94,15 @@ for (let index in fruits) -&gt; (단순히 인덱스에만 접근함)
 						<!-- ========== Component ========== -->
 <pre>
 function sayHello(name) { console.log('Hello', name); }
-
-setTimeout(function() { console.log('Loaded') }, 2000);
-
-list.forEach(function(item) { console.log(item); });
+sayHello = name =&gt; console.log('Hello', name);
 </pre>
 <pre>
-sayHello = name =&gt; console.log('Hello', name);
-
+setTimeout(function() { console.log('Loaded') }, 2000);
 setTimeout(() =&gt; console.log('Loaded'), 2000);
-
-list.forEach(item =&gt; console.log(item));
+</pre>
+<pre>
+list.forEach(function(item) { console.log(item); });
+list.forEach((item, index) => { ... });
 </pre>
 						<!--// ========== Component ========== -->	
 					</div><!--// _pb-component -->

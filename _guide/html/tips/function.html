@@ -31,6 +31,62 @@
 				</div>
 
 				<section class="_pb-section">
+					<h3 class="_pb-section-tit">일반 함수와 화살표 함수</h3>
+					<p class="_pb-section-desc">this의 바인딩 방식이 서로 다르다는 점 유의</p>
+					<!-- <h4 class="_pb-component-tit">Component sub title</h4> -->
+					<p class="_pb-component-desc">
+						- this가 필요하면 일반 함수 (function) 쓰기 (DOM 이벤트, 객체 메서드, 클래스 등)<br>
+						- 간단한 로직/콜백/return만 있으면 화살표 함수 (map, filter, sort, Promise 등)<br>
+						- arguments 써야 하면 무조건 일반 함수
+					</p>
+					<div class="_pb-board">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+                        <table>
+                            <caption>목록</caption>
+                            <colgroup>
+								<col>
+                                <col style="width: 40%">
+								<col style="width: 40%">
+                            </colgroup>
+							<thead>
+								<tr>
+									<th scope="col"></th>
+									<th scope="col">일반 함수</th>
+									<th scope="col">화살표 함수</th>
+								</tr>
+							</thead>
+                            <tbody>
+                                <tr>
+									<th scope="row">this</th>
+                                    <td>자기 실행 컨텍스트에서 this를 바인딩함 (function() {} 쓰면 그때 정해짐</td>
+									<td>상위 스코프의 this를 그대로 씀. this = window</td>
+                                </tr>
+								<tr>
+									<th scope="row">DOM 이벤트 핸들러</th>
+                                    <td>this가 이벤트 대상 요소가 됨</td>
+									<td>요소 안 됨</td>
+                                </tr>
+								<tr>
+									<th scope="row">메서드 정의용</th>
+                                    <td>클래스나 객체 메서드용으로 안정적</td>
+									<td>피해야 함 (this 꼬임)</td>
+                                </tr>
+								<tr>
+									<th scope="row">constructor (생성자)</th>
+                                    <td>new 키워드로 인스턴스 생성 가능</td>
+									<td>사용 불가</td>
+                                </tr>
+								<tr>
+									<th scope="row">arguments 객체</th>
+                                    <td>있음 (arguments[0] 등)</td>
+									<td>없음</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</section><!--// _pb-section  -->
+
+				<section class="_pb-section">
 					<h3 class="_pb-section-tit">고차함수와 클로저</h3>
 					<!-- <div class="_pb-section-tips">
 						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
