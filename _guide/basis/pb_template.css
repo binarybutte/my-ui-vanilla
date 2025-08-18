@@ -102,6 +102,10 @@ hr + ._pb-component { margin-top: 25px; }
 ._pb-section-tit + ._pb-board { margin-top: 10px; }
 ._pb-vertical-mid { vertical-align: middle !important; }
 ._pb-board table td pre { background-color: var(--colorGray100); padding: 10px; margin: 5px 0; font-size: 14px;}
+
+._pb-board pre + ._pb-pre-guide { padding: 5px 0 0; font-size: 14px; }
+._pb-board ._pb-pre-guide + pre { margin-top: 15px }
+
 /* col */
 ._pb-board:not(._pb-board-small) .related-th-20 { width: 20%; }
 ._pb-board:not(._pb-board-small) .related-th-30 { width: 30%; }

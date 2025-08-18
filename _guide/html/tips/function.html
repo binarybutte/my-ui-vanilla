@@ -45,8 +45,8 @@
                             <caption>목록</caption>
                             <colgroup>
 								<col>
-                                <col style="width: 40%">
-								<col style="width: 40%">
+                                <col style="width: 30%">
+								<col style="width: 50%">
                             </colgroup>
 							<thead>
 								<tr>
@@ -58,9 +58,30 @@
                             <tbody>
                                 <tr>
 									<th scope="row">this</th>
-                                    <td>자기 실행 컨텍스트에서 this를 바인딩함 (function() {} 쓰면 그때 정해짐</td>
-									<td>상위 스코프의 this를 그대로 씀. this = window<br>
-									이벤트 대상을 찾으려면 e.currentTarget 로 찾는다. </td>
+                                    <td>자기 실행 컨텍스트에서 this를 바인딩함<br> (function() {} 쓰면 그때 정해짐</td>
+									<td>
+										상위 스코프의 this를 그대로 씀. this = window<br>이벤트 대상을 찾으려면 e.currentTarget 로 찾는다. 
+<pre>
+element.addEventListener('click', (e) => { 
+  <code class="text-primary">e.currentTarget</code>.classList.add('active');  // 올바른 방법
+});
+</pre>
+<div class="_pb-pre-guide">
+	e.currentTarget은 이벤트가 걸려 있는 그 엘리먼트 자신을 가리킴 (e.target은 실제로 클릭된 하위 요소)<br>
+	즉, e.currentTarget은 항상 안전하고 정확하게 현재 그 엘리먼트를 가리킨다.
+</div>
+<pre>
+element.addEventListener('click', (e) => { 
+  <code class="text-primary">element</code>.classList.add('active'); // 잘못된 방법!!
+});
+</pre>
+<div class="_pb-pre-guide">
+	element 변수 직접 참조하는 게 위험한 이유?<br>
+	클로저 상황에서 예전 el을 기억해서 잘못된 걸 참조할 수도 있고..<br>
+	그 el 자체가 이미 다른 DOM으로 교체되거나 없어졌을 수도 있고..<br>
+	반복문 안에서 el을 참조하면 마지막 값만 남아있기도 하고 (let 안 쓰면 특히)
+</div>
+									</td>
                                 </tr>
 								<tr>
 									<th scope="row">DOM 이벤트 핸들러</th>
