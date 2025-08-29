@@ -243,6 +243,7 @@ var include = {
 							['√ Tips & Tech', 'tipstech_js.html'],
 							['√ Copy & paste', 'copypaste_js.html'],
 							['EventListener', 'eventListener.html'],
+							['Math', 'math.html'],
 							['Scroll event', 'scrollevent.html'],
 							['Function', 'function.html'],
 							['Observer', 'observer.html'],
