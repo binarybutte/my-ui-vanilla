@@ -139,6 +139,8 @@ const myDialgUI = {
 
         /*
          - ._resizePopoverHandler
+         DOM 엘리먼트(객체)에 임의로 붙인 커스텀 필드/"확장 프로퍼티(expando)" (브라우저 표준 아님)
+         * 자바스크립트 객체는(대부분) 동적으로 프로퍼티를 더 붙일 수 있다.
          createPopover 엘리먼트에 resizePopoverHandler 함수 저장하기.
          언더스코어(_) 로 시작하는 이름은 js에서 내부용, 비공개, 임시 데이터라는 의도를
          나타내기 위한 개발자들간의 '관례'. 실제 언어 규칙은 아니다. 
