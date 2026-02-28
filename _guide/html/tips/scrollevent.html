@@ -31,7 +31,8 @@
 				</div>
 
 				<section class="_pb-section">
-					<h3 class="_pb-section-tit">스크롤 움직임 감지</h3>
+					<h3 class="_pb-section-tit">스크롤 감지</h3>
+					<h4 class="_pb-component-tit">동작 감지</h4>
 					<!-- <div class="_pb-section-tips">
 						<button type="button" class="_pb-tips-btn"><i class="icon-css-info-bold"></i></button>
 						<ul class="_pb-info-list">
@@ -39,7 +40,8 @@
 						</ul>
 					</div> -->
 					<!-- <p class="_pb-section-desc"></p> -->
-					<div class="_pb-component _pb-component--border">
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
 						<!-- ========== Component ========== -->
 <pre>
 let scrolling;
@@ -62,7 +64,92 @@ element.addEventListener('scroll', e => {
 </pre>
 						<!--// ========== Component ========== -->	
 					</div><!--// _pb-component -->
-					<script></script>
+					
+					<h4 class="_pb-component-tit">위아래 감지</h4>
+					<p class="_pb-component-desc">
+						스크롤은 미세 진동이 있어서 1px 움직여도 계속 방향 바뀌는 경우 있음. 그래서 보통 threshold 둠.
+					</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+let lastScrollY = window.scrollY;
+const threshold = 5;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  const diff = currentScrollY - lastScrollY;
+
+  if (Math.abs(diff) < threshold) return;
+
+  if (diff > 0) {
+    console.log('👇 down');
+  } else {
+    console.log('👆 up');
+  }
+
+  lastScrollY = currentScrollY;
+}, { passive: true });
+</pre>
+						<p class="_pb-pre-guide">//</p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<p class="_pb-component-desc">
+						스크롤 이벤트 안에서 연산 직접 안 돌리고 rAF 묶기:
+					</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function updateScrollDir() {
+  const currentScrollY = window.scrollY;
+  const diff = currentScrollY - lastScrollY;
+
+  if (Math.abs(diff) > 5) {
+    state.scrollDir = diff > 0 ? 'down' : 'up';
+    lastScrollY = currentScrollY;
+  }
+
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(updateScrollDir);
+    ticking = true;
+  }
+}, { passive: true });
+</pre>
+						<p class="_pb-pre-guide">//</p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
+					<p class="_pb-component-desc">
+						threshold 없는 기본 타입
+					</p>
+					<div class="_pb-component _pb-component--border inactive">
+						<button type="button" class="_pb-toggle-btn"><i class="icon icon-chevron-down bg-black"></i></button>
+						<!-- ========== Component ========== -->
+<pre>
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY) {
+    console.log('👇 scroll down');
+  } else if (currentScrollY < lastScrollY) {
+    console.log('👆 scroll up');
+  }
+
+  lastScrollY = currentScrollY;
+}, { passive: true });
+</pre>
+						<p class="_pb-pre-guide">//</p>
+						<!--// ========== Component ========== -->	
+					</div><!--// _pb-component -->
 				</section><!--// _pb-section  -->
 			</article>
 		</div>
