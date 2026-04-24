@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="../pb_inc.js"></script>
+<script>include.meta();</script>
+<!-- ======================== CSS / JS ======================== -->
+<script>include.styles();</script>
+<script src="../../assets/js/common_ui.js"></script>
+<script src="../../assets/js/dialogue.js"></script>
+<script src="../../assets/js/popup.js"></script>
+<script src="../../assets/js/navigation.js"></script>
+<script src="../../assets/js/display.js"></script>
+<script src="../../assets/js/form.js"></script>
+<script src="../../assets/js/init.js"></script>
+<!--// ======================== CSS / JS ======================== -->
+<script>include.title();</script>
+<style>
+.mutation-observer-test {padding: 20px; min-height: 100vh;}
+.mutation-observer-boxes {position: relative; width: 100%; height: calc(100vh - 6em);} 
+.mutation-observer-boxes .box{display: none; width: 100%; height: 100%;}
+.mutation-observer-boxes .box .inner,
+.mutation-observer-boxes .box .scene {width: 100%; height:100%; display:flex; justify-content: center; align-items: center; font-size: 2.4rem; color: var(--colorWhite); text-align: center; font-weight: 700; text-transform:uppercase;} 
+.mutation-observer-boxes .box.ui-active {display: block}
+.scene {width: 100%; height:100%; position: absolute; top:0; left:0; opacity: 0; transition: .2s; display:flex; justify-content: center; align-items: center; font-size: 2.4rem; color: var(--colorWhite); text-align: center; font-weight: 700; text-transform:uppercase;} 
+.scene-1.active {opacity: 1;}
+.scene-2.active {opacity: 0.6;}
+.scene-1 {background: linear-gradient(330deg, var(--colorPrimary) 10%, var(--colorPrimaryLight) 100%);}
+.scene-2 {background: linear-gradient(330deg, var(--colorSuccess) 10%, var(--colorSuccessLight) 100%);}
+.scene-1.done {background: linear-gradient(330deg, var(--colorSecondary) 10%, var(--colorSecondaryLight) 100%); opacity: 1;}
+.box-01, .box-03 {background-color: var(--colorGray700);}
+</style>
+</head>  
+
+<body>
+<div class="_pb-blank">
+  <div class="mutation-observer-test">
+    <div class="dropdown">
+      <button type="button" class="btn-basic btn-basic-md btn-primary"
+        data-js-behavior="dropdown" data-dropdown-direction="bottom"
+        aria-expanded="false"
+        onclick="myNavUI.dropdown(event, this);">
+        <span>선택하기</span>
+        <i class="icon-sm icon-caret-down bg-white ui-arrow" aria-label="열기"></i>
+      </button>
+      <div class="dropdown-menu scrollable">
+        <ul class="dropdown-list">
+          <li><button type="button" class="dropdown-item">box-01</button></li>
+          <li><button type="button" class="dropdown-item">box-02</button></li>
+          <li><button type="button" class="dropdown-item">box-03</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mutation-observer-boxes">
+      <div class="box box-01 ui-active">
+        <div class="inner">box-01</div>
+      </div>
+      <div class="box box-02">
+        <div class="scene scene-1">box-02<br>scene-1</div>
+        <div class="scene scene-2">box-02<br>scene-2</div>
+      </div>
+      <div class="box box-03">
+        <div class="inner">box-03</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /**
+   * 1. '.dropdown-item' 클릭시 해당 .box들에 .ui-active기 토글됨
+   * 2. .box-02 활성화되면, scene1에 addclass .active
+   *    ㄴ '.dropdown-item' 클릭이벤트로 addclass가 실행되는 것이 아니라, mutationobserver 등(혹은 다른 방법이 있다면 추천 요망)으로 box-02가 활성화 됨을 감지하여 _scene1에 addclass .active를 실행해야 함.
+   * 3. 3초 후에 _scene1에 removeClass active 되고, 동시에 _scene2에  addclass .active
+   * 4 0.3초 후에 addClass done으로 scene1이 마무리 됨을 알림.
+   * */
+
+  // 요소 선택
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+const boxes = document.querySelectorAll('.box');
+const scene1 = document.querySelector('.scene-1');
+const scene2 = document.querySelector('.scene-2');
+const targetBox02 = document.querySelector('.box-02');
+
+/**
+ * 1. .dropdown-item 클릭 시 .box 활성화 토글
+ */
+dropdownItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    // 모든 박스 비활성화
+    boxes.forEach(box => box.classList.remove('ui-active'));
+    // 클릭한 인덱스에 해당하는 박스 활성화
+    boxes[index].classList.add('ui-active');
+  });
+});
+
+/**
+ * 2 ~ 4. MutationObserver를 이용한 상태 감지 및 시퀀스 실행
+ */
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    // attributes(속성) 변화 중 'class' 변화만 감지
+    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+      const isVisible = targetBox02.classList.contains('ui-active');
+
+      if (isVisible) {
+        // [Step 2] box-02 활성화 시 scene1 활성화
+        scene1.classList.add('active');
+
+        // [Step 3] 3초 후 scene1 제거 및 scene2 활성화
+        setTimeout(() => {
+          scene1.classList.remove('active');
+          scene2.classList.add('active');
+
+          // [Step 4] 0.3초 후 scene1에 .done 클래스 추가
+          setTimeout(() => {
+              scene1.classList.add('done');
+          }, 300);
+        }, 3000);
+      } else {
+        // box-02가 비활성화될 때 상태 초기화 (재진입을 위함)
+        scene1.classList.remove('active', 'done');
+        scene2.classList.remove('active');
+      }
+    }
+  });
+});
+
+// 관찰 시작: box-02의 attributes 변화를 감시
+observer.observe(targetBox02, { attributes: true });
+</script>
+</body>
+</html>
